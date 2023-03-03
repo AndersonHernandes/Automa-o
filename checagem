@@ -1,0 +1,4262 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128400116-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128400116-1');
+</script>
+<title>Sistema Odonto Excellence</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta name="twitter:widgets:csp" content="on">
+<meta name="robots" content="noindex"> <link href="/sistemas/odonto/adm/css/admin2.css?1675950448" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/Site.css?1675950448" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/site_new.css?1675950448" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/_joint.css?1675950448" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" media="screen" href="/sistemas/odonto/adm/libs/font-awesome/4.6.3/css/all.css">
+<link rel="icon" type="image/x-icon" href="/sistemas/odonto/adm/favicon.ico?1675950448">
+<style>
+	body {
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	@media print {
+		.hidden-print {
+			display: none;
+		}
+	}
+</style> 
+<link rel="stylesheet" href="/sistemas/odonto/adm/css/colorbox.css?1675950448">
+<script src="/sistemas/odonto/adm/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/js/jquery.colorbox-min.js?1675950448"></script> 
+<style>
+	.select2 {
+		font-size: 14px !important;
+		font-family: "Calibri";
+	}
+</style>
+<link href="/sistemas/odonto/adm/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
+<script src="/sistemas/odonto/adm/libs/select2/4.0.5/js/select2.min.js"></script>
+<script src="/sistemas/odonto/adm/libs/select2/4.0.5/js/i18n/pt-BR.js"></script>
+<script>
+	var $loader = "<div style=\"text-align: center; \"class=\"loader text-center\" title=\"Loading...\">\n\t<svg class=\"ajax-loader\" version=\"1.1\" id=\"loader-1\" x=\"0px\" y=\"0px\" width=\"40px\" height=\"40px\" viewBox=\"0 0 40 40\" enable-background=\"new 0 0 40 40\" xml:space=\"preserve\"><path opacity=\"0.2\" fill=\"#000\" d=\"M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z\"/><path fill=\"#000\" d=\"M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z\"><animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0 20 20\" to=\"360 20 20\" dur=\"0.5s\" repeatCount=\"indefinite\"/></path></svg>\n</div>";
+
+	$(document).ready(function () {
+		$(".select2").select2();
+	});
+</script>
+
+<script>
+            function fechar() {
+                $('.meu_modal').colorbox.close();
+            }
+
+            $(document).ready(function() {
+                $('.meu_modal').colorbox({iframe: true, width: '700px', height: '430px', overlayClose: false});
+                $('.meu_modal_003_2').colorbox({iframe: true, width: '800px', height: '400px', overlayClose: false});
+                $('.meu_modal_003_3').colorbox({iframe: true, width: '850px', height: '400px', overlayClose: false});
+                $('.meu_modal_003_5').colorbox({iframe: true, width: '850px', height: '500px', overlayClose: false});
+                $('.meu_modal_015').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_017').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_001').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_016').colorbox({iframe: true, width: '800px', height: '450px', overlayClose: false});
+                $('.meu_modal_04').colorbox({iframe: true, width: '450', height: '300', overlayClose: false});
+                //$(".inline").colorbox({inline:true, width:"400"});
+            });
+
+            function abre_proc(qq_trat, qq_franquia, qq_prof, qq_data, qq_id) {
+                // abre janela do cadastro do cliente
+                $.colorbox({
+                    iframe: true,
+                    width: '850',
+                    height: '500',
+                    overlayClose: true,
+                    href: 'mapa_trabalho_franqueado_inc003_modal_5b.php?tratamento=' + qq_trat + '&franquia=' + qq_franquia + '&prof=' + qq_prof + '&data=' + qq_data,
+                    onClosed: function() {
+                        re_abre(qq_trat, qq_franquia, qq_prof, qq_data, qq_id);
+                    }, // quando fecha tem que abrir novamente a janela da cobranca
+                });
+            }
+
+            function re_abre(qq_trat, qq_franquia, qq_prof, qq_data, qq_id) {
+                //alert(qq_cliente);
+                var j_href = 'mapa_trabalho_franqueado_inc003_modal_5.php?franquia=' + qq_franquia + '&prof=' + qq_prof + '&data=' + qq_data + '&linha_marcada=' + qq_id;
+                // abrindo a janela de cobranca
+                $.colorbox({
+                    iframe: true, width: '850', height: '500', overlayClose: false, //closeButton: false,
+                    escKey: false, href: j_href,
+                });
+            }
+
+            function abre_negativados(qq_franquia) {
+                //alert(qq_cliente);
+                var j_href = 'mt_box_18c.php?franquia=' + qq_franquia;
+                // abrindo a janela de cobranca
+                $.colorbox({
+                    iframe: true, width: '700', height: '450', overlayClose: false, //closeButton: false,
+                    escKey: false, href: j_href,
+                });
+            }
+
+        </script>
+
+<link rel="stylesheet" href="./css/caixas.css" />
+<style>
+            .o_bold {
+                font-weight: bold;
+            }
+        </style>
+</head>
+<body topmargin="0" marginheight="0">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../admin/css/single-happy-star.css">
+<style>
+	body {
+		margin: 0px !important;
+	}
+
+	.defaultSize {
+		height: 70px;
+	}
+
+	.title-header {
+		background: #EEEEEE;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.header-content {
+		font-family: 'Open Sans';
+		/*margin-left: 5em;*/
+		margin-left: 8em;
+		padding-top: 1em;
+	}
+
+	.icon_new {
+		background-position-x: 1em;
+	}
+
+	#span_title, #spam-title {
+		font-size: 20px;
+		font-weight: bold;
+		position: absolute;
+		margin-top: 30px;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.span_combo, .spam-combo {
+		margin-top: 30px;
+	}
+
+	.logox {
+		background-repeat: no-repeat;
+		background-position-x: 4em;
+		/*background-position-x: 1em;*/
+		background-position-y: 80%;
+		background-size: 40px;
+		height: 100%;
+		width: 100%;
+		background-image: url("/sistemas/odonto/adm//images/logo_mini.png");
+	}
+
+	.icon_new {
+		background-position-x: 1em;
+		margin-top: 10px;
+	}
+
+	.time-zone {
+		padding-top: 0px;
+		padding-left: 10px;
+		text-align: left;
+		width: 400px;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.session-user {
+		margin-top: -12px;
+		text-align: right;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.content-center {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 30px;
+	}
+</style>
+<style>
+		.info-userx {
+			color: #EEEEEE;
+			background-color: #373737;
+			border-bottom: 1px solid #212121;
+			
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 15px;
+			padding-top: 3px;
+			padding-right: 15px;
+			z-index: 100000;
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+			/*text-transform: uppercase;*/
+		}
+    </style>
+<div class="title-header defaultSize">
+<div class="info-userx">
+<div class="time-zone">
+Time Zone: Etc/GMT+3 - 02/03/2023 17:12:03 </div>
+<div class="session-user">
+Usuário: G53076 /
+F: 1693 /
+T: 10 /
+PT-BRL </div>
+</div>
+<div class="logox">
+<div class="content-center">
+<label>
+<nav class="rating">
+<ul id="some-list">
+<li class="li current" title="Parabéns, o Projeto 360 foi concluído!">
+<svg>
+<use xlink:href="#star"></use>
+</svg>
+</li>
+</ul>
+<div>
+<span>
+<svg><use xlink:href="#star"></use></svg>
+</span>
+</div>
+</nav>
+<svg style="display: none;">
+<symbol viewBox="0 0 36 34" id="star">
+<path fill="currentColor" d="M19.6859343,0.861782958 L24.8136328,8.05088572 C25.0669318,8.40601432 25.4299179,8.6717536 25.8489524,8.80883508 L34.592052,11.6690221 C35.6704701,12.021812 36.2532905,13.1657829 35.8938178,14.2241526 C35.8056709,14.4836775 35.6647294,14.7229267 35.4795411,14.9273903 L29.901129,21.0864353 C29.5299163,21.4962859 29.3444371,22.0366367 29.3872912,22.5833831 L30.1116131,31.8245163 C30.1987981,32.9368499 29.3506698,33.9079379 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.51252508,34.2485817 6.34688429,33.6765963 5.98741159,32.6182265 C5.90066055,32.3628116 5.86681029,32.0929542 5.88785051,31.8245163 L6.61217242,22.5833831 C6.65502653,22.0366367 6.46954737,21.4962859 6.09833466,21.0864353 L0.519922484,14.9273903 C-0.235294755,14.0935658 -0.158766688,12.8167745 0.690852706,12.0755971 C0.899189467,11.8938516 1.14297067,11.7555303 1.40741159,11.6690221 L10.1505113,8.80883508 C10.5695458,8.6717536 10.9325319,8.40601432 11.1858308,8.05088572 L16.3135293,0.861782958 C16.9654141,-0.0521682813 18.2488096,-0.274439442 19.1800736,0.365326425 C19.3769294,0.500563797 19.5481352,0.668586713 19.6859343,0.861782958 Z"></path>
+</symbol>
+<path class="shadow" d="M18.7022469,29.7633426 L29.1611722,33.6861584 C28.8859085,33.8576358 28.5650147,33.9672494 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.98083887,34.0953792 7.34281791,33.9989813 6.83864817,33.6859784 L17.2977531,29.7633426 C17.7505234,29.5935537 18.2494766,29.5935537 18.7022469,29.7633426 Z"></path>
+</svg>
+</label>
+</div>
+<div class="header-content">
+<spam id='spam-title'>
+GUARAREMA - SP
+</spam>
+<spam id='spam-combo'>
+<select class="comboFranquia select2" style="width:400px!important" autocomplete="off">
+<option value="36y7yM1pYlsXiNDvtQpkoIGGU9I2Rvckuw%3D%3D">
+ERECHIM - RS - BAIRRO LINHO [1006] </option>
+<option value="wFKPXEAEsvfALMxpQIVOnXjYcwIY1AM%3D">
+ERECHIM - RS - CENTRO [60] </option>
+<option selected="selected" value="YcB9NR5kwafH9r7LexCha3oIpDhke5BUvQ%3D%3D">
+GUARAREMA - SP [1693] </option>
+<option value="bR0s0jcmrGYL9b9skdyzfc9JlQTXQJdLKg%3D%3D">
+JARDINOPOLIS - SP [1468] </option>
+<option value="gEp1GR1%2B4dKDibhxE4O8FfmmY7IQkN%2Fh">
+MANDAGUACU - PR [522] </option>
+<option value="wJw5oeQ28TKDoJWjQPW0fAFwfilIkb8E">
+MARIALVA - PR [534] </option>
+<option value="I123K8WmE1ru0%2Fn4%2FU916R3GnLp0lNNG%2BQ%3D%3D">
+PALMEIRA DAS MISSOES - RS [1069] </option>
+<option value="CX4IiB58vz%2FQ5lwoajeVJcTAaMRBEr3nQg%3D%3D">
+RONDA ALTA-RS [1382] </option>
+<option value="Gxp6E5dN4%2FeklQHEVrCRPihI%2FOX8WXZWLg%3D%3D">
+SALTO DE PIRAPORA - SP [1204] </option>
+<option value="e3%2F5IRFiexVvtPdnZzwisMEwfPBb4oGt">
+SARANDI - PR - CENTRO [813] </option>
+<option value="Hc8gcXkr%2B9iZvzuP1fCYa4FWyUGvT3JK">
+UBERLANDIA - MG - CENTRO [695] </option>
+</select>
+</spam>
+</div>
+</div>
+</div>
+<script>
+		$(document).ready(function () {
+			$(".comboFranquia").change(function() {
+				let franquia_referencia = $(this).val();
+				let retorno = '/sistemas/odonto/adm/mapa_trabalho_franqueado.php?interno=1'; 
+				
+				let $dados = {
+					franquia_referencia, 
+					retorno 
+				};
+				
+				$.post('./acao/atualizar_sessao_franquia.php', $dados, function($ret) {				
+					window.location.reload();	
+				});
+			});			
+		});	
+	</script>
+<script>
+                $(".comboFranquia").prop( "disabled", true);
+            </script>
+<table border="0" width="100%" height="75%" cellpadding="0" cellspacing="0" bgcolor="white">
+<tr>
+<td width="13" valign="top">
+<p>
+<br>
+<iframe src="./include_menu3/_menu3.php" width="275px" height="2000px" scrolling="no" style="overflow: hidden; border: none;"></iframe>
+<script>
+    $(document).ready(function() {
+        $(".btn-escolha-menu").click(function() {
+            let escolha_menu = $(this).attr("escolha_menu");
+
+            let dados = {
+                escolha_menu: escolha_menu
+            };
+
+            if (escolha_menu != "") {
+                $.post("./acao/gravar_escolha_menu.php", dados, function(ret) {
+                    if (ret == "OK") {
+                        window.location = './home.php';
+                    } else {
+                        alert(ret);
+                    }
+                });
+            }
+        });
+    });
+</script> </p>
+</td>
+<td valign="top">
+<p>
+ </p>
+<table width="1000" border="0" align="center" cellpadding="4" cellspacing="4">
+<tr>
+<td colspan="2" align="center" valign="top">
+<button style="width: 350px" class="e-botao turquesa" onClick="window.location.href = 'cultura_agendamento.php?1675950448&cod===wdJpnY1pEWaBTNXFGQ9kERNRXTE1EdNpWT'">Cultura do Agendamento &gt;&gt;</button>
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center" valign="top">
+<div class="box001_p" style="width:970px; height:295px">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width:950px">Mapa de Trabalho</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width:950px; height:50px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+<strong class="sub_titulo">Franquia: 1693 - Odonto Excellence - Guararema - SP</strong>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width:950px; height:145px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+<strong class="sub_titulo">Gestão de ambiente: </strong>
+</td>
+</tr>
+<tr>
+<td height="50" align="center" valign="middle">
+<strong class="sub_titulo">Cadeiras: 4</strong></br>
+<strong class="sub_titulo">Raio-x panorâmico: Sim</strong></br>
+<strong class="sub_titulo">Tomografia: Não</strong></br>
+<strong class="sub_titulo">CAD/CAM: Não</strong></br>
+<strong class="sub_titulo">Raio-x digital: Sim</strong></br>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_m">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+1. índice de aceitação <a href="./orcamentos.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_001' href="rel_aproveitamento_efetivacao_inc001_modal_all.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Aproveitamento mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo001" class="box003_m">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+<div class="info_caixas" style="width: 330px;">
+Clínico Geral - Período:
+01/03/2023 a 01/03/2023 - índice mínimo: 80%
+</div>
+<p>
+<strong>
+<span class="super_titulo">
+100%
+</span>
+<br><br>
+Total de avaliações: 5 - Efetivadas: 5 </strong>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Aceitação&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+100 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<input name="hr_001" id="hr_001" type="hidden" value="100" />
+<input name="hr_002" id="hr_002" type="hidden" value="" />
+</td>
+</tr>
+<tr>
+<td height="80" align="center" valign="middle">
+<strong>
+Média de parcelamento: 14.8 <strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Total de cadastros: 6</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Total de indicações:
+1 - (16,67%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações MKT Viral:
+0 - (0,00%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações por conversão:
+0 - (0,00%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações pelo aplicativo:
+1 - (16,67%)
+</strong>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+2. Metas <a id="relatorio_metas" style="cursor: pointer;">
+Metas orofacial
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="340" align="center" valign="middle">
+<div class="info_caixas" style="width:330px">
+Período: 01/03/2023 a 01/03/2023 - índice mínimo: 80%
+</div>
+<p>
+<span class="super_titulo">Clínico Geral: 78%</span><br>
+<strong>
+<br>
+Faturamento: 300.000,00 <br>
+Proporcional: 20.000,00 <br>
+Efetivadas: 15.610,31 </strong>
+<br><br>
+<strong style="color: blue"> <u>Ticket médio: 3.122,06</u></strong>
+<br>
+</p>
+<p>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Clínico&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="242" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+78 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<span class="super_titulo">Implantodontia: 0%</span>
+<br>
+<strong>
+<br>
+Faturamento: 30.000,00 -
+Proporcional: 2.000,00 -
+Efetivadas: 0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Implanto&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Ortodontia: 11%</span>
+<br>
+<br>
+<strong>
+Financeira: 11.000,00 -
+Proporcional: 734,00 -
+Total recebido: 79,04 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Ortodontia&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="33" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+11 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Orofacial:</span>
+<br><br>
+<strong>Sem metas por procedimento cadastradas</strong>
+</p>
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<script>
+    $(document).ready(function() {
+        $("#relatorio_metas").off("click").on("click", function() {
+            deny_ver_dados();
+            pop_it_up_center("../../admin/mapa_trabalho_rel_metas_orofacial.php", "janelamapa", 1280, 720);
+            allow_ver_dados();
+        });
+
+        function deny_ver_dados() {
+            $("#button-ver-dados").attr("disabled", "disabled");
+        }
+
+        function allow_ver_dados() {
+            $("#button-ver-dados").removeAttr("disabled");
+        }
+    });
+</script> </tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+3. Atendimentos x Procedimentos concluídos <a class='meu_modal' href="mapa_trabalho_franqueado_inc003_modal.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Por profissional' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_2' href="mapa_trabalho_franqueado_inc003_modal_2.php?franquia=1693&data_de_ontem=2023-03-01&ontem_data_inicial=2023-03-01 00:00:00&ontem_data_final=2023-03-01 23:59:59">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_3' href="mapa_trabalho_franqueado_inc003_modal_3_ajax.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Grade de agendamento' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_2' href="mapa_trabalho_franqueado_inc003_modal_4.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Últimos 30 dias - Por Profissional' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_5' href="mapa_trabalho_franqueado_inc003_modal_5.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Controle de produção diária' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo003" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Clínico Geral - Período: 01/03/2023 </div>
+<br>
+<span class="sub_titulo">Atendimento:</span> <span class="super_titulo">14</span>
+<br><br>
+<span class="sub_titulo">Procedimentos concluídos:</span> <span class="super_titulo">19</span>
+<p>
+<span class="super_titulo">
+Porcentagem de faltosos:
+18 %
+</span>
+<br>
+<br>
+ <span class="sub_titulo">
+Pacientes agendados:
+17 Pacientes faltosos:
+3 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="420" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Faltoso(s)&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="55" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+18 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_003" id="hr_003" type="hidden" value="">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+4. Pacientes sem agendamento nas próximas agendas <a href="../../admin/paciente_sem_agendamento.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class="meu_modal_04" href="./mostrar_agendamento_real.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Agendamento Real' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo004" class="" style="background: white">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">
+Clínico Geral, iniciando em:
+01/03/2023 </div>
+<br>
+<p>
+<strong>
+Proporção sem agendamento </strong>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="154" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+50 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<span class="sub_titulo">
+Pacientes sem dívida:
+</span>
+<span class="super_titulo">
+97 </span>
+<br><br><br>
+<span class="sub_titulo">
+Pacientes com dívida:
+</span>
+<span class="super_titulo">
+49 </span>
+<br><br><br>
+<span class="sub_titulo">
+Tratamentos em stand-by:
+</span>
+<span class="super_titulo">
+42 </span>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc004_modal.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Tratamentos em stand-by' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<input name="hr_004" id="hr_004" type="hidden" value="">
+<br><br><br>
+<span class="sub_titulo">
+<abbr title="Tratamentos em andamento = Tratamentos Sem Dívida + Tratamentos Com Dívida + Tratamento em Stand-by + Tratamentos Agendados">
+Tratamentos em andamento:
+</abbr>
+</span>
+<span class="super_titulo">
+293 </span>
+</td>
+</tr>
+</table>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+5. Porcentagem de reagendamento do dia anterior <a href="./relatorio_reagendamento_pre.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' target="_blank" href="mapa_trabalho_franqueado_inc005_modal.php?franquia=1693&data_de_ontem=2023-03-01">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Tratamentos não reagendados' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo005" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Clínico Geral - Período:
+01/03/2023 - índice mínimo: 90%
+</div>
+<p>
+<span class="super_titulo">75%</span>
+<br>
+<br>
+<span class="sub_titulo">
+Pacientes atendidos:
+12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pacientes reagendados:
+9 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="420" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Reagendamento&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="233" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+75 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_005" id="hr_005" type="hidden" value="75">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+6. Quantidade de cobranças x quantidade cobradas <a href="agente_cobranca_retornos_franqueado.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc006_modal.php?franquia=1693&amp;data_de_ontem=2023-03-01" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo006" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 01/03/2023 - índice mínimo: 80%</div>
+<p>
+<span class="super_titulo">
+105 %
+</span>
+<br>
+<br>
+<span class="sub_titulo">
+Cobranças:
+168 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cobrado(s):
+176 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Cobrança&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+105 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_006" id="hr_006" type="hidden" value="105">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+7. Cancelamentos alta a pedido e automático <a href="rel_franqueado_canc_resumido.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo007" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px">
+Clínico Geral - Período:
+01/03/2023 a 01/03/2023 - índice máximo: 18%
+</div>
+<p>
+<span class="super_titulo">Alta a pedido: 0%</span>
+<br>
+<br>
+<strong>
+Contratado:
+0,00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cancelado:
+0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Alta&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Automático: 0%</span>
+<br>
+<br>
+<strong>
+Contratado:
+0,00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cancelado:
+0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Automático&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_007" id="hr_007" type="hidden" value="">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+8. Porcentagem de aproveitamento do agente de cobrança <a href="agente_cobranca_aproveitamento_res_franqueado.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo008" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Período:
+21/01/2023 a
+20/02/2023 - índice mínimo: 65%
+</div>
+<p>
+<span class="super_titulo">47%</span>
+<br>
+<br>
+<span class="sub_titulo">
+Cobranças efetuadas:
+199 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pagamentos realizados:
+94 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Aproveitamento&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="146" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+47 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_008" id="hr_008" type="hidden" value="47">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+9. Pesquisa de satisfação (solicitados x respondidos) <a href="./pesquisa_rel_franqueado.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo009" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">
+Período:
+01/03/2023 a
+01/03/2023 -
+índice mínimo: 90%
+</div>
+<p>
+<span class="super_titulo">
+33 %
+</span>
+<br>
+<br>
+<span class="sub_titulo">
+Clientes abordados:
+9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Quantos responderam:
+3 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Pesquisa&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="103" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+33 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_009" id="hr_009" type="hidden" value="33">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+10. Comparativo geral da receita do mês anterior <a href="./caixa.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo010" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Mês anterior:
+01/02/2023 a
+02/02/2023 </div>
+<p><span class="sub_titulo"></span><span class="super_titulo">4.617,64</span></p>
+<div class="info_caixas" style="width: 280px;">
+Mês atual:
+01/03/2023 a 01/03/2023 </div>
+<p><span class="sub_titulo"></span> <span class="super_titulo">1.173,60</span></p>
+<input name="hr_010" id="hr_010" type="hidden" value="0,00">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+ 11. Aproveitamento de Agendamento </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo011" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 16/01/2023 a 15/02/2023 - índice mínimo: 80%</div>
+<p><span class="super_titulo">78%</span><br />
+<br />
+<span class="sub_titulo">Agendamento:
+370 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aproveitamento:
+288 </span></p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Agenda&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="241" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+78 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_011" id="hr_011" type="hidden" value="78" />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+12. Estatísticas do Aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+<div class="info_caixas" style="width:280px">
+Período:
+Março/2023 </div>
+<br>
+<div align="center" class="legenda">
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<thead>
+<tr>
+<th colspan="3">
+INSTALAÇÕES/EFETIVAÇÕES </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+INSTALAÇÕES </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+EFETIVAÇÕES </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+PROPORÇÃO </strong>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+3 </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+6 </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+50,00%
+</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div class="info_caixas" style="width:280px">
+Período:
+31/01/2023 -
+02/03/2023 </div>
+<br>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<thead>
+<tr>
+<th colspan="2">
+NOTIFICAÇÕES </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de consulta (dia seguinte) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+577 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de consulta (hoje) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+540 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de tratamento realizado parcialmente </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+151 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de vencimento de parcela de prótese </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+1548 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Confirmação de e-mail </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+601 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Confirmação de telefone </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+587 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Feliz aniversário </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+44 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (parcela vencida) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+6324 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (vencimento em 7 dias) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+469 </span>
+</td>
+</tr>
+ <tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (vencimento hoje) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+278 </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="78" />
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+13. Negativados e Desnegativados&nbsp;&nbsp;
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês anterior' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_2.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_4.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Pré-Acordo - Mês Anterior' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_3.php?franquia=1693">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Pré-Acordo - Mês Atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo013" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<p><span class="sub_titulo">Negativados:</span> <span class="super_titulo">0</span></p>
+<p><span class="sub_titulo">Desnegativados:</span> <span class="super_titulo">3</span></p>
+<input name="hr_013" id="hr_013" type="hidden" value="0" />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+14. Avaliação de Oclusão
+<a id='detalhes-oclusao' franquia="0EN9M7Bc%2Bh%2FHuBI7gBzWidDuaZa%2BLA61eQ%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 01/03/2023</div>
+<p></p>
+<div align="center" class="legenda">
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+</strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+Total </span>
+</td>
+<td align="center" width="55" class="mtabela">
+<span class="sub_titulo">
+%
+</span>
+</td>
+</tr>
+<tr>
+ <td class="mtabela">
+<strong>
+Concluído / em andamento </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Radiologia </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Radiologia - Paciente vai trazer a pasta </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0
+</strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo paciente </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0
+</strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+ </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo Paciente com Documentação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo dentista </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo Dentista com Documentação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Aguardando confirmação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+ </td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Paciente com menos de 12 anos. </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Sem especialidade indicada </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="sub_titulo">
+Total </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+0 </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+100%
+</span>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+ <span class="sub_titulo">
+Novas avaliações de orto </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+0
+</span>
+</td>
+<td align="center" class="mtabela">
+<a href="mapa_trabalho_franqueado_inc014_ro_modal_2.php?franquia=1693&amp;de=2023-03-01&ate=2023-03-01" class="meu_modal"><img src="./images/link_externo.png" width="10" height="10" border="0" align="absmiddle" title="Mais informações" /></a>
+</td>
+</tr>
+</table>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="78" />
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<script>
+    $(document).ready(function(){
+        $("#detalhes-oclusao").click(function(){
+            let franquia = $(this).attr("franquia");
+            pop_it_up_center(`../../admin/rel_avaliacao_oclusao_orto.php?franquia=${franquia}`, "Avaliação de oclusão - Ortodontia");
+        });
+    });
+</script> </tr>
+<tr>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+16. Indicações pelo aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<br>
+<div class="info_caixas" style="width: 280px;">Período: últimos 30 dias</div>
+<div align="center" class="legenda">
+<table class="mtabela o_bold" width="90%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong></strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+Qtde.
+</span>
+</td>
+<td align="center" width="55" class="mtabela">
+<span class="sub_titulo">
+%
+</span>
+</td>
+</tr>
+<tr>
+ <td class="mtabela">
+<div id="box-red1" style="background-color: #E08283!important">&nbsp;</div>
+<strong>
+Nova indicação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+2 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+12.5 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #EC644B!important">&nbsp;</div>
+<strong>
+Contato sem sucesso </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+3 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+18.75 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #F7CA18!important">&nbsp;</div>
+<strong>
+Avaliação pendente </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+5 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+31.25 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #87D37C!important">&nbsp;</div>
+<strong>
+Efetivado(s) </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+2 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+12.5 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #95A5A6!important">&nbsp;</div>
+<strong>
+Descartado </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+4 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+25 %
+</strong>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+<br>&nbsp;
+<span class="sub_titulo">
+Total </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+16 </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+100%
+</span>
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="78">
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<style>
+    #mcc-azul {
+        color: #2196F3;
+    }
+
+    #mcc-amarelo {
+        color: #F9A825;
+    }
+
+    #mcc-vermelho {
+        color: #F44336;
+    }
+
+    #box-blue {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #2196F3;
+        display: inline-table;
+    }
+
+    #box-yellow {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #F9A825;
+        display: inline-table;
+    }
+
+    #box-red {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #F44336;
+        display: inline-table;
+    }
+
+    .strong-blue {
+        color: #2196F3;
+    }
+
+    .strong-red {
+        color: #F44336;
+    }
+
+    .strong-blue {
+        color: #2196F3;
+    }
+
+    .strong-red {
+        color: #F44336;
+    }
+
+    .cursor_help {
+        cursor: help;
+    }
+</style>
+<tr>
+<td colspan="2" align="center" valign="top">
+<div class="box001_p" style="width: 970px; height: auto; cursor: default;">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width: 950px;">
+17. Ticket médio - Clínico Geral (últimos 30 dias)
+<a class='meu_modal_017' href="mapa_trabalho_franqueado_inc017_ticket_medio_paciente_v2.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio por cliente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<span id="hist-comp-dentista" class="" style="cursor: pointer;">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Histórico Comportamental do Dentista' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+<span id="procedimentos-vendidos-profissional" class="" style="cursor: pointer;">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Procedimentos vendidos avaliação' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+<br />
+<br />
+<small>
+[ 30/01/2023 ~ 01/03/2023 ]
+</small>
+</div>
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width: 950px; height: auto">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="middle">
+<table width="99%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+<table width="99%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td class="mtabela" width="100">Profissional</td>
+<td class="mtabela" width="80" align="center">
+índice de aceitação <br>
+(75 %)
+</td>
+<td class="mtabela" align="center">
+Média procedimentos vendidos </td>
+<td class="mtabela" width="200" align="center">
+<abbr title="Valor Total das Efetivações dividido pelo N° de Efetivações">
+Ticket médio <br>
+(2.500,00)
+</abbr>
+</td>
+<td class="mtabela" style="cursor: help;" width="80" align="center" title="Valor dos procedimentos do mês - Do 1° dia até o atual.">
+<abbr title="Valor médio dos procedimentos concluídos no período">
+Ticket médio de conclusão </abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+<abbr title="01/11/2022 - 15/01/2023 ">
+Carteira concluída (%)
+</abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+<abbr title="Termo de conclusão de tratamento escaneados">
+Termo escaneado (%)
+</abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+Média de produtividade diária <br>
+(11)
+</td>
+<td class="mtabela" width="80" align="center">
+Estimativa de Conclusão da Carteira </td>
+<td class="mtabela" width="80" align="center">
+Pacientes <br />
+Ativos </td>
+<td class="mtabela" width="80" align="center">
+Procedimentos a realizar  </td>
+<td class="mtabela" width="80" align="center">
+Média de parcelamento </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="ANA LAURA RIBEIRO NUNEZ [#64905]">
+<span>
+ANA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">100,00%</strong>
+</td>
+<td class="mtabela" align="right">
+8 </td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">
+3.112,36 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="z%2FW6lsinBiqGcZhR7hnw%2FLWAMP6ujrxgUIo%3D" id_franquia="ErF9FUe1WmbG8Qk5d9uF6USftRJOj8PpUQ%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="ZXfYByDW81w%2FOFpTjAZr3pqLHtP9jDHLrjU%3D" id_franquia="jaJ74xJTFi6IOo8JFoH4CFh27WYgRowBCw%3D%3D" tipo_relatorio='5YOPQ4pEayqRAt%2FHdC0kwbUZPT3rdg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="m4gt1cvni3Z4jDSaVdOlucj2gyKmywK4LSA%3D" id_franquia="a6CYOlY4aapY1r%2B2Ufxzqrd2ddCMxYzjPg%3D%3D" tipo_relatorio='MOpM4oMVzyhnY5xnu%2BH8i72fWe7JKQ%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="right">
+
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 0 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>0,00</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+0 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+15 </td>
+<td class="mtabela" align="right">
+112 </td>
+<td class="mtabela" align="right">
+27,20 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="DIEGO AUGUSTO GUIMARAES [#51918]">
+<span>
+DIEGO </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">85,71%</strong>
+</td>
+<td class="mtabela" align="right">
+4 </td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">
+3.838,99 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="YONGV0e1wvXjuEhOK4Mm%2B9vpb22UEUlq4Cg%3D" id_franquia="gsjoZxE2jA%2FxZqVUr%2Bt2%2F9c0gTmTEcKUoA%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="GtGJtLmJ2YkciP7EMCMa4sXywwSzsU2qkI4%3D" id_franquia="43zxT8Zgs2khNPrHZmMQ7cRew3n5bPOJhA%3D%3D" tipo_relatorio='3Q06iXdTber%2B9sq1hS9FDDUraBGe4A%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="Mw2%2BUoaxsPIdgo4fTQQl%2FU6gZor9wM1JJVo%3D" id_franquia="GBChIywny706yCOhpa4adTFzojn1vLs2ZQ%3D%3D" tipo_relatorio='Uf0Njf3GPFf2fjN1EUKbYnB%2Fw86JJg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+33,33 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-blue">
+100,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 5 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>3,60</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+23 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+17 </td>
+<td class="mtabela" align="right">
+75 </td>
+<td class="mtabela" align="right">
+27,76 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="FELIPE SILVA MOURA [#51919]">
+<span>
+FELIPE </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">0,00%</strong>
+</td>
+<td class="mtabela" align="right">
+10 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+0,00 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="cg%2BumVJU2coSZsVptD3MuCJhJWx5Q1c%2BBM8%3D" id_franquia="iZEloGAs3FIoIjxsIXQC0nSw%2BNakxvTzhw%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="AtSDIRy7%2BDAtFYHgdanUYLf0TfAt5XnDlDU%3D" id_franquia="2PY1%2FQ%2FFCzIQcYkbRh8ChzhYMvJsairbAg%3D%3D" tipo_relatorio='3TUb%2BzFkcEao%2F0opQ3DLgijgH%2F3mGg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="67Rr%2FNB%2FjCA5OP6q%2BK77ELqdX8IK4UXsWOk%3D" id_franquia="5PRjswugmytKSbjYM%2Bz6CBRUJcGzjOMxoA%3D%3D" tipo_relatorio='zDEbxSwxD%2BxIWhgE8bLNIo0K6wpBIQ%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+33,33 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-blue">
+100,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 2 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>3,00</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-amarelo" class='mcc-amarelo'>
+68 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+17  </td>
+<td class="mtabela" align="right">
+135 </td>
+<td class="mtabela" align="right">
+30,53 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="JONATHANS VALEZZI PEREIRA DA SILVA [#51928]">
+<span>
+JONATHANS </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">0,00%</strong>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+0,00 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="gPH8x6TgUydBhKiCBYM3kY1Y5D%2BTJFoWeRk%3D" id_franquia="dqG4XQn14OLQHdUjPLXLdjcRZpHpPnEWLw%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="3VMhC5YI7ScAARk4YYmhgwRu8xKWY1HYKcY%3D" id_franquia="%2BcVOMSWrhepkaikVfYcCuhsSoe%2F8BKKrmQ%3D%3D" tipo_relatorio='sH2oVjpuSdQ7H03vMSXspqeQ9YbjLw%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="9EfRGv%2FOnEvksK45Il4kB%2F81dmFShA1ohaU%3D" id_franquia="7ImPlTwpMbGUMOfrUwzNRTipNISb0L7wqA%3D%3D" tipo_relatorio='pmFo%2FoGKF%2F9Y7B%2Bvpq89mAPfntlYkQ%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+ <td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 0 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>0,00</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+0 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0,00 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="JULIA VECINO DOS SANTOS [#59097]">
+<span>
+JULIA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">92,00%</strong>
+</td>
+<td class="mtabela" align="right">
+7 </td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">
+2.958,69 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="3RNC1GhdC9p4FMIYS%2FzeA7m9dGCCltKVbGo%3D" id_franquia="bxArNiLsWP1aAGlwLyjKp3nK%2BUl7ptvN5Q%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+ <td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="Ch2%2B8xEdgG2YCfzK2QiQKJK4zhv%2FQwV2NxA%3D" id_franquia="SSPGQgqPWtRor9utcSAKNTaBrE%2BTTn0IeQ%3D%3D" tipo_relatorio='QP0AhtTjYegnA4ivEguSy%2BGIMYRT%2BA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="IdMHCSLjsw8LByjCC64dghtF2WxKeJL2CSk%3D" id_franquia="xd71TkEPtyf2oUaum%2BJmlDJFAFvYbxHyRA%3D%3D" tipo_relatorio='ZnLD6nMk9NdSzz58VqzS0aUXomU3PA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-blue">
+100,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-blue">
+100,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 11 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>8,45</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+20 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+29 </td>
+<td class="mtabela" align="right">
+171 </td>
+<td class="mtabela" align="right">
+28,03 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="MARINA PAULINI GUIMARAES [#51920]">
+<span>
+MARINA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">64,29%</strong>
+</td>
+<td class="mtabela" align="right">
+4 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+1.732,63 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="tFmhwdEB46llm21cix1Tdjl2PxCyryE4wqw%3D" id_franquia="N1CZrrWGhhq6qHCyDeDXZZBXIbupiKqGnA%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="i%2Bg55shK0Tote2aiJt1JKyPcXZkkZ2tagGw%3D" id_franquia="iT7KyZV2KJJ2movc47tULCWnmhXvF4k5DQ%3D%3D" tipo_relatorio='Keg6qk2p%2Fx%2BVKhw5nofUFkpmj0Gm2A%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+ <td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="pyp7zaf6PtNfGL8bQ6hqs2JnHxw2XXZK5o0%3D" id_franquia="P2sNgRKO5FiV01saMX6s9SoFP%2FRpNZELVQ%3D%3D" tipo_relatorio='XRpG%2FBG09RsRkOIr4NafjkdBS8ezyQ%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+63,64 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-blue">
+100,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 8 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>8,75</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+
+<div id="mcc-azul" class='mcc-azul'>
+45 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+64 </td>
+<td class="mtabela" align="right">
+206 </td>
+<td class="mtabela" align="right">
+25,52 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="MIRELLY FARIAS DE ALMEIDA [#65289]">
+<span>
+MIRELLY </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">0,00%</strong>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+0,00 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="pwg850tRImHIWmz0lheynIqhuqo7yNZTPgU%3D" id_franquia="XEEwB95u85kFwXI895IvU%2B0VJB4becvL3w%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="3B%2FLGfqLiobzIySRB8gjkr63pTmzuFix19c%3D" id_franquia="%2F8GiXFNoZC%2BDBS9hGsk6ufJ1k99Myh8RZQ%3D%3D" tipo_relatorio='4F6kzW1wfT9m9hytXtD7hS9j8Xcgbg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="JbJ51TQO6yNCJ%2FOFHAud72tiJSWZ1SNo0do%3D" id_franquia="MNPtbGMy6WL%2FdUN7p6L0E7lUA78nxaLmqg%3D%3D" tipo_relatorio='8NEl5%2Fu%2BYXlwbnlwT6QuuCo6ud6ejQ%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+ </tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 0 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>0,00</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+0 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0,00 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="NADYNE DELA TORRE MIYADA [#63840]">
+<span>
+NADYNE </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">47,37%</strong>
+</td>
+<td class="mtabela" align="right">
+5 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+1.262,79 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="JVgtr36NFRn8%2FH7kk26WtCx4%2Bw9YqQbOFpA%3D" id_franquia="qCY1i3TN1N9jHLd7LggjddPvuiU%2F2C%2FcDg%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+ </td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="PWmVIfTs3X3xIPc%2BXgQkgwt7ciVjCO1j7mQ%3D" id_franquia="sCp0D%2B6newBnD1s7g%2BjSIE91lnluod4hzA%3D%3D" tipo_relatorio='P5RX%2F6tvelggPgm4KAEuQQTGLpzbdw%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="%2FRk9V%2FS4HZlySLQBgAmh4EwtoXzAOJv7%2BEY%3D" id_franquia="sC92GbfnjKpLHJZ0wHXmbS%2BjwPIfyXtVwQ%3D%3D" tipo_relatorio='%2BXZ3cY3jVBWAyUDtry2QkpDBzmh6Mg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 12 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>7,08</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+0 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0,00 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="PALOMA RANGEL VIEIRA DE ANDRADE [#61902]">
+ <span>
+PALOMA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">95,24%</strong>
+</td>
+<td class="mtabela" align="right">
+7 </td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">
+2.706,80 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="crni%2BkOMtuk14gnYHIigsGUSLabXRArl4NU%3D" id_franquia="7W47g1ZmFtuWQFwVY5On%2BwDPHymPW%2BhOhw%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="pRoJlaFVQPlfdeVd%2Fha33cjjbT2TpcmQDoo%3D" id_franquia="ZEtv1FMbPsM9wHDNEjwEZFa%2BwA0xVkpa%2Bg%3D%3D" tipo_relatorio='%2BsWGhxiW%2FPmDQGVAuAQKW%2BzHyBMuqA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="vwi%2BlSKtz2JKtHDZuZ2SHVL9kQaxd2T8WR4%3D" id_franquia="cuJ0LiTuS7UaKoCMW7eSkGwxJd5sYPlWIQ%3D%3D" tipo_relatorio='K2MW9I1g7a6Qorwj1R3WA0GaxieSag%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+62,22 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+92,86 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+<abbr title='Media de Produtividade dos 13 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>13,08</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-amarelo" class='mcc-amarelo'>
+49 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+130 </td>
+<td class="mtabela" align="right">
+628 </td>
+<td class="mtabela" align="right">
+27,58 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="PAULA LARISSA MOURA DA SILVA [#59064]">
+<span>
+PAULA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">0,00%</strong>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+0,00 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="NP1u%2BEwef0go25NSteKI1lX2eXYLOcoOyFk%3D" id_franquia="EGrzez7YWww4pdjHVH4yXbO55jLgm5M22w%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="uAUDbaCohJObLbxyXVjWRHagMsPHENkpKx0%3D" id_franquia="kaHFmPZKjEN9UbBWQT4aRWnqy7xzxOwQJQ%3D%3D" tipo_relatorio='%2Bjzq%2B5lzjeZiMnX98Vyb%2FY92Majjbw%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="8SM83CoTUKY5yomha3Y7Ur8nSG7Mfhqjs3w%3D" id_franquia="oHjP7Tekp10bv%2Bq3S2MzUH7nZaXE8CXlbA%3D%3D" tipo_relatorio='QOKSqGRdumtICoxr5SNz0XCLm0oUlA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+0,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 6 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>0,00</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+0 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+0,00 </td>
+</tr>
+</table>
+<br />
+<table width="50%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td width="50%">
+<strong>
+Legenda <br>
+Estimativa de Conclusão da Carteira </strong>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<div id="box-blue">&nbsp</div>
+<strong>Até 45 dias</strong>
+</td>
+</tr>
+<tr>
+<td width="72%">
+<div id="box-yellow">&nbsp</div>
+<strong>De 46 até 75 dias</strong>
+</td>
+</tr>
+<tr>
+<td width="72%">
+<div id="box-red">&nbsp</div>
+<strong>Acima de 75 dias</strong>
+</td>
+</tr>
+</table>
+<br>
+</td>
+</tr>
+</table>
+</td>
+ </tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<script>
+    $(document).ready(function() {
+        $('#hist-comp-dentista').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/mapa_17_item_m1.php', 'infcomp', 1200, 800);
+        });
+
+        $('#procedimentos-vendidos-profissional').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/pop_procedimentos_vendidos_avaliacao.php', 'infcomp', 1200, 800);
+        });
+
+        $('.btn-ticket-medio').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            pop_it_up_center('./../../admin/mapa_17_item_ticket_medio.php?user=' + id_profissional + '&franquia=' + id_franquia, 'infcomp', 1200, 800);
+        });
+
+        $('.btn-ultimos-30-dias').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            let tipo_relatorio = $(this).attr('tipo_relatorio');
+            pop_it_up_center('./../../admin/mapa_17_item_m2.php?user=' + id_profissional + '&franquia=' + id_franquia + '&tipo_relatorio=' + tipo_relatorio, 'infcomp', 1200, 800);
+        });
+
+        $('.btn-mes-corrente').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            let tipo_relatorio = $(this).attr('tipo_relatorio');
+            pop_it_up_center('./../../admin/mapa_17_item_m2.php?user=' + id_profissional + '&franquia=' + id_franquia + '&tipo_relatorio=' + tipo_relatorio, 'infcomp', 1200, 800);
+        });
+
+        $('#mes-corrente').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/mapa_17_item_m3.php', 'infcomp', 1200, 800);
+        });
+    });
+</script>
+<tr>
+<td align="left" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+18. Status: input / output (Clínica Geral)
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<br>
+<div class="info_caixas" style="width: 280px">
+Clínico Geral - Período: 01/03/2023 - 01/03/2023 </div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+
+<div class="m_texto" id="content">
+<img src="./images/carregando_pacotes.gif" width="32" height="32" align="absmiddle" />
+Processando dados, aguarde... </div>
+<script>
+                                        $(document).ready(function() {
+                                            $('#content').load("mt_box_18.php?franquia=1693", function() {
+                                                $(".comboFranquia").prop("disabled", false);
+                                            });
+                                        });
+                                    </script>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p" style="height: 100% !important;">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+19. Visão geral das indicações pelo aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 330px">
+últimos 30 dias de indicações </div>
+<table width="90%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td class="mtabela" width="70%" align="right">Indicações:</td>
+<td class="mtabela" width="30%" align="center">16</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Contato pendente:</td>
+<td class="mtabela" width="30%" align="center">2</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Contato sem sucesso:</td>
+<td class="mtabela" width="30%" align="center">3</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Avaliação pendente</td>
+<td class="mtabela" width="30%" align="center">5</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Efetivação pendente:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Efetivadas:</td>
+<td class="mtabela" width="30%" align="center">2</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Descartadas:</td>
+<td class="mtabela" width="30%" align="center">4</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Inválidas:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Receita total:</td>
+<td class="mtabela" width="30%" align="center">BRL 4.661,43</td>
+</tr>
+</table>
+<br>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<script>
+    /* +FACADE ------------------------------------------------------------------------------------------------------ */
+
+    function _start_protocol_action() {
+        event_save_manager();
+        event_comment_add();
+        event_comment_view();
+        event_stars_view();
+        event_change_status();
+        event_change_status_final();
+        event_start_stars();
+        event_close_protocol();
+        event_hist_video();
+        event_magic_button();
+        event_magic_button_add_email();
+        event_send_password_to_email();
+        event_renew_views();
+        event_add_email();
+        //---------------------
+        event_external_link();
+        event_erase_protocol();
+        event_external_payment();
+        send_whats();
+        openSelectOrigemProtocolo();
+        eventoSalvarOrigemProtocolo();
+        add_picker('.sel-exp-gerentes');
+    }
+
+    /* -FACADE ------------------------------------------------------------------------------------------------------ */
+
+    /* -FUNCTION ---------------------------------------------------------------------------------------------------- */
+    function openSelectOrigemProtocolo () {
+        _load('select-origem-protocolos', 'load-combo-origem-protocolos', {}, function() {
+            add_picker('#tipos-origem-protocolos');
+        })
+    }
+
+    function set_price_format() {
+        $('.valor').priceFormat({
+            clearPrefix: true,
+            prefix: 'R$ ',
+            centsSeparator: ',',
+            thousandsSeparator: '.',
+        });
+    }
+
+    function show_real_spend($this) {
+        var $supervisor = currency_to_number($('#comissao-supervisor').val());
+        var $gerente = currency_to_number($('#comissao-gerente').val());
+        var $empresa = currency_to_number($('#comissao-empresa').val());
+        var $representante = currency_to_number($('#comissao-representante').val());
+        var $usuario = currency_to_number($('#comissao-usuario').val());
+
+        var $total = $supervisor + $gerente + $empresa + $representante + $usuario;
+        if (!isNaN($total)) {
+            var $total = $total.toMoneyBRL();
+            $('#total-comissao').html('');
+            $('#total-comissao').hide();
+            $('#total-comissao').fadeIn(function() {
+                $('#total-comissao').html('Total Comissionado: R$ ' + $total);
+                $this.removeAttr('disabled');
+            });
+            $('.btn-gravar-comissao').removeAttr('disabled');
+        } else {
+            swal('Atenção', 'É necessário adicionar os valores antes de continuar.');
+            $this.removeAttr('disabled');
+        }
+    }
+
+    /* -FUNCTION ---------------------------------------------------------------------------------------------------- */
+
+    /* +EVENTOS ----------------------------------------------------------------------------------------------------- */
+    function event_comment_add() {
+        $('.button-add-comment').off('click');
+        $('.button-add-comment').on('click', function() {
+            var $this = $(this);
+
+            $('.form-comentario').html('');
+            $('.comment-view').html('');
+            $('.button-add-comment').removeClass('comentario-atual');
+
+            $this.addClass('comentario-atual');
+
+            $('.form-final').html('');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-comentario').
+            html('<div class=\'text-center\'><p></p><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-comentario').load('./load/exp_protocolo_comment.php', function() {
+                event_comment_add_close();
+                event_save_comment();
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-comment');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
+        });
+    }
+
+    function event_comment_add_close() {
+        $('.fechar-formulario-comentario').off('click');
+        $('.fechar-formulario-comentario').on('click', function() {
+            var $this = $(this);
+            $this.fadeOut('fast');
+
+            var $comment = $this.parents('.form-comentario');
+
+            $comment.slideUp('slow', function() {
+                $comment.html('');
+                $comment.show();
+            });
+        });
+    }
+
+    function event_save_comment() {
+        $('#add-comment').click(function() {
+            var $this = $(this);
+
+            var $descricaox = $('#input-descricao').val();
+            var $protocolo = $('.comentario-atual').val();
+            var $protocolo_status = $('.comentario-atual').attr('protocolo_status');
+
+            var $descricaox = $.trim($descricaox);
+
+            if ($descricaox !== '' && $protocolo !== '') {
+                if ($descricaox.length < 10) {
+                    alert('Mínimo de 10 caracteres.');
+                    $('#input-descricao').focus();
+                    return false;
+                }
+
+                var $data = {
+                    protocolox: $protocolo,
+                    protocolo_statusx: $protocolo_status,
+                    comentariox: $descricaox,
+                };
+
+                $.post('./acao/exp_add_comment.php', $data, function() {
+                    $('.form-comentario').html('');
+                    refresh_page_wo_warning();
+                });
+            } else {
+                $('#input-descricao').focus();
+            }
+        });
+    }
+
+    function event_comment_view() {
+        $('.button-comment-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            $this.siblings('.comment-view').
+            html('<p></p><div class=\'text-center\'><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.siblings('.comment-view').load('./load/exp_pro_vendas_comment_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_comment_add_close();
+                event_comment_close();
+            });
+        });
+    }
+
+    function event_comment_close() {
+        $('.fechar-comment-view').off('click');
+        $('.fechar-comment-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-comment-view');
+            $this.hide();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    function event_stars_view() {
+        $('.button-stars-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            $this.siblings('.stars-view').
+            html('<p></p><div class=\'text-center\'><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.siblings('.stars-view').load('./load/exp_pro_vendas_stars_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_stars_close();
+            });
+        });
+    }
+
+    function event_stars_close() {
+        $('.fechar-stars-view').off('click');
+        $('.fechar-stars-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-stars-view');
+            $this.hide();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    function event_hist_video() {
+        $('.button-hist-video-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            var $panelx = $('.protocol-' + $protocol);
+            var $panel_heading = $panelx.children('.card-header');
+            var $panel_body = $panelx.children('.card-body');
+            var $panel_footer = $panelx.children('.card-footer');
+            var $panel_hist_video = $panel_footer.children('.load-hist-video');
+
+            $panel_hist_video.load('./load/exp_video_hist_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_hist_video_close();
+            });
+
+        });
+    }
+
+    function event_send_password_to_email() {
+        $('.btn-send-email').off('click');
+        $('.btn-send-email').on('click', function() {
+            var $this = $(this);
+            var $userx = $this.attr('userx');
+            $('.btn-send-email').attr('disabled', 'disabled');
+            $('.btn-ativar-usuario').attr('disabled', 'disabled');
+            $('.btn-desativar-usuario').attr('disabled', 'disabled');
+            $this.children().removeClass('fa-chevron-up').removeClass('fa-chevron-right').addClass('fa-spin').addClass('fa-spinner');
+            $.post('./acao/expansion_send_login_pass.php', {
+                userx: $userx
+            }, function($return) {
+                $this.children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-check');
+                if ($.trim($return).length >= 1) {
+                    swal('Atenção', $return);
+                }
+                setTimeout(function() {
+                    $this.remove();
+                }, 5000);
+            });
+        });
+    }
+
+    function event_hist_video_close() {
+        $('.fechar-video-hist-view').off('click');
+        $('.fechar-video-hist-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-video-hist-view');
+            $this.remove();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    /**
+     * CRIAR O USUÁRIO E ENVIAR O VÍDEO
+     */
+    function event_magic_button() {
+        $('.button-create-user').off('click');
+        $('.button-create-user').on('click', function() {
+            let $this = $(this);
+            let $protocolx = $this.val();
+
+            $this.attr('disabled', 'disabled');
+            $.post('./acao/expansao_create_user.php', {
+                protocolx: $protocolx
+            }, function(ret) {
+                refresh_page_wo_warning();
+            });
+        });
+    }
+
+    /**
+     * ADICIONAR EMAIL PARA - CRIAR O USUÁRIO E ENVIAR O VÍDEO
+     * function event_magic_button()
+     */
+    function event_magic_button_add_email() {
+        $('.button-create-user-add-email').off('click');
+        $('.button-create-user-add-email').on('click', function() {
+            let $this = $(this);
+            let $protocolx = $this.val();
+
+            $this.attr('disabled', 'disabled');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-comentario').
+            html('<div class=\'text-center\'><p></p><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-comentario').load('./load/exp_protocolo_add_email.php', {
+                protocolox: $protocolx
+            }, function() {
+                event_comment_add_close();
+                event_save_comment();
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-comment');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
+        });
+    }
+
+    function event_change_status($status) {
+        $('.btn-change-status').off('click');
+        $('.btn-change-status').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = $this.attr('to_status');
+            var $tipo_venda = false;
+            if ($to_status == 8) {
+                $tipo_venda = $('input[name=\'tipo_venda_' + $protocolx + '\']:checked').val();
+                if ($tipo_venda == undefined || !$tipo_venda) {
+                    swal('Atenção', 'Selecione um tipo de venda.');
+                    return false;
+                }
+                console.log($tipo_venda);
+            }
+
+            $.post('./acao/exp_change_protocol_status.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+    }
+
+    /**
+     * EFETIVAR OU DECLINAR PROTOCOLO
+     */
+    function event_change_status_final() {
+        $('.btn-change-status-final').off('click');
+        $('.btn-change-status-final').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = $this.attr('to_status');
+
+            var $panelx = $('.protocol-' + $protocolx);
+
+            var $panel_heading = $panelx.children('.card-header');
+            var $panel_body = $panelx.children('.card-body');
+            var $panel_footer = $panelx.children('.card-footer');
+
+            var $panel_final_form = $panel_footer.children('.form-final');
+            // cadastrar_franquia();
+            $('.form-final').html('');
+            $panel_final_form.load('./load/exp_form_prot_final.php', {
+                    protocolx: $protocolx,
+                    to_statusx: $to_status,
+                },
+                function() {
+                    add_picker('.select');
+                    //observer_resize();
+                    event_save_comment_final();
+                    event_close_form_final($panel_final_form);
+                });
+        });
+    }
+    /*function cadastrar_franquia() {
+        $('#listar').html($loader);
+        $('#listar').load('./pages/cadastrar_franquia.php', function () {
+        });
+    }*/
+    function event_save_comment_final() {
+        $('.add-comment-final').off('click');
+        $('.add-comment-final').on('click', function() {
+            var $this = $(this);
+
+            var $protocolx = $this.attr('protocolx');
+            var $to_statusx = $this.attr('to_statusx');
+            var $commentx = $('.comment-final').val();
+
+            if ($to_statusx == 6) {
+                var $uf_venda = $('.sel-estados-br').val();
+                var $cidade_venda = $('.cidade-destino').val();
+
+                if ($uf_venda <= 0) {
+                    swal('Atenção', 'Selecione a UF na qual a unidade foi vendida.');
+                    return;
+                }
+
+                if ($cidade_venda.length <= 3) {
+                    $('.cidade-destino').focus();
+                    return;
+                }
+            }
+
+            if ($to_statusx == 4) {
+                var $date_return = $('#data-escolher').val();
+            }
+
+            if ($commentx.length <= 5) {
+                $('.comment-final').focus();
+                return;
+            }
+
+            $this.attr('disabled', 'disabled');
+
+            if ($to_statusx == 6) {
+                save_comment_up($protocolx, $to_statusx, $uf_venda, $cidade_venda, $commentx);
+            }
+
+            if ($to_statusx == 5) {
+                save_comment_down($protocolx, $to_statusx, $commentx);
+            }
+
+            if ($to_statusx == 4) {
+                save_comment_wait($protocolx, $to_statusx, $date_return, $commentx);
+            }
+
+        });
+    }
+
+    function save_comment_up($protocolx, $to_statusx, $uf_venda, $cidade_venda, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            commentx: $commentx,
+            uf_venda: $uf_venda,
+            cidade_venda: $cidade_venda,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
+            }
+        });
+    }
+
+    function save_comment_down($protocolx, $to_statusx, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            commentx: $commentx,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
+            }
+        });
+    }
+
+    function save_comment_wait($protocolx, $to_statusx, $date_return, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            date_return: $date_return,
+            commentx: $commentx,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
+            }
+        });
+    }
+
+    function event_close_form_final($panel_final_form) {
+        $('.fechar-formulario').off();
+        $('.fechar-formulario').on('click', function() {
+            $panel_final_form.html('');
+        });
+    }
+
+    function observer_resize() {
+        add_picker('.select2');
+        $('.select2').css('width', '100%');
+        $(window).resize(function() {
+            add_picker('.select2');
+        });
+    }
+
+    function event_save_manager() {
+        //observer_resize();
+        $('.button-mudar-resp').off('click');
+        $('.button-mudar-resp').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.attr('data-protocolo-id');
+            var $respx = $('.sel-exp-gerentes').find('option:selected').val();
+            var $origemProtocolo = $('#tipos-origem-protocolos').val();
+
+            if ($respx <= 0) {
+                $('.sel-exp-gerentes').focus();
+                console.log('Can\'t handle operation.');
+                return false;
+            }
+
+            $.post('./acao/exp_mudar_resp.php', {
+                protocolx: $protocolx,
+                respx: $respx,
+                origemProtocolo: $origemProtocolo
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.button-mudar-resp').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+    }
+
+    function eventoSalvarOrigemProtocolo() {
+        $('.btn-mudar-origem').off('click').on('click', function() {
+            $(".btn-mudar-origem").attr('disabled', 'disabled');
+            let origemProtocoloId = $('#tipos-origem-protocolos').val();
+            let protocoloId = $(this).attr('data-protocolo-id');
+
+            if (origemProtocoloId == 0) {
+                $('#tipos-origem-protocolos').focus();
+                $(".btn-mudar-origem").removeAttr('disabled');
+                return false;
+            }
+
+            salvarOrigemProtocolo(protocoloId, origemProtocoloId);
+        })
+
+    }
+
+    function salvarOrigemProtocolo(protocoloId, origemProtocoloId) {
+        _post('acao-mudar-origem-protocolo', {
+            protocoloId,
+            origemProtocoloId
+        }, function(result) {
+            if (result.trim() == 'OK') {
+                swal('Origem alterada com sucesso!', {
+                    icon: "success"
+                }).then((close) => {
+                    refresh_page_w_warning();
+                });
+            } else {
+                swal('Não foi possível alterar, favor tentar novamente!', {
+                    icon: "error"
+                }).then((close) => {
+                    $(".btn-mudar-origem").removeAttr('disabled');
+                });
+            }
+        })
+    }
+
+    function event_start_stars() {
+        if ($('.stars').length >= 1) {
+            $('.stars').addClass('cursor-pointer');
+            $('.stars').hover(function() {
+                $(this).children().addClass('fa-spin').addClass('text-color-pomegranate').removeClass('far').addClass('fas');
+                $(this).prevAll().children().addClass('fa-spin').addClass('text-color-pomegranate').removeClass('far').addClass('fas');
+            }, function() {
+                $(this).children().removeClass('fa-spin').removeClass('text-color-pomegranate').addClass('far').removeClass('fas');
+                $(this).prevAll().children().removeClass('fa-spin').removeClass('text-color-pomegranate').addClass('far').removeClass('fas');
+            });
+
+            $('.stars').click(function() {
+                var $this = $(this);
+                var protocolox = $(this).attr('protocolox');
+                var starx = $(this).attr('star');
+
+                $.post('./acao/gravar_estrela_negociacao.php', {
+                    protocolox: protocolox,
+                    starx: starx
+                }, function(data) {
+                    if ($.trim(data.toString()) === '') {
+                        var $stars_place = $this.closest('.estrelas');
+                        $stars_place.html('<span class=\'text-success\'>Registrando...<span><p></p>');
+                        setTimeout(function() {
+                            refresh_page_wo_warning();
+                        }, 2000);
+                    } else {
+                        swal('Atenção', data);
+                    }
+                });
+            });
+        }
+    }
+
+    function event_close_protocol() {
+        $('.button-close-protocol').off('click');
+        $('.button-close-protocol').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+
+            $('.fechar-formulario-end-protocol').trigger('click');
+
+            $('.form-close-protocol').html('');
+            $('.button-close-protocol').removeClass('comentario-atual');
+
+            $this.addClass('comentario-atual');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-close-protocol').
+            html('<div class=\'text-center\'><br><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-close-protocol').load('./load/exp_end_protocol.php', {
+                protocolx: $protocolx
+            }, function() {
+                $('.btn-gravar-comissao').attr('disabled', 'disabled');
+
+                event_end_protocol_add_close();
+                set_price_format();
+                event_on_calc();
+                event_save_end_protocol($protocolx);
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-checked');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
+        });
+    }
+
+    function event_end_protocol_add_close() {
+        $('.fechar-formulario-end-protocol').off('click');
+        $('.fechar-formulario-end-protocol').on('click', function() {
+            var $this = $(this);
+            $this.fadeOut('fast');
+
+            var $comment = $this.parents('.form-close-protocol');
+
+            $comment.slideUp('slow', function() {
+                $comment.html('');
+                $comment.show();
+            });
+        });
+    }
+
+    function event_save_end_protocol(protocolx) {
+        $('.btn-gravar-comissao').off('click');
+        $('.btn-gravar-comissao').on('click', function() {
+            var $this = $(this);
+
+            var $protocolx = protocolx;
+            var $to_status = 8;
+
+            var $supervisor = $('#comissao-supervisor').val();
+            var $gerente = $('#comissao-gerente').val();
+            var $empresa = $('#comissao-empresa').val();
+            var $representante = $('#comissao-representante').val();
+            var $usuario = $('#comissao-usuario').val();
+
+            if (false /* JUMP FOR NOW */ ) {
+
+                if ($supervisor.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Supervisor.');
+                    return false;
+                }
+                if ($gerente.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Gerente.');
+                    return false;
+                }
+                if ($empresa.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão da Empresa.');
+                    return false;
+                }
+                if ($representante.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Representante.');
+                    return false;
+                }
+            }
+
+            $.post('./acao/exp_change_protocol_status.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+                supervisorx: $supervisor,
+                gerentex: $gerente,
+                empresax: $empresa,
+                representantex: $representante,
+                usuariox_exp: $usuario,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+
+            console.log($protocolx);
+        });
+    }
+
+    function event_on_calc() {
+        $('.button-calcular').off('click');
+        $('.button-calcular').on('click', function() {
+            var $this = $(this);
+            $this.attr('disabled', 'disabled');
+            $('.btn-gravar-comissao').attr('disabled', 'disabled');
+            show_real_spend($this);
+        });
+    }
+
+    function event_external_link() {
+        $('.button-external-link').off('click');
+        $('.button-external-link').on('click', function() {
+            var $this = $(this);
+            var $value = $this.val();
+
+            $this.preventDefault;
+            $this.attr('disabled', 'disabled');
+            $.post('./acao/set_temp_var.php', {
+                atributox: 'sistema_controle_exp_work_protocol',
+                valorx: $value
+            }, function(returnx) {
+                pop_it_up_center('./pop_exp_external_prot.php', 'extprot', 1280, 720);
+                $this.removeClass('btn-primary').addClass('btn-default');
+                setTimeout(function() {
+                    $this.removeAttr('disabled');
+                }, 2000);
+            });
+        });
+    }
+
+    function event_erase_protocol() {
+        $('.button-erase-protocol').off('click');
+        $('.button-erase-protocol').on('click', function() {
+            var $this = $(this);
+            var $value = $this.val();
+
+            $this.preventDefault;
+            $this.attr('disabled', 'disabled');
+
+            swal('Realmente excluir, o processo irreversível?', {
+                buttons: {
+                    cancel: 'Cancelar',
+                    deletar: {
+                        text: 'Deletar',
+                        value: true,
+                    },
+                },
+            }).then((value) => {
+                switch (value) {
+                    case 'Cancelar':
+                        break;
+
+                    case true:
+                        $this.closest('tr').remove();
+                        $.post('./acao/exp_delete_protocol.php', {
+                            valorx: $value
+                        }, function(returnx) {
+                            call_protocol();
+                            swal('Apagado!', 'Protocolo apagado.', 'success');
+                            setTimeout(function() {
+                                $this.removeAttr('disabled');
+                            }, 2000);
+                        });
+                        break;
+                }
+            });
+
+            $this.removeAttr('disabled');
+        });
+    }
+
+    function event_external_payment() {
+        $('.button-pagar').off('click');
+        $('.button-pagar').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = 111; //AUTHORIZE PAYMENT
+            var $line = $this.parent().parent();
+
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+
+            $line.hide();
+            $.post('./acao/exp_change_protocol_status_master.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    reload_protocolos();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+
+        $('.button-estornar').off('click');
+        $('.button-estornar').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = 222; //REVOKE PAYMENT
+            var $line = $this.parent().parent();
+
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+
+            $line.hide();
+            $.post('./acao/exp_change_protocol_status_master.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    reload_protocolos();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+    }
+
+    function event_add_email() {
+        $('#add-email-prot-vazio').off('keypress').on('keypress', function(key) {
+            if (key.which === 13) {
+                let _this = $(this);
+                let protx = $('#protocolx').attr('protocolx');
+                let emailx = $('#add-email-prot-vazio').val();
+
+                if (emailx.length >= 1) {
+                    if (!validate_email(emailx)) {
+                        swal('Email incorreto.');
+                        return false;
+                    }
+                } else {
+                    swal('É preciso adicionar um email.');
+                    return false;
+                }
+
+                if (protx <= 1) {
+                    return false;
+                }
+
+                $.post('./acao/exp_add_email_prot.php', {
+                    protx: protx,
+                    emailx: emailx
+                }, function() {
+                    refresh_page_w_warning();
+                });
+            }
+        });
+    }
+
+    function event_renew_views() {
+        $('.button-hist-reset-view').off('click');
+        $('.button-hist-reset-view').on('click', function() {
+            var $this = $(this);
+            var $userx = $this.attr('userx');
+
+            $this.attr('disabled', 'disabled');
+            $this.text('Renovando...');
+            $.post('acao/exp_renew_views.php', {
+                userx: $userx
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    refresh_page_wo_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+
+            if (false) {
+
+                swal({
+                    title: 'Tem certeza?',
+                    text: 'Não é possível desfazer a operação!',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dd6b55',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonText: 'Resetar',
+                    closeOnConfirm: false,
+                }, function() {
+                    $this.attr('disabled', 'disabled');
+                    $this.text('Renovando...');
+                    $.post('acao/exp_renew_views.php', {
+                        userx: $userx
+                    }, function($return) {
+                        if ($.trim($return).length == 0) {
+                            refresh_page_wo_warning();
+                        } else {
+                            swal('Atenção', $return);
+                        }
+                    });
+                });
+            }
+        });
+    }
+
+    function send_whats() {
+        $('.whatsx').each(function(index, obj) {
+            whats_to_desktop(index, obj);
+        });
+    }
+
+    function whats_to_desktop(index, obj) {
+        let $this = $(obj);
+
+        let uri = 'https://wa.me/';
+        let phone = $this.attr('phone');
+        let msg = $this.attr('msg');
+
+        let url = uri + phone + '?text=' + msg;
+
+        $this.attr('href', url);
+    }
+
+    /* -EVENTOS ----------------------------------------------------------------------------------------------------- */
+
+    /* +GATILHO ----------------------------------------------------------------------------------------------------- */
+
+    function trigger_register_form_close() {
+        $('#form-cadastrar').trigger('click');
+    }
+
+    /* -GATILHO ----------------------------------------------------------------------------------------------------- */
+
+    /* +STARTS ------------------------------------------------------------------------------------------------------ */
+    /* SHOULD BE MANUAL */
+    /* -STARTS ------------------------------------------------------------------------------------------------------ */
+</script><tr>
+<td colspan="2">
+<div class="box001_p" style="width:970px; height:auto">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width: 950px;">20. Mapa de trabalho - colaborador <img id="open_mapa_admin" src="/sistemas/odonto/adm/./images/mais.png" width="16" height="16" style="cursor: pointer;" />
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo_item_20" class="box003_p" style="width:950px; height:auto"></div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<script>
+	$(document).ready(function () {
+		$("#open_mapa_admin").off("click").on("click", function () {
+			deny_ver_dados();
+			pop_it_up_center("../../admin/mapa_trabalho_colaborador_link.php", "janelamapa", 1280, 720);
+			allow_ver_dados();
+		});
+		
+		function deny_ver_dados() {
+			$("#button-ver-dados").attr("disabled", "disabled");
+		}
+
+		function allow_ver_dados() {
+			$("#button-ver-dados").removeAttr("disabled");
+		}
+	});
+</script>
+<tr>
+<td colspan="2" align="center" valign="top">
+</td>
+</tr>
+</table>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</td>
+</tr>
+</table>
+<style>
+		.rodape {
+			border-top: 1px solid #BDBDBD;
+			background: #EEEEEE;
+			margin: 0px !important;
+			padding: 1em;
+			margin-top: 1em !important;
+		}
+
+		#rodape {
+			filter: drop-shadow(1px 1px 0px #282726);
+		}
+		#tabela_rodape {
+			filter: drop-shadow(1px 1px 0px #282726);
+		}
+	</style>
+<div class="rodape">
+<div style="text-align: right;">
+<button class="scroll-top btn e-botao concreto">
+<i class="fa fa-chevron-up" style="margin-bottom: 3px;"></i>
+</button>
+<div id="info-memoria"></div>
+</div>
+</div>
+<iframe name="mm_excluir" id="mm_excluir" src="about:blank" height="1" width="1" frameborder="0" scrolling="no"></iframe>
+<script>
+    $(document).ready(function() {
+        $.post('./ajax/refresh_session.php', {refresh: 1});
+        setInterval(function() {
+            $.post('./ajax/refresh_session.php', {refresh: 1});
+        }, 300000);
+
+        setInterval(function() {
+            //Notificações
+            if ($('.notif').find('li').hasClass('notif_green')) {
+                setTimeout(function() {
+                    $('.icone_notificacao_ativo').toggleClass('notif_green');
+                    $('#cabecalho').css('border-bottom', '8px solid #8bc34a');
+                    $('#rodape').css('border-top', '8px solid #8bc34a');
+                }, 250);
+                setTimeout(function() {
+                    $('.icone_notificacao_ativo').toggleClass('notif_green');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('.icone_notificacao_ativo').removeClass('notif_green');
+            }
+
+            //Voz do Franqueado
+            if ($('.notif').find('li').hasClass('notif_blue')) {
+                setTimeout(function() {
+                    $('.icone_voz_do_franqueado').toggleClass('notif_blue');
+                    $('#cabecalho').css('border-bottom', '8px solid #42a5f5');
+                    $('#rodape').css('border-top', '8px solid #42a5f5');
+                }, 250);
+                setTimeout(function() {
+                    $('.icone_voz_do_franqueado').toggleClass('notif_blue');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('.icone_voz_do_franqueado').removeClass('notif_blue');
+            }
+
+            //Mensagem
+            if ($('.notif').find('li').hasClass('notif_orange_mi')) {
+                setTimeout(function() {
+                    $('title').html('ATENÇÃO!');
+                    $('.icone_mensageiro_ativo').toggleClass('notif_orange_mi');
+                    $('#cabecalho').css('border-bottom', '8px solid #ff9800');
+                    $('#rodape').css('border-top', '8px solid #ff9800');
+                }, 250);
+                setTimeout(function() {
+                    $('title').html('NOVA MENSAGEM!');
+                    $('.icone_mensageiro_ativo').toggleClass('notif_orange_mi');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('title').html('Sistema Odonto Excellence');
+                $('.icone_mensageiro_ativo').removeClass('notif_orange');
+            }
+
+            //Vídeo
+            if ($('#menu-v').find('li').hasClass('notificacao')) {
+                setTimeout(function() {
+                    $('.notificacao').toggleClass('video_ativo');
+                    $('.span-icon').toggleClass('icon_ativo');
+                }, 250);
+                setTimeout(function() {
+                    $('.notificacao').removeClass('video_ativo');
+                    $('.span-icon').removeClass('icon_ativo');
+                }, 750);
+            } else {
+                $('.notificacao').removeClass('video_ativo');
+                $('.span-icon').removeClass('icon_ativo');
+            }
+        }, 1250);
+
+        $('.scroll-top').click(function() {
+            $('.scroll-top').attr('disabled', 'disabled');
+            $('html, body').animate({scrollTop: 0}, 'slow', function() {
+                $('.scroll-top').removeAttr('disabled');
+            });
+        });
+    });
+</script>
+<div id='system' align="rigth">
+<p></p>
+<abbr title="Memória utilizada.">23.25 MB</abbr>
+|
+<abbr title="Pico de uso de memória.">23.25 MB</abbr>
+|
+<abbr title="Tempo que o servidor levou para gerar a página (em segundos).">
+2.591s </abbr>
+<iframe name="expire" id="expire" src="expirex.php" height="1" width="1" frameborder="0" scrolling="no"></iframe><p align="right">U53076F1693S187.108.198.168</p></div>
+<script type="text/javascript">
+    $('#system').appendTo($('#info-memoria'));
+
+    function msg_notify_by_system_lite($title, $msg, $tag = 'normal') {
+        var options = {
+            body: $msg, lang: 'pt-BR', tag: $tag,
+        };
+
+        var n = new Notification($title, options);
+    }
+
+    function blinkMenuIndicacao() {
+        setInterval(function() {
+            $('#indicacao_cliente').toggleClass('orange');
+        }, 750);
+    }
+</script>
+</body>
+</html>
+<script>
+    function pop_it_up_center(page_URL, title, w, h) {
+        let left  = (screen.width / 2) - (w / 2);
+        let top   = (screen.height / 2) - (h / 2);
+        let popup = window.open(page_URL, title, 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        if (window.focus) {
+            popup.focus();
+        }
+    }
+
+    function carregar_mapa_20(franquia) {
+        var verifyMbox18 = setInterval(() => {
+            if ($('#mbox18').length >= 1) {
+                clearInterval(verifyMbox18);
+                $('#conteudo_item_20').html('<img src="./images/carregando_pacotes.gif" width="32" height="32" align="absmiddle" />');
+                $('#conteudo_item_20').load('./ajax/mapa_trabalho_item_20.php', {franquia: franquia}, function() {
+                    $('#bprosseguir').show();
+                });
+            }
+        }, 1000);
+    }
+
+    function mostrarMaisinhos() {
+        $('.maisinho').show();
+    }
+
+    $(document).ready(function() {
+        mostrarMaisinhos();
+        carregar_mapa_20(1693);
+    });
+</script>
