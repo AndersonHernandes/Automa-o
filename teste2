@@ -1,4 +1,4 @@
-!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
 
@@ -54,66 +54,67 @@
 		$(".select2").select2();
 	});
 </script>
-<link rel="stylesheet" href="/sistemas/odonto/adm/windowfiles/dhtmlwindow.css?1677930146" type="text/css" />
-<link rel="stylesheet" href="/sistemas/odonto/adm/modalfiles/modal.css?1677930146" type="text/css" />
-<script type="text/javascript" src="/sistemas/odonto/adm/js/avalidate.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/windowfiles/dhtmlwindow.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/modalfiles/modal.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/modalfiles/modais.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.config.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.lang-enUS.js?1677930146"></script>
-<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.validators.js?1677930146"></script>
-<style type="text/css">
-            <!--
-            .style1 {font-weight: bold}
-            a.veja:link,a.veja:visited{color: black;text-decoration:none}
-            a.veja:hover{color: black;text-decoration:none}
-            -->
-        </style>
-<style>
-            #aviso {
-                font-weight:bold;
-                color: #C00;
-            }
 
-            #aviso a {
-                margin: 10px;
-            }
-
-            #aviso_atualizacao {
-                font-weight:bold;
-                color: #C00;
-            }
-
-            #aviso_atualizacao a {
-                margin: 10px;
-            }
-
-            .texto1 {
-                margin-top: 5px;
-                padding-top: 10px;
-            }
-        </style>
-
-<link rel="stylesheet" href="/sistemas/odonto/adm/css/colorbox.css?1677930146" />
-<script src="/sistemas/odonto/adm/js/jquery.colorbox-min.js?1677930146"></script>
 <script>
-            $(document).ready(function () {
-                $(".modal_verificar_cliente").colorbox({iframe: true, width: "710", height: "650", overlayClose: true});
+            function fechar() {
+                $('.meu_modal').colorbox.close();
+            }
+
+            $(document).ready(function() {
+                $('.meu_modal').colorbox({iframe: true, width: '700px', height: '430px', overlayClose: false});
+                $('.meu_modal_003_2').colorbox({iframe: true, width: '800px', height: '400px', overlayClose: false});
+                $('.meu_modal_003_3').colorbox({iframe: true, width: '850px', height: '400px', overlayClose: false});
+                $('.meu_modal_003_5').colorbox({iframe: true, width: '850px', height: '500px', overlayClose: false});
+                $('.meu_modal_015').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_017').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_001').colorbox({iframe: true, width: '700px', height: '450px', overlayClose: false});
+                $('.meu_modal_016').colorbox({iframe: true, width: '800px', height: '450px', overlayClose: false});
+                $('.meu_modal_04').colorbox({iframe: true, width: '450', height: '300', overlayClose: false});
+                //$(".inline").colorbox({inline:true, width:"400"});
             });
 
-            function fecha_modal() {
-                $(".modal_verificar_cliente").colorbox.close();
+            function abre_proc(qq_trat, qq_franquia, qq_prof, qq_data, qq_id) {
+                // abre janela do cadastro do cliente
+                $.colorbox({
+                    iframe: true,
+                    width: '850',
+                    height: '500',
+                    overlayClose: true,
+                    href: 'mapa_trabalho_franqueado_inc003_modal_5b.php?tratamento=' + qq_trat + '&franquia=' + qq_franquia + '&prof=' + qq_prof + '&data=' + qq_data,
+                    onClosed: function() {
+                        re_abre(qq_trat, qq_franquia, qq_prof, qq_data, qq_id);
+                    }, // quando fecha tem que abrir novamente a janela da cobranca
+                });
             }
+
+            function re_abre(qq_trat, qq_franquia, qq_prof, qq_data, qq_id) {
+                //alert(qq_cliente);
+                var j_href = 'mapa_trabalho_franqueado_inc003_modal_5.php?franquia=' + qq_franquia + '&prof=' + qq_prof + '&data=' + qq_data + '&linha_marcada=' + qq_id;
+                // abrindo a janela de cobranca
+                $.colorbox({
+                    iframe: true, width: '850', height: '500', overlayClose: false, //closeButton: false,
+                    escKey: false, href: j_href,
+                });
+            }
+
+            function abre_negativados(qq_franquia) {
+                //alert(qq_cliente);
+                var j_href = 'mt_box_18c.php?franquia=' + qq_franquia;
+                // abrindo a janela de cobranca
+                $.colorbox({
+                    iframe: true, width: '700', height: '450', overlayClose: false, //closeButton: false,
+                    escKey: false, href: j_href,
+                });
+            }
+
         </script>
 
-<script language="JavaScript">
-            function excluir(id) {
-                if (confirm("Tem certeza que deseja excluir?")) {
-                    document.getElementById("mm_excluir").src = "excluir_retornos.php?ret=&acao=excluir&table=tb_retornos&id_posfix=&id=" + id;
-                }
+<link rel="stylesheet" href="./css/caixas.css" />
+<style>
+            .o_bold {
+                font-weight: bold;
             }
-        </script>
+        </style>
 </head>
 <body topmargin="0" marginheight="0">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
@@ -192,7 +193,7 @@
 		margin-top: 30px;
 	}
 </style>
- <style>
+<style>
 		.info-userx {
 			color: #EEEEEE;
 			background-color: #373737;
@@ -213,65 +214,41 @@
 <div class="title-header defaultSize">
 <div class="info-userx">
 <div class="time-zone">
-Time Zone: Etc/GMT+3 - 06/03/2023 09:46:27 </div>
+Time Zone: Etc/GMT+3 - 06/03/2023 19:12:17 </div>
 <div class="session-user">
 Usuário: G53076 /
-F: 1693 /
+F: 1468 /
 T: 10 /
 PT-BRL </div>
 </div>
 <div class="logox">
-<div class="content-center">
-<label>
-<nav class="rating">
-<ul id="some-list">
-<li class="li current" title="Parabéns, o Projeto 360 foi concluído!">
-<svg>
-<use xlink:href="#star"></use>
-</svg>
-</li>
-</ul>
-<div>
-<span>
-<svg><use xlink:href="#star"></use></svg>
-</span>
-</div>
-</nav>
-<svg style="display: none;">
-<symbol viewBox="0 0 36 34" id="star">
-<path fill="currentColor" d="M19.6859343,0.861782958 L24.8136328,8.05088572 C25.0669318,8.40601432 25.4299179,8.6717536 25.8489524,8.80883508 L34.592052,11.6690221 C35.6704701,12.021812 36.2532905,13.1657829 35.8938178,14.2241526 C35.8056709,14.4836775 35.6647294,14.7229267 35.4795411,14.9273903 L29.901129,21.0864353 C29.5299163,21.4962859 29.3444371,22.0366367 29.3872912,22.5833831 L30.1116131,31.8245163 C30.1987981,32.9368499 29.3506698,33.9079379 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.51252508,34.2485817 6.34688429,33.6765963 5.98741159,32.6182265 C5.90066055,32.3628116 5.86681029,32.0929542 5.88785051,31.8245163 L6.61217242,22.5833831 C6.65502653,22.0366367 6.46954737,21.4962859 6.09833466,21.0864353 L0.519922484,14.9273903 C-0.235294755,14.0935658 -0.158766688,12.8167745 0.690852706,12.0755971 C0.899189467,11.8938516 1.14297067,11.7555303 1.40741159,11.6690221 L10.1505113,8.80883508 C10.5695458,8.6717536 10.9325319,8.40601432 11.1858308,8.05088572 L16.3135293,0.861782958 C16.9654141,-0.0521682813 18.2488096,-0.274439442 19.1800736,0.365326425 C19.3769294,0.500563797 19.5481352,0.668586713 19.6859343,0.861782958 Z"></path>
-</symbol>
-<path class="shadow" d="M18.7022469,29.7633426 L29.1611722,33.6861584 C28.8859085,33.8576358 28.5650147,33.9672494 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.98083887,34.0953792 7.34281791,33.9989813 6.83864817,33.6859784 L17.2977531,29.7633426 C17.7505234,29.5935537 18.2494766,29.5935537 18.7022469,29.7633426 Z"></path>
-</svg>
-</label>
-</div>
 <div class="header-content">
 <spam id='spam-title'>
-GUARAREMA - SP
+JARDINOPOLIS - SP
 </spam>
 <spam id='spam-combo'>
 <select class="comboFranquia select2" style="width:400px!important" autocomplete="off">
-<option value="iRigmBRQA786WMne0YJ2JghI915D5TXnag%3D%3D">
+<option value="lZ9mbhY0Hdu2enD99%2Bk2I7h7i6AePZsV6w%3D%3D">
 ERECHIM - RS - BAIRRO LINHO [1006] </option>
-<option value="eNLbStrO80NAZn9xs4FR0BgwcTOuAuo%3D">
+<option value="xC3cBbw3oJZz655wWnZrig38UW3g%2F4s%3D">
 ERECHIM - RS - CENTRO [60] </option>
-<option selected="selected" value="pE%2Fxh05RiU1uDBBCQmWucdKhdqJBwvZrdA%3D%3D">
+<option value="zpighQDca%2FF7%2F5%2BcIdoWHZWqffSoRrvh9g%3D%3D">
 GUARAREMA - SP [1693] </option>
-<option value="l4Z0cjjgqa5D90te0gqLK50MwdM7QqNiaw%3D%3D">
+<option selected="selected" value="X2w6smcGgXHRpLbQeQOLIAYBIQYGebsPaw%3D%3D">
 JARDINOPOLIS - SP [1468] </option>
-<option value="2gjFGG%2F3VYjSePAFBWrJiruwQsDnN%2Fz2">
+<option value="PDmTk4fAJ%2BGBE6gSnQn4L2ZVPASgaUMg">
 MANDAGUACU - PR [522] </option>
-<option value="5nvwZ7jpCf9w33lpgkBrz9BXzw7QDvCx">
+<option value="tVVzRid1SljEXHUgboi%2FYvMyEOjNnliF">
 MARIALVA - PR [534] </option>
-<option value="IS7r%2BaIazujbFiI0HuxR6pJ72DHwfH29jQ%3D%3D">
+<option value="K03EyMJ%2FF4GPnIkJNKS1FpJskutep2t5Zg%3D%3D">
 PALMEIRA DAS MISSOES - RS [1069] </option>
-<option value="w0fxmG0aDgSZeUuphCrfrVfg3rnjpBZlpA%3D%3D">
+<option value="vdHunBuVsn9jOlH6ivOqbu27CSo4sPh1sw%3D%3D">
 RONDA ALTA-RS [1382] </option>
-<option value="0%2FUT9XaI5iKPE4JTVzPrkspolsE1n7Q9gQ%3D%3D">
+<option value="tix656iv5os%2F0kB158GcxvlTORlDVqZ1YA%3D%3D">
 SALTO DE PIRAPORA - SP [1204] </option>
-<option value="0Fy3paJxj5Fnr2LQO9uprl1hFF%2Fvzgmu">
+<option value="vYGzwkFn2i5BQ8RCgJ3V5NX4qqEt5YJ9">
 SARANDI - PR - CENTRO [813] </option>
-<option value="ne9p0vi6VdbsoRqeozFK%2FU28lVSP5azx">
+<option value="V0Wm%2Fj2AeYrBSnmvWSvIFGi48BSToVdp">
 UBERLANDIA - MG - CENTRO [695] </option>
 </select>
 </spam>
@@ -282,7 +259,7 @@ UBERLANDIA - MG - CENTRO [695] </option>
 		$(document).ready(function () {
 			$(".comboFranquia").change(function() {
 				let franquia_referencia = $(this).val();
-				let retorno = '/sistemas/odonto/adm/home_full.php'; 
+				let retorno = '/sistemas/odonto/adm/mapa_trabalho_franqueado.php?interno=1'; 
 				
 				let $dados = {
 					franquia_referencia, 
@@ -295,11 +272,12 @@ UBERLANDIA - MG - CENTRO [695] </option>
 			});			
 		});	
 	</script>
-
-
+<script>
+                $(".comboFranquia").prop( "disabled", true);
+            </script>
 <table border="0" width="100%" height="75%" cellpadding="0" cellspacing="0" bgcolor="white">
 <tr>
-<td width="13" valign="top" class="hidden-print">
+<td width="13" valign="top">
 <p>
 <br>
 <iframe src="./include_menu3/_menu3.php" width="275px" height="2000px" scrolling="no" style="overflow: hidden; border: none;"></iframe>
@@ -323,1557 +301,3229 @@ UBERLANDIA - MG - CENTRO [695] </option>
             }
         });
     });
-</script>
+</script> </p>
+</td>
+<td valign="top">
+<p>
+</p>
+<table width="1000" border="0" align="center" cellpadding="4" cellspacing="4">
+<tr>
+<td colspan="2" align="center" valign="top">
+<button style="width: 350px" class="e-botao turquesa" onClick="window.location.href = 'cultura_agendamento.php?1677930146&cod===wdJpnY1pEWaBTNXFGQ9kFRNRXTE1EdNpWT'">Cultura do Agendamento &gt;&gt;</button>
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center" valign="top">
+<div class="box001_p" style="width:970px; height:295px">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width:950px">Mapa de Trabalho</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width:950px; height:50px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+<strong class="sub_titulo">Franquia: 1468 - Odonto Excellence - Jardinópolis - SP</strong>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width:950px; height:145px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+ <strong class="sub_titulo">Gestão de ambiente: </strong>
+</td>
+</tr>
+<tr>
+<td height="50" align="center" valign="middle">
+<strong class="sub_titulo">Cadeiras: 3</strong></br>
+<strong class="sub_titulo">Raio-x panorâmico: Sim</strong></br>
+<strong class="sub_titulo">Tomografia: Não</strong></br>
+<strong class="sub_titulo">CAD/CAM: Não</strong></br>
+<strong class="sub_titulo">Raio-x digital: Não</strong></br>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_m">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+1. índice de aceitação <a href="./orcamentos.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_001' href="rel_aproveitamento_efetivacao_inc001_modal_all.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Aproveitamento mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo001" class="box003_m">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="50" align="center" valign="middle">
+<div class="info_caixas" style="width: 330px;">
+Clínico Geral - Período:
+01/03/2023 a 04/03/2023 - índice mínimo: 80%
+</div>
+<p>
+<strong>
+<span class="super_titulo">
+89%
+</span>
+<br><br>
+Total de avaliações: 9 - Efetivadas: 8 </strong>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Aceitação&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="276" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+89 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<input name="hr_001" id="hr_001" type="hidden" value="89" />
+<input name="hr_002" id="hr_002" type="hidden" value="" />
+</td>
+</tr>
+<tr>
+<td height="80" align="center" valign="middle">
+<strong>
+Média de parcelamento: 29.38 <strong>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Total de cadastros: 9</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Total de indicações:
+4 - (44,44%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações MKT Viral:
+4 - (44,44%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações por conversão:
+0 - (0,00%)
+</strong>
+</td>
+</tr>
+<tr>
+<td>
+ <br>
+</td>
+</tr>
+<tr>
+<td>
+<strong>
+Indicações pelo aplicativo:
+0 - (0,00%)
+</strong>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+2. Metas <a id="relatorio_metas" style="cursor: pointer;">
+Metas orofacial
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="340" align="center" valign="middle">
+<div class="info_caixas" style="width:330px">
+Período: 01/03/2023 a 04/03/2023 - índice mínimo: 80%
+</div>
+<p>
+<span class="super_titulo">Clínico Geral: 36%</span><br>
+<strong>
+<br>
+Faturamento: 280.000,00 <br>
+Proporcional: 55.998,00 <br>
+Efetivadas: 20.365,70 </strong>
+<br><br>
+<strong style="color: blue"> <u>Ticket médio: 2.545,71</u></strong>
+<br>
+</p>
+<p>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Clínico&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="113" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+36 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>
+<span class="super_titulo">Implantodontia: 0%</span>
+<br>
+<strong>
+<br>
+Faturamento: 30.000,00 -
+Proporcional: 6.000,00 -
+Efetivadas: 0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Implanto&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Ortodontia: 50%</span>
+<br>
+<br>
+<strong>
+Financeira: 14.194,62 -
+Proporcional: 2.838,00 -
+Total recebido: 1.421,02 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Ortodontia&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="155" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+50 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Orofacial:</span>
+<br><br>
+<strong>Sem metas por procedimento cadastradas</strong>
 </p>
 </td>
-<td valign="top" class="conteudo">
-<p align="center">&nbsp;</p>
-
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
 <script>
-                        $(document).ready(function () {
-                            setTimeout(function () {
-                                $("#aviso").load("ajax/aviso_tarefa.php");
-                                $("#aviso_atualizacao").load("ajax/aviso_atualizacao.php");
-                            }, 1250);
-                        });
-                    </script>
-<p align="center">
-<span>
-Olá,
-<strong>
-JHONATAN WILLIAN DOS SANTOS <br>
-<small style="color: grey;">
-Franqueado <br>
-</small>
-</strong>
+    $(document).ready(function() {
+        $("#relatorio_metas").off("click").on("click", function() {
+            deny_ver_dados();
+            pop_it_up_center("../../admin/mapa_trabalho_rel_metas_orofacial.php", "janelamapa", 1280, 720);
+            allow_ver_dados();
+        });
+
+        function deny_ver_dados() {
+            $("#button-ver-dados").attr("disabled", "disabled");
+        }
+
+        function allow_ver_dados() {
+            $("#button-ver-dados").removeAttr("disabled");
+        }
+    });
+</script> </tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+3. Atendimentos x Procedimentos concluídos <a class='meu_modal' href="mapa_trabalho_franqueado_inc003_modal.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Por profissional' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_2' href="mapa_trabalho_franqueado_inc003_modal_2.php?franquia=1468&data_de_ontem=2023-03-04&ontem_data_inicial=2023-03-04 00:00:00&ontem_data_final=2023-03-04 23:59:59">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_3' href="mapa_trabalho_franqueado_inc003_modal_3_ajax.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Grade de agendamento' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_2' href="mapa_trabalho_franqueado_inc003_modal_4.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Últimos 30 dias - Por Profissional' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal_003_5' href="mapa_trabalho_franqueado_inc003_modal_5.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Controle de produção diária' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo003" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Clínico Geral - Período: 04/03/2023 </div>
+<br>
+<span class="sub_titulo">Atendimento:</span> <span class="super_titulo">6</span>
+<br><br>
+<span class="sub_titulo">Procedimentos concluídos:</span> <span class="super_titulo">9</span>
+<p>
+<span class="super_titulo">
+Porcentagem de faltosos:
+25 %
 </span>
+<br>
+<br>
+<span class="sub_titulo">
+Pacientes agendados:
+8 Pacientes faltosos:
+2 </span>
 </p>
-<hr style="border: thin solid #757575; max-width: 700px;">
-<div id="painel_pesquisa_franqueado"></div>
-
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="420" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Faltoso(s)&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="78" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+25 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_003" id="hr_003" type="hidden" value="">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+4. Pacientes sem agendamento nas próximas agendas <a href="../../admin/paciente_sem_agendamento.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class="meu_modal_04" href="./mostrar_agendamento_real.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Agendamento Real' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo004" class="" style="background: white">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">
+Clínico Geral, iniciando em:
+04/03/2023 </div>
+<br>
+<p>
+<strong>
+Proporção sem agendamento </strong>
+</p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="187" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+60 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<span class="sub_titulo">
+Pacientes sem dívida:
+</span>
+<span class="super_titulo">
+93 </span>
+<br><br><br>
+<span class="sub_titulo">
+Pacientes com dívida:
+</span>
+<span class="super_titulo">
+46 </span>
+<br><br><br>
+<span class="sub_titulo">
+Tratamentos em stand-by:
+</span>
+<span class="super_titulo">
+37 </span>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc004_modal.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Tratamentos em stand-by' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<input name="hr_004" id="hr_004" type="hidden" value="">
+<br><br><br>
+<span class="sub_titulo">
+<abbr title="Tratamentos em andamento = Tratamentos Sem Dívida + Tratamentos Com Dívida + Tratamento em Stand-by + Tratamentos Agendados">
+Tratamentos em andamento:
+</abbr>
+</span>
+<span class="super_titulo">
+231 </span>
+</td>
+</tr>
+</table>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+5. Porcentagem de reagendamento do dia anterior <a href="./relatorio_reagendamento_pre.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' target="_blank" href="mapa_trabalho_franqueado_inc005_modal.php?franquia=1468&data_de_ontem=2023-03-04">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Tratamentos não reagendados' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo005" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Clínico Geral - Período:
+04/03/2023 - índice mínimo: 90%
+</div>
+<p>
+<span class="super_titulo">100%</span>
+<br>
+<br>
+<span class="sub_titulo">
+Pacientes atendidos:
+3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pacientes reagendados:
+3 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="420" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Reagendamento&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+100 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_005" id="hr_005" type="hidden" value="100">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+6. Quantidade de cobranças x quantidade cobradas <a href="agente_cobranca_retornos_franqueado.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc006_modal.php?franquia=1468&amp;data_de_ontem=2023-03-04" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo006" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 04/03/2023 - índice mínimo: 80%</div>
+<p>
+<span class="super_titulo">
+104 %
+</span>
+<br>
+<br>
+<span class="sub_titulo">
+Cobranças:
+120 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cobrado(s):
+125 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Cobrança&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+104 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_006" id="hr_006" type="hidden" value="104">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+7. Cancelamentos alta a pedido e automático <a href="rel_franqueado_canc_resumido.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo007" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px">
+Clínico Geral - Período:
+01/03/2023 a 04/03/2023 - índice máximo: 18%
+</div>
+<p>
+<span class="super_titulo">Alta a pedido: 0%</span>
+<br>
+<br>
+<strong>
+Contratado:
+0,00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cancelado:
+0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Alta&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<p>
+<span class="super_titulo">Automático: 0%</span>
+<br>
+<br>
+<strong>
+Contratado:
+0,00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Cancelado:
+0,00 </strong>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Automático&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="0" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#64b5f6">
+0 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_007" id="hr_007" type="hidden" value="">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+8. Porcentagem de aproveitamento do agente de cobrança <a href="agente_cobranca_aproveitamento_res_franqueado.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo008" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Período:
+25/01/2023 a
+24/02/2023 - índice mínimo: 65%
+</div>
+<p>
+<span class="super_titulo">52%</span>
+<br>
+<br>
+<span class="sub_titulo">
+Cobranças efetuadas:
+232 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pagamentos realizados:
+121 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Aproveitamento&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="162" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+52 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_008" id="hr_008" type="hidden" value="52">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+9. Pesquisa de satisfação (solicitados x respondidos) <a href="./pesquisa_rel_franqueado.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo009" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">
+Período:
+01/03/2023 a
+04/03/2023 -
+índice mínimo: 90%
+</div>
+<p>
+<span class="super_titulo">
+14 %
+</span>
+<br>
+<br>
+<span class="sub_titulo">
+Clientes abordados:
+22 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Quantos responderam:
+3 </span>
+</p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Pesquisa&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="42" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+14 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_009" id="hr_009" type="hidden" value="14">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+10. Comparativo geral da receita do mês anterior <a href="./caixa.php" target="_blank">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Abrir outra página com informações mais detalhadas' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo010" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 280px;">
+Mês anterior:
+01/02/2023 a
+06/02/2023 </div>
+<p><span class="sub_titulo"></span><span class="super_titulo">7.919,61</span></p>
+<div class="info_caixas" style="width: 280px;">
+Mês atual:
+01/03/2023 a 05/03/2023 </div>
+<p><span class="sub_titulo"></span> <span class="super_titulo">4.672,76</span></p>
+<input name="hr_010" id="hr_010" type="hidden" value="0,00">
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+11. Aproveitamento de Agendamento </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo011" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 20/01/2023 a 19/02/2023 - índice mínimo: 80%</div>
+<p><span class="super_titulo">72%</span><br />
+<br />
+<span class="sub_titulo">Agendamento:
+344 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aproveitamento:
+248 </span></p>
+<p>
+<style>
+    .otexto{
+        font-family:Verdana, Geneva, sans-serif !important;
+        font-size:9px !important;
+        font-weight:bold !important;
+    }
+</style>
+<table width="380" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td width="60" height="20" align="right">
+Agenda&nbsp;&nbsp;
+</td>
+<td width="310" style="border: 1px solid black; padding: 0px 0px 0px 0px !important;">
+<table width="223" border="0" cellspacing="0" cellpadding="0" class="otexto">
+<tr>
+<td height="20" align="center" bgcolor="#ec644b">
+72 % </td>
+</tr>
+</table>
+</td>
+</tr>
+</table> </p>
+<input name="hr_011" id="hr_011" type="hidden" value="72" />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+12. Estatísticas do Aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+<div class="info_caixas" style="width:280px">
+Período:
+Março/2023 </div>
+<br>
+<div align="center" class="legenda">
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<thead>
+<tr>
+<th colspan="3">
+INSTALAÇÕES/EFETIVAÇÕES </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+INSTALAÇÕES </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+EFETIVAÇÕES </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+PROPORÇÃO </strong>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+3 </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+7 </strong>
+</td>
+<td height="30" width="220" class="mtabela" align="center">
+<strong>
+42,86%
+</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<div class="info_caixas" style="width:280px">
+Período:
+04/02/2023 -
+06/03/2023 </div>
+<br>
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<thead>
+<tr>
+<th colspan="2">
+NOTIFICAÇÕES </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de consulta (dia seguinte) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+442 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de consulta (hoje) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+415 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de tratamento realizado parcialmente </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+11 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Aviso de vencimento de parcela de prótese </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+1073 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Confirmação de e-mail </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+1241 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Confirmação de telefone </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+637 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Feliz aniversário </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+46 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (parcela vencida) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+6723 </span>
+ </td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (vencimento em 7 dias) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+511 </span>
+</td>
+</tr>
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+Notificação de cobrança (vencimento hoje) </strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+272 </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="72" />
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<div class="box001_p">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+13. Negativados e Desnegativados&nbsp;&nbsp;
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês anterior' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_2.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_4.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Pré-Acordo - Mês Anterior' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<a class='meu_modal' href="mapa_trabalho_franqueado_inc013_modal_3.php?franquia=1468">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Pré-Acordo - Mês Atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo013" class="box003_p">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<p><span class="sub_titulo">Negativados:</span> <span class="super_titulo">5</span></p>
+<p><span class="sub_titulo">Desnegativados:</span> <span class="super_titulo">3</span></p>
+<input name="hr_013" id="hr_013" type="hidden" value="5" />
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+14. Avaliação de Oclusão
+<a id='detalhes-oclusao' franquia="XSDDRFd50sG3VfWyxNyUGY91FUJE7gPnjA%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Relatório mês atual' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width:280px">Período: 04/03/2023</div>
+<p></p>
+<div align="center" class="legenda">
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="0" class="mtabela">
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong>
+</strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+Total </span>
+</td>
+<td align="center" width="55" class="mtabela">
+<span class="sub_titulo">
+%
+</span>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Concluído / em andamento </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+2 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+66.67 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Radiologia </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Radiologia - Paciente vai trazer a pasta </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0
+</strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+ 0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo paciente </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0
+</strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo Paciente com Documentação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo dentista </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Rejeitada pelo Dentista com Documentação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Aguardando confirmação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+2 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+66.67 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Paciente com menos de 12 anos. </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<strong>
+Sem especialidade indicada </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+0.00 </strong>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="sub_titulo">
+ Total </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+3 </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+100%
+</span>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+<span class="sub_titulo">
+Novas avaliações de orto </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+3
+</span>
+</td>
+<td align="center" class="mtabela">
+<a href="mapa_trabalho_franqueado_inc014_ro_modal_2.php?franquia=1468&amp;de=2023-03-04&ate=2023-03-04" class="meu_modal"><img src="./images/link_externo.png" width="10" height="10" border="0" align="absmiddle" title="Mais informações" /></a>
+</td>
+</tr>
+</table>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="72" />
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
 <script>
-        $(document).ready(function() {
-            $(".btn-inscrever-ferramenta-termo").off("click");
-            $(".btn-inscrever-ferramenta-termo").on("click", function() {
-                let preenchido = 0;
-                let franquias = new Array();
-                $("input[name='franquiasEscolhaFerramenta[]']:checked").each(function() {
-                    franquias.push($(this).val());
-                    if (franquias) {
-                        preenchido = 1;
-                    }
+    $(document).ready(function(){
+        $("#detalhes-oclusao").click(function(){
+            let franquia = $(this).attr("franquia");
+            pop_it_up_center(`../../admin/rel_avaliacao_oclusao_orto.php?franquia=${franquia}`, "Avaliação de oclusão - Ortodontia");
+        });
+    });
+</script> </tr>
+<tr>
+<td align="right" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+16. Indicações pelo aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<br>
+<div class="info_caixas" style="width: 280px;">Período: últimos 30 dias</div>
+<div align="center" class="legenda">
+<table class="mtabela o_bold" width="90%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="30" width="220" class="mtabela">
+<strong></strong>
+</td>
+<td align="right" width="30" class="mtabela">
+<span class="sub_titulo">
+Qtde.
+</span>
+</td>
+<td align="center" width="55" class="mtabela">
+<span class="sub_titulo">
+%
+</span>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #E08283!important">&nbsp;</div>
+<strong>
+Nova indicação </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+1 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+7.14 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #EC644B!important">&nbsp;</div>
+<strong>
+Contato sem sucesso </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+8 </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+57.14 %
+</strong>
+</td>
+</tr>
+<tr>
+<td class="mtabela">
+<div id="box-red1" style="background-color: #F7CA18!important">&nbsp;</div>
+<strong>
+Avaliação pendente </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+5  </strong>
+</td>
+<td align="right" class="mtabela">
+<strong>
+35.71 %
+</strong>
+</td>
+</tr>
+<tr>
+<td align="right" class="mtabela">
+<br>&nbsp;
+<span class="sub_titulo">
+Total </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+14 </span>
+</td>
+<td align="right" class="mtabela">
+<br>
+<span class="sub_titulo">
+100%
+</span>
+</td>
+</tr>
+</table>
+<br>
+<br>
+</div>
+<input name="hr_011" id="hr_011" type="hidden" value="72">
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<style>
+    #mcc-azul {
+        color: #2196F3;
+    }
+
+    #mcc-amarelo {
+        color: #F9A825;
+    }
+
+    #mcc-vermelho {
+        color: #F44336;
+    }
+
+    #box-blue {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #2196F3;
+        display: inline-table;
+    }
+
+    #box-yellow {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #F9A825;
+        display: inline-table;
+    }
+
+    #box-red {
+        width: 12px;
+        padding: 0px;
+        border: 1px solid;
+        margin: 0px;
+        background-color: #F44336;
+        display: inline-table;
+    }
+
+    .strong-blue {
+        color: #2196F3;
+    }
+
+    .strong-red {
+        color: #F44336;
+    }
+
+    .strong-blue {
+        color: #2196F3;
+    }
+
+    .strong-red {
+        color: #F44336;
+    }
+
+    .cursor_help {
+        cursor: help;
+    }
+</style>
+<tr>
+<td colspan="2" align="center" valign="top">
+<div class="box001_p" style="width: 970px; height: auto; cursor: default;">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width: 950px;">
+17. Ticket médio - Clínico Geral (últimos 30 dias)
+<a class='meu_modal_017' href="mapa_trabalho_franqueado_inc017_ticket_medio_paciente_v2.php">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio por cliente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</a>
+<span id="hist-comp-dentista" class="" style="cursor: pointer;">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Histórico Comportamental do Dentista' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+<span id="procedimentos-vendidos-profissional" class="" style="cursor: pointer;">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Procedimentos vendidos avaliação' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+<br />
+<br />
+<small>
+[ 03/02/2023 ~ 05/03/2023 ]
+</small>
+</div>
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo" class="box003_p" style="width: 950px; height: auto">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="middle">
+<table width="99%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+<table width="99%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td class="mtabela" width="100">Profissional</td>
+<td class="mtabela" width="80" align="center">
+índice de aceitação <br>
+(75 %)
+</td>
+<td class="mtabela" align="center">
+Média procedimentos vendidos </td>
+<td class="mtabela" width="200" align="center">
+<abbr title="Valor Total das Efetivações dividido pelo N° de Efetivações">
+Ticket médio <br>
+(2.500,00)
+ </abbr>
+</td>
+<td class="mtabela" style="cursor: help;" width="80" align="center" title="Valor dos procedimentos do mês - Do 1° dia até o atual.">
+<abbr title="Valor médio dos procedimentos concluídos no período">
+Ticket médio de conclusão </abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+<abbr title="05/11/2022 - 19/01/2023 ">
+Carteira concluída (%)
+</abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+<abbr title="Termo de conclusão de tratamento escaneados">
+Termo escaneado (%)
+</abbr>
+</td>
+<td class="mtabela" width="80" align="center">
+Média de produtividade diária <br>
+(11)
+</td>
+<td class="mtabela" width="80" align="center">
+Estimativa de Conclusão da Carteira </td>
+<td class="mtabela" width="80" align="center">
+Pacientes <br />
+Ativos </td>
+<td class="mtabela" width="80" align="center">
+Procedimentos a realizar </td>
+<td class="mtabela" width="80" align="center">
+Média de parcelamento </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="CHRISTIANE HIDALGO DE MATOS [#45230]">
+<span>
+CHRISTIANE </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">0,00%</strong>
+</td>
+<td class="mtabela" align="right">
+0 </td>
+<td class="mtabela" align="right">
+<strong class="strong-red">
+0,00 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="u206iyNhfaCNK54AUCMeHBvArH%2Bda9YyTCo%3D" id_franquia="w6ylv0xr4h8bbJG4o3AMZRneylyaym6qpg%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="M1GEFzNYo9l196zrgNZKkKhuI6GcQXb8NaQ%3D" id_franquia="lSe3nvN%2BMS%2BV2Oj0RvTEsOus2XyfNojofQ%3D%3D" tipo_relatorio='5NOt1myOdmGEPrTG561b8JpirNBeyw%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="IdSUXpsUZNgjhBNmRU5KJWesQcfqz%2BAGD%2Bg%3D" id_franquia="0YIt%2FQ5nTnJdYwnetZxd3akPsk1xKBnZag%3D%3D" tipo_relatorio='Z6WXDCJTqV2mHqJaxrqV7IEe1fnSLA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+50,00 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+60,00 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 9 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>1,33</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+197 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+39 </td>
+<td class="mtabela" align="right">
+153 </td>
+<td class="mtabela" align="right">
+28,69 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="NICOLE SOUZA CIMENTO [#53372]">
+<span>
+NICOLE </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-red">54,84%</strong>
+</td>
+<td class="mtabela" align="right">
+13 </td>
+<td class="mtabela" align="right">
+
+<strong class="strong-blue">
+3.649,57 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="Jbgwac%2Bke%2BC7SDbTD%2FAKgLj3SDYP9WhEARk%3D" id_franquia="p7ZCDLm6U7pi34i0M7uEMONfMGSPhIC2Uw%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="MKPZtLSb72arz%2BeQdpJ434mPUgNH1Uk%2BTQE%3D" id_franquia="ZyEbmJgTXOhaYebOUBa1FZGf5HW5cKYoXg%3D%3D" tipo_relatorio='JJISyuUpgbNDqAlJ3mGTwYaskafhOA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="g72cMDbPJPxmeLHeUpAfePgj6tyVYuZnKUI%3D" id_franquia="WccBra%2F2Y9yiAd7eD6HurQjGtetLaEnTsA%3D%3D" tipo_relatorio='pdU%2F5WXz2t%2BHVsMZ7kq5orCMTtgYvg%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+62,50 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+86,67 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+<abbr title='Media de Produtividade dos 19 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>14,89</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-azul" class='mcc-azul'>
+32 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+58  </td>
+<td class="mtabela" align="right">
+478 </td>
+<td class="mtabela" align="right">
+40,81 </td>
+</tr>
+<tr>
+<td class="mtabela cursor_help" title="VITORIA AUGUSTA COIMBRA [#62223]">
+<span>
+VITORIA </span>
+</td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">79,49%</strong>
+</td>
+<td class="mtabela" align="right">
+5 </td>
+<td class="mtabela" align="right">
+<strong class="strong-blue">
+2.558,72 </strong>
+<span id="btn-ticket-medio" class="btn-ticket-medio" title="Ticket médio" style="cursor: pointer;" id_profissional="S%2FDDEW2vWC234Zmh4REERl7G9RKxVatBoJE%3D" id_franquia="FDT4FYgDf5bFH3PioISCPXW6Q3bMMMc4VQ%3D%3D">
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Ticket médio' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td class="mtabela" align="right">
+<table>
+<tr>
+<td style="text-align: right;">
+</td>
+<td>
+<span id="btn-mes-corrente" class="btn-mes-corrente" title="Mês corrente" style="cursor: pointer;" id_profissional="JQ00vYuqY4bE7mDoq1RlyKpPtEiyQKfBmY0%3D" id_franquia="MxgML9oBkH38H9RwFzYqgSrGQo1weHnGSw%3D%3D" tipo_relatorio='yDLwEFLOJQ24CVfynqDND62XKJUu%2FA%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='Mês Corrente' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+<td>
+<span id="btn-ultimos-30-dias" class="btn-ultimos-30-dias" title="últimos 30 dias" style="cursor: pointer;" id_profissional="8HyRq4beKSbwA0nZnLDoYrsIZH2h71vGiD8%3D" id_franquia="QRG81DtOrftuBFl6nYYqgEAjnkPOx968%2FQ%3D%3D" tipo_relatorio='uIeSVKHRfst7BMzfZTua0wQu9oiO0Q%3D%3D'>
+<img src='./images/mais.png' class='maisinho' border='0' align='absmiddle' title='últimos 30 dias' style='
+                    display: none; 
+                    margin-left: 3px;
+                    width: 16px;
+                    height: 16px;
+                '>
+</span>
+</td>
+</tr>
+</table>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+29,69 </span>
+</td>
+<td class="mtabela" align="middle">
+<span class="strong-red">
+52,63 </span>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-vermelho" class='mcc-vermelho'>
+<abbr title='Media de Produtividade dos 18 dias trabalhados nos últimos 30 dias. (Procedimentos por dia)'>9,50</abbr> </div>
+</td>
+<td class="mtabela" align="right">
+<div id="mcc-amarelo" class='mcc-amarelo'>
+72 dia(s) </div>
+</td>
+<td class="mtabela" align="right">
+119 </td>
+<td class="mtabela" align="right">
+587 </td>
+<td class="mtabela" align="right">
+36,26 </td>
+</tr>
+</table>
+<br />
+<table width="50%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td width="50%">
+<strong>
+Legenda <br>
+Estimativa de Conclusão da Carteira </strong>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<div id="box-blue">&nbsp</div>
+<strong>Até 45 dias</strong>
+</td>
+</tr>
+<tr>
+<td width="72%">
+<div id="box-yellow">&nbsp</div>
+<strong>De 46 até 75 dias</strong>
+</td>
+</tr>
+<tr>
+<td width="72%">
+<div id="box-red">&nbsp</div>
+<strong>Acima de 75 dias</strong>
+</td>
+</tr>
+</table>
+<br>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<script>
+    $(document).ready(function() {
+        $('#hist-comp-dentista').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/mapa_17_item_m1.php', 'infcomp', 1200, 800);
+        });
+
+        $('#procedimentos-vendidos-profissional').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/pop_procedimentos_vendidos_avaliacao.php', 'infcomp', 1200, 800);
+        });
+
+        $('.btn-ticket-medio').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            pop_it_up_center('./../../admin/mapa_17_item_ticket_medio.php?user=' + id_profissional + '&franquia=' + id_franquia, 'infcomp', 1200, 800);
+        });
+
+        $('.btn-ultimos-30-dias').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            let tipo_relatorio = $(this).attr('tipo_relatorio');
+            pop_it_up_center('./../../admin/mapa_17_item_m2.php?user=' + id_profissional + '&franquia=' + id_franquia + '&tipo_relatorio=' + tipo_relatorio, 'infcomp', 1200, 800);
+        });
+
+        $('.btn-mes-corrente').off('click').on('click', function() {
+            let id_profissional = $(this).attr('id_profissional');
+            let id_franquia = $(this).attr('id_franquia');
+            let tipo_relatorio = $(this).attr('tipo_relatorio');
+            pop_it_up_center('./../../admin/mapa_17_item_m2.php?user=' + id_profissional + '&franquia=' + id_franquia + '&tipo_relatorio=' + tipo_relatorio, 'infcomp', 1200, 800);
+        });
+
+        $('#mes-corrente').off('click').on('click', function() {
+            pop_it_up_center('./../../admin/mapa_17_item_m3.php', 'infcomp', 1200, 800);
+        });
+    });
+</script>
+<tr>
+<td align="left" valign="top">
+<div class="box016">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+18. Status: input / output (Clínica Geral)
+</div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<br>
+<div class="info_caixas" style="width: 280px">
+Clínico Geral - Período: 01/03/2023 - 04/03/2023 </div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<br>
+
+<div class="m_texto" id="content">
+<img src="./images/carregando_pacotes.gif" width="32" height="32" align="absmiddle" />
+Processando dados, aguarde... </div>
+<script>
+                                        $(document).ready(function() {
+                                            $('#content').load("mt_box_18.php?franquia=1468", function() {
+                                                $(".comboFranquia").prop("disabled", false);
+                                            });
+                                        });
+                                    </script>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td align="right" valign="top">
+<div class="box001_p" style="height: 100% !important;">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002">
+19. Visão geral das indicações pelo aplicativo </div>
+</td>
+</tr>
+<tr>
+<td valign="middle">
+<div id="conteudo015" xclass="box003_p" class="box016_1" height="400">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="240" align="center" valign="middle">
+<div class="info_caixas" style="width: 330px">
+últimos 30 dias de indicações </div>
+<table width="90%" border="0" cellspacing="4" cellpadding="4" class="mtabela o_bold">
+<tr>
+<td class="mtabela" width="70%" align="right">Indicações:</td>
+<td class="mtabela" width="30%" align="center">14</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Contato pendente:</td>
+<td class="mtabela" width="30%" align="center">1</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Contato sem sucesso:</td>
+<td class="mtabela" width="30%" align="center">8</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Avaliação pendente</td>
+<td class="mtabela" width="30%" align="center">5</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Efetivação pendente:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Efetivadas:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Descartadas:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Inválidas:</td>
+<td class="mtabela" width="30%" align="center">0</td>
+</tr>
+<tr>
+<td class="mtabela" width="70%" align="right">Receita total:</td>
+<td class="mtabela" width="30%" align="center">0 0,00</td>
+</tr>
+</table>
+<br>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<script>
+    /* +FACADE ------------------------------------------------------------------------------------------------------ */
+
+    function _start_protocol_action() {
+        event_save_manager();
+        event_comment_add();
+        event_comment_view();
+        event_stars_view();
+        event_change_status();
+        event_change_status_final();
+        event_start_stars();
+        event_close_protocol();
+        event_hist_video();
+        event_magic_button();
+        event_magic_button_add_email();
+        event_send_password_to_email();
+        event_renew_views();
+        event_add_email();
+        //---------------------
+        event_external_link();
+        event_erase_protocol();
+        event_external_payment();
+        send_whats();
+        openSelectOrigemProtocolo();
+        eventoSalvarOrigemProtocolo();
+        add_picker('.sel-exp-gerentes');
+    }
+
+    /* -FACADE ------------------------------------------------------------------------------------------------------ */
+
+    /* -FUNCTION ---------------------------------------------------------------------------------------------------- */
+    function openSelectOrigemProtocolo () {
+        _load('select-origem-protocolos', 'load-combo-origem-protocolos', {}, function() {
+            add_picker('#tipos-origem-protocolos');
+        })
+    }
+
+    function set_price_format() {
+        $('.valor').priceFormat({
+            clearPrefix: true,
+            prefix: 'R$ ',
+            centsSeparator: ',',
+            thousandsSeparator: '.',
+        });
+    }
+
+    function show_real_spend($this) {
+        var $supervisor = currency_to_number($('#comissao-supervisor').val());
+        var $gerente = currency_to_number($('#comissao-gerente').val());
+        var $empresa = currency_to_number($('#comissao-empresa').val());
+        var $representante = currency_to_number($('#comissao-representante').val());
+        var $usuario = currency_to_number($('#comissao-usuario').val());
+
+        var $total = $supervisor + $gerente + $empresa + $representante + $usuario;
+        if (!isNaN($total)) {
+            var $total = $total.toMoneyBRL();
+            $('#total-comissao').html('');
+            $('#total-comissao').hide();
+            $('#total-comissao').fadeIn(function() {
+                $('#total-comissao').html('Total Comissionado: R$ ' + $total);
+                $this.removeAttr('disabled');
+            });
+            $('.btn-gravar-comissao').removeAttr('disabled');
+        } else {
+            swal('Atenção', 'É necessário adicionar os valores antes de continuar.');
+            $this.removeAttr('disabled');
+        }
+    }
+
+    /* -FUNCTION ---------------------------------------------------------------------------------------------------- */
+
+    /* +EVENTOS ----------------------------------------------------------------------------------------------------- */
+    function event_comment_add() {
+        $('.button-add-comment').off('click');
+        $('.button-add-comment').on('click', function() {
+            var $this = $(this);
+
+            $('.form-comentario').html('');
+            $('.comment-view').html('');
+            $('.button-add-comment').removeClass('comentario-atual');
+
+            $this.addClass('comentario-atual');
+
+            $('.form-final').html('');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-comentario').
+            html('<div class=\'text-center\'><p></p><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-comentario').load('./load/exp_protocolo_comment.php', function() {
+                event_comment_add_close();
+                event_save_comment();
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-comment');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
+        });
+    }
+
+    function event_comment_add_close() {
+        $('.fechar-formulario-comentario').off('click');
+        $('.fechar-formulario-comentario').on('click', function() {
+            var $this = $(this);
+            $this.fadeOut('fast');
+
+            var $comment = $this.parents('.form-comentario');
+
+            $comment.slideUp('slow', function() {
+                $comment.html('');
+                $comment.show();
+            });
+        });
+    }
+
+    function event_save_comment() {
+        $('#add-comment').click(function() {
+            var $this = $(this);
+
+            var $descricaox = $('#input-descricao').val();
+            var $protocolo = $('.comentario-atual').val();
+            var $protocolo_status = $('.comentario-atual').attr('protocolo_status');
+
+            var $descricaox = $.trim($descricaox);
+
+            if ($descricaox !== '' && $protocolo !== '') {
+                if ($descricaox.length < 10) {
+                    alert('Mínimo de 10 caracteres.');
+                    $('#input-descricao').focus();
+                    return false;
+                }
+
+                var $data = {
+                    protocolox: $protocolo,
+                    protocolo_statusx: $protocolo_status,
+                    comentariox: $descricaox,
+                };
+
+                $.post('./acao/exp_add_comment.php', $data, function() {
+                    $('.form-comentario').html('');
+                    refresh_page_wo_warning();
                 });
+            } else {
+                $('#input-descricao').focus();
+            }
+        });
+    }
 
-                if (preenchido == 1) {
-                    if (franquias) {
-                        dados = {
-                            franquias: franquias
-                        };
+    function event_comment_view() {
+        $('.button-comment-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            $this.siblings('.comment-view').
+            html('<p></p><div class=\'text-center\'><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
 
-                        if (confirm('Deseja gravar?')) {
-                            $.post("./acao/gravar_escolha_franquia_termo_conclusao_procedimento.php", dados, function(ret) {
-                                var ret = $.trim(ret);
-                                if (ret == "OK") {
-                                    window.location.reload(true);
-                                } else {
-                                    alert(ret);
-                                }
-                            });
-                        }
-                    }
+            $this.siblings('.comment-view').load('./load/exp_pro_vendas_comment_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_comment_add_close();
+                event_comment_close();
+            });
+        });
+    }
+
+    function event_comment_close() {
+        $('.fechar-comment-view').off('click');
+        $('.fechar-comment-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-comment-view');
+            $this.hide();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    function event_stars_view() {
+        $('.button-stars-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            $this.siblings('.stars-view').
+            html('<p></p><div class=\'text-center\'><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.siblings('.stars-view').load('./load/exp_pro_vendas_stars_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_stars_close();
+            });
+        });
+    }
+
+    function event_stars_close() {
+        $('.fechar-stars-view').off('click');
+        $('.fechar-stars-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-stars-view');
+            $this.hide();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    function event_hist_video() {
+        $('.button-hist-video-view').click(function() {
+            var $this = $(this);
+            var $protocol = $this.val();
+            var $panelx = $('.protocol-' + $protocol);
+            var $panel_heading = $panelx.children('.card-header');
+            var $panel_body = $panelx.children('.card-body');
+            var $panel_footer = $panelx.children('.card-footer');
+            var $panel_hist_video = $panel_footer.children('.load-hist-video');
+
+            $panel_hist_video.load('./load/exp_video_hist_view.php', {
+                protocolx: $protocol
+            }, function() {
+                event_hist_video_close();
+            });
+
+        });
+    }
+
+    function event_send_password_to_email() {
+        $('.btn-send-email').off('click');
+        $('.btn-send-email').on('click', function() {
+            var $this = $(this);
+            var $userx = $this.attr('userx');
+            $('.btn-send-email').attr('disabled', 'disabled');
+            $('.btn-ativar-usuario').attr('disabled', 'disabled');
+            $('.btn-desativar-usuario').attr('disabled', 'disabled');
+            $this.children().removeClass('fa-chevron-up').removeClass('fa-chevron-right').addClass('fa-spin').addClass('fa-spinner');
+            $.post('./acao/expansion_send_login_pass.php', {
+                userx: $userx
+            }, function($return) {
+                $this.children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-check');
+                if ($.trim($return).length >= 1) {
+                    swal('Atenção', $return);
+                }
+                setTimeout(function() {
+                    $this.remove();
+                }, 5000);
+            });
+        });
+    }
+
+    function event_hist_video_close() {
+        $('.fechar-video-hist-view').off('click');
+        $('.fechar-video-hist-view').on('click', function() {
+            var $this = $(this);
+            var $div_view = $this.closest('.div-video-hist-view');
+            $this.remove();
+            $div_view.slideUp(function() {
+                $div_view.html('');
+            });
+        });
+    }
+
+    /**
+     * CRIAR O USUÁRIO E ENVIAR O VÍDEO
+     */
+    function event_magic_button() {
+        $('.button-create-user').off('click');
+        $('.button-create-user').on('click', function() {
+            let $this = $(this);
+            let $protocolx = $this.val();
+
+            $this.attr('disabled', 'disabled');
+            $.post('./acao/expansao_create_user.php', {
+                protocolx: $protocolx
+            }, function(ret) {
+                refresh_page_wo_warning();
+            });
+        });
+    }
+
+    /**
+     * ADICIONAR EMAIL PARA - CRIAR O USUÁRIO E ENVIAR O VÍDEO
+     * function event_magic_button()
+     */
+    function event_magic_button_add_email() {
+        $('.button-create-user-add-email').off('click');
+        $('.button-create-user-add-email').on('click', function() {
+            let $this = $(this);
+            let $protocolx = $this.val();
+
+            $this.attr('disabled', 'disabled');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-comentario').
+            html('<div class=\'text-center\'><p></p><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-comentario').load('./load/exp_protocolo_add_email.php', {
+                protocolox: $protocolx
+            }, function() {
+                event_comment_add_close();
+                event_save_comment();
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-comment');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
+        });
+    }
+
+    function event_change_status($status) {
+        $('.btn-change-status').off('click');
+        $('.btn-change-status').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = $this.attr('to_status');
+            var $tipo_venda = false;
+            if ($to_status == 8) {
+                $tipo_venda = $('input[name=\'tipo_venda_' + $protocolx + '\']:checked').val();
+                if ($tipo_venda == undefined || !$tipo_venda) {
+                    swal('Atenção', 'Selecione um tipo de venda.');
+                    return false;
+                }
+                console.log($tipo_venda);
+            }
+
+            $.post('./acao/exp_change_protocol_status.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
                 } else {
-                    alert("Escolha uma Franquia antes de gravar");
+                    swal('Atenção', $return);
                 }
             });
         });
-    </script>
-<div align="center">
-<h3 class="text-justify font-weight-bold">
-Mensagem do Presidente<br>
-</h3>
-</div>
-<div align="center">
-<iframe allow="autoplay; fullscreen;" class="jmvplayer" frameborder="0" src="https://player.jmvstream.com/1wclpjZ0Uo51RK9oMgmR51sL7km92G/2a297n21z1yr16k" allow="accelerometer; autoplay; fullscreen; gyroscope; xr-spatial-tracking;" style="position: top; height: 700px; width: 700px;"></iframe>
-</div>
-<hr style="border: thin solid #c00; max-width: 700px;">
-<div align="center">
-<h3 class="text-justify font-weight-bold">
-Cupom de desconto para profissional Odonto Excellence: #descontodontoexcelenceproteseabo23 <br><br>
-Falar com Dr. Leonardo Pellissari (42) 98403-6545
-</h3>
-</div>
-<div align="center">
-<p align="center">
-<img src="images/curso_2023/aviso-curso-especializacao-protese-03-2023.jpg">
-</p>
-</div>
-<hr style="border: thin solid #c00; max-width: 700px;">
-<div align="center">
-<h3 class="text-justify font-weight-bold">
-Curso Rioquímica<br>
-</h3>
-</div>
-<div align="center">
-<iframe allow="autoplay; fullscreen;" class="jmvplayer" frameborder="0" src="https://player.jmvstream.com/1wclpjZ0Uo51RK9oMgmR51sL7km92G/nei31xq7p92h215" allow="accelerometer; autoplay; fullscreen; gyroscope; xr-spatial-tracking;" style="position: top; height: 700px; width: 700px;"></iframe>
-</div>
-<hr style="border: thin solid #c00; max-width: 700px;">
-<div align="center">
-<p align="center">
-<img src="images/curso_2023/aviso-curso-bioseguranca-03-2022-2.jpg">
-</p>
-</div>
-<hr style="border: thin solid #c00; max-width: 700px;">
-<hr style="border: thin solid #c00; max-width: 700px;">
-<div align='center'>
-<p align='center'>
-<img src="images/publicidade_2023/atualizado_outdoor_publicidade_2023.jpg">
-</p>
-</div>
-<hr style="border: thin solid #c00; max-width: 700px;">
-<style>
-    .treinamento {
-        font: 10px/12px Geneva, Verdana, Arial, Helvetica, sans-serif;
-        border-color: #eeeeee;
-        display: table;
-        margin: 0 auto;
-        background: #eeeeee;
-        border-bottom: 1px solid #bdbdbd;
-        border-top: 1px solid #bdbdbd;
-        border-right: 1px solid #bdbdbd;
-        border-left: 1px solid #bdbdbd;
     }
 
-    #form_treinamento {
-        border-color: #eeeeee;
-    }
+    /**
+     * EFETIVAR OU DECLINAR PROTOCOLO
+     */
+    function event_change_status_final() {
+        $('.btn-change-status-final').off('click');
+        $('.btn-change-status-final').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = $this.attr('to_status');
 
-    #form_treinamento th {
-        background-color: #e0e0e0;
-        border-bottom: 1px solid #9e9e9e;
-        border-top: 1px solid #9e9e9e;
-        height: 15px;
-        line-height: 10px;
-    }
-</style>
-<script>
-    $(document).ready(function() {
-        $(".btn-inscrever-treinamento-1").off("click");
-        $(".btn-inscrever-treinamento-1").on("click", function() {
-            let fk_usuario = $('#usuario').val();
-            let fk_franquia = $('#franquia').val();
-            let id_treinamento = $('#treinamento_1').val();
+            var $panelx = $('.protocol-' + $protocolx);
 
-            dados = {
-                fk_usuario: fk_usuario,
-                fk_franquia: fk_franquia,
-                id_treinamento: id_treinamento
-            };
+            var $panel_heading = $panelx.children('.card-header');
+            var $panel_body = $panelx.children('.card-body');
+            var $panel_footer = $panelx.children('.card-footer');
 
-            if (id_treinamento != "") {
-                $.post("./acao/gravar_inscricao_usuario_treinamento.php", dados, function(ret) {
-                    var ret = $.trim(ret);
-                    if (confirm('Deseja Participar?')) {
-                        if (ret == "OK") {
-                            window.location.reload(true)
-                        } else {
-                            alert(ret);
-                        }
-                    }
+            var $panel_final_form = $panel_footer.children('.form-final');
+            // cadastrar_franquia();
+            $('.form-final').html('');
+            $panel_final_form.load('./load/exp_form_prot_final.php', {
+                    protocolx: $protocolx,
+                    to_statusx: $to_status,
+                },
+                function() {
+                    add_picker('.select');
+                    //observer_resize();
+                    event_save_comment_final();
+                    event_close_form_final($panel_final_form);
                 });
+        });
+    }
+    /*function cadastrar_franquia() {
+        $('#listar').html($loader);
+        $('#listar').load('./pages/cadastrar_franquia.php', function () {
+        });
+    }*/
+    function event_save_comment_final() {
+        $('.add-comment-final').off('click');
+        $('.add-comment-final').on('click', function() {
+            var $this = $(this);
+
+            var $protocolx = $this.attr('protocolx');
+            var $to_statusx = $this.attr('to_statusx');
+            var $commentx = $('.comment-final').val();
+
+            if ($to_statusx == 6) {
+                var $uf_venda = $('.sel-estados-br').val();
+                var $cidade_venda = $('.cidade-destino').val();
+
+                if ($uf_venda <= 0) {
+                    swal('Atenção', 'Selecione a UF na qual a unidade foi vendida.');
+                    return;
+                }
+
+                if ($cidade_venda.length <= 3) {
+                    $('.cidade-destino').focus();
+                    return;
+                }
+            }
+
+            if ($to_statusx == 4) {
+                var $date_return = $('#data-escolher').val();
+            }
+
+            if ($commentx.length <= 5) {
+                $('.comment-final').focus();
+                return;
+            }
+
+            $this.attr('disabled', 'disabled');
+
+            if ($to_statusx == 6) {
+                save_comment_up($protocolx, $to_statusx, $uf_venda, $cidade_venda, $commentx);
+            }
+
+            if ($to_statusx == 5) {
+                save_comment_down($protocolx, $to_statusx, $commentx);
+            }
+
+            if ($to_statusx == 4) {
+                save_comment_wait($protocolx, $to_statusx, $date_return, $commentx);
+            }
+
+        });
+    }
+
+    function save_comment_up($protocolx, $to_statusx, $uf_venda, $cidade_venda, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            commentx: $commentx,
+            uf_venda: $uf_venda,
+            cidade_venda: $cidade_venda,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
             }
         });
+    }
 
-        $(".btn-inscrever-treinamento-2").off("click");
-        $(".btn-inscrever-treinamento-2").on("click", function() {
-            let fk_usuario = $('#usuario').val();
-            let fk_franquia = $('#franquia').val();
-            let id_treinamento = $('#treinamento_2').val();
-
-            dados = {
-                fk_usuario: fk_usuario,
-                fk_franquia: fk_franquia,
-                id_treinamento: id_treinamento
-            };
-
-            if (id_treinamento != "") {
-                $.post("./acao/gravar_inscricao_usuario_treinamento.php", dados, function(ret) {
-                    var ret = $.trim(ret);
-                    if (confirm('Deseja Participar?')) {
-                        if (ret == "OK") {
-                            window.location.reload(true)
-                        } else {
-                            alert(ret);
-                        }
-                    }
-                });
+    function save_comment_down($protocolx, $to_statusx, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            commentx: $commentx,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
             }
         });
-    });
-</script> <hr style="border: thin solid #C00; max-width: 700px;">
-<hr style="border: thin solid #C00; max-width: 700px;">
-<style>
-            .top_10 th {
-                font-size: 13px;
-                background-color: #bac9cc;
+    }
+
+    function save_comment_wait($protocolx, $to_statusx, $date_return, $commentx) {
+        $.post('./acao/exp_change_protocol_status.php', {
+            protocolx: $protocolx,
+            change_status: $to_statusx,
+            date_return: $date_return,
+            commentx: $commentx,
+        }, function($return) {
+            if ($.trim($return).length == 0) {
+                $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                refresh_page_w_warning();
+            } else {
+                swal('Atenção', $return);
+            }
+        });
+    }
+
+    function event_close_form_final($panel_final_form) {
+        $('.fechar-formulario').off();
+        $('.fechar-formulario').on('click', function() {
+            $panel_final_form.html('');
+        });
+    }
+
+    function observer_resize() {
+        add_picker('.select2');
+        $('.select2').css('width', '100%');
+        $(window).resize(function() {
+            add_picker('.select2');
+        });
+    }
+
+    function event_save_manager() {
+        //observer_resize();
+        $('.button-mudar-resp').off('click');
+        $('.button-mudar-resp').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.attr('data-protocolo-id');
+            var $respx = $('.sel-exp-gerentes').find('option:selected').val();
+            var $origemProtocolo = $('#tipos-origem-protocolos').val();
+
+            if ($respx <= 0) {
+                $('.sel-exp-gerentes').focus();
+                console.log('Can\'t handle operation.');
+                return false;
             }
 
-            .top_10 td {
-                font-size: 11px;
-                border-left: 1px solid #bac9cc;
-                border-bottom: 1px solid #000000;
+            $.post('./acao/exp_mudar_resp.php', {
+                protocolx: $protocolx,
+                respx: $respx,
+                origemProtocolo: $origemProtocolo
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.button-mudar-resp').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+    }
+
+    function eventoSalvarOrigemProtocolo() {
+        $('.btn-mudar-origem').off('click').on('click', function() {
+            $(".btn-mudar-origem").attr('disabled', 'disabled');
+            let origemProtocoloId = $('#tipos-origem-protocolos').val();
+            let protocoloId = $(this).attr('data-protocolo-id');
+
+            if (origemProtocoloId == 0) {
+                $('#tipos-origem-protocolos').focus();
+                $(".btn-mudar-origem").removeAttr('disabled');
+                return false;
             }
 
-            .title_top_10_clinico_geral {
-                background-color: #00a652;
-                color: white;
-                font-size: 20px;
-            }
+            salvarOrigemProtocolo(protocoloId, origemProtocoloId);
+        })
 
-            .title_top_10_orto {
-                background-color: #f68121;
-                color: white;
-                font-size: 20px;
-            }
+    }
 
-            .title_top_10_implanto {
-                background-color: #7570b3;
-                color: white;
-                font-size: 20px;
+    function salvarOrigemProtocolo(protocoloId, origemProtocoloId) {
+        _post('acao-mudar-origem-protocolo', {
+            protocoloId,
+            origemProtocoloId
+        }, function(result) {
+            if (result.trim() == 'OK') {
+                swal('Origem alterada com sucesso!', {
+                    icon: "success"
+                }).then((close) => {
+                    refresh_page_w_warning();
+                });
+            } else {
+                swal('Não foi possível alterar, favor tentar novamente!', {
+                    icon: "error"
+                }).then((close) => {
+                    $(".btn-mudar-origem").removeAttr('disabled');
+                });
             }
+        })
+    }
 
-            .title_top_10_aplicativo {
-                background-color: #5980ab;
-                color: white;
-                font-size: 20px;
-            }
+    function event_start_stars() {
+        if ($('.stars').length >= 1) {
+            $('.stars').addClass('cursor-pointer');
+            $('.stars').hover(function() {
+                $(this).children().addClass('fa-spin').addClass('text-color-pomegranate').removeClass('far').addClass('fas');
+                $(this).prevAll().children().addClass('fa-spin').addClass('text-color-pomegranate').removeClass('far').addClass('fas');
+            }, function() {
+                $(this).children().removeClass('fa-spin').removeClass('text-color-pomegranate').addClass('far').removeClass('fas');
+                $(this).prevAll().children().removeClass('fa-spin').removeClass('text-color-pomegranate').addClass('far').removeClass('fas');
+            });
 
-            .title_top_10_ticket_medio {
-                background-color: #cc8c5e;
-                color: white;
-                font-size: 20px;
-            }
+            $('.stars').click(function() {
+                var $this = $(this);
+                var protocolox = $(this).attr('protocolox');
+                var starx = $(this).attr('star');
 
-            .title_top_10_conversao {
-                background-color: #806c53;
-                color: white;
-                font-size: 20px;
-            }
-
-            .title_top_10_menor_cancelamento {
-                background-color: #3a8476;
-                color: white;
-                font-size: 20px;
-            }
-
-            .top_10 th {
-                font-size: small;
-                text-transform: uppercase;
-            }
-        </style>
-<div align="center">
-<table width="700">
-<tr>
-<td align="center">
-<img src="/sistemas/odonto/adm//images/top_10_modelo_02/implantodontia_cabecalho_top_20.jpg">
-</td>
-</tr>
-</table>
-<table class="top_10" width="700">
-<tr>
-<th align="center">
-<h3>
-Valores de EFETIVAÇÃO em IMPLANTODONTIA - [ Fevereiro / 2023 ]
-</h3>
-</th>
-</tr>
-</table>
-<table class="top_10" width="700">
-<tr>
-<th align="center">
-<strong>
-#
-</strong>
-</th>
-<th align="center">
-<strong>
-Unidade </strong>
-</th>
-<th align="center" width="75">
-<strong>
-VALOR </strong>
-</th>
-<th align="center">
-<strong>
-Franqueado </strong>
-</th>
-<th align="center">
-<strong>
-Supervisor </strong>
-</th>
-<th align="center">
-<strong>
-Gerente </strong>
-</th>
-<th align="center">
-<strong>
-<abbr title="Pontuação">
-Pontuação </abbr>
-</strong>
-</th>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-1 </td>
-<td style="">
-JUNDIAI - SP - BAIRRO BONFIGLIOLI </td>
-<td align="right" style="">
-241.485,96 </td>
-<td style="">
-FRANCISCO / DANIEL </td>
-<td title="CASSIA CAROLINA DE LARA" style="">
-CASSIA CAROLINA DE LARA </td>
-<td title="CHRISTOPHER HILDON DE GOES" style="">
-CHRISTOPHER HILDON DE GOES </td>
-<td height="28" align="center" style="">
-20 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-2 </td>
-<td style="">
-PONTA GROSSA - PR - CENTRO (CS) </td>
-<td align="right" style="">
-228.757,76 </td>
-<td style="">
-SIDNEI / TATIANA </td>
-<td title="LIDIANE DZULINSKI" style="">
-LIDIANE DZULINSKI </td>
-<td title="BRUNA KEDRYN TAQUES" style="">
-BRUNA KEDRYN TAQUES </td>
-<td height="28" align="center" style="">
-19 </td>
-</tr>
-
-<tr>
-<td height="28" align="center" style="">
-3 </td>
-<td style="">
-FLORIANOPOLIS - SC - BAIRRO ESTREITO </td>
-<td align="right" style="">
-212.077,26 </td>
-<td style="">
-ANDREA / JOãO </td>
-<td title="PRYSCILA HASS FERREIRA" style="">
-PRYSCILA HASS FERREIRA </td>
-<td title="NATALIA GABRIELE DO NASCIMENTO ARAUJO" style="">
-NATALIA GABRIELE DO NASCIMENTO ARAUJO </td>
-<td height="28" align="center" style="">
-18 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-4 </td>
-<td style="">
-DIAMANTINO - MT </td>
-<td align="right" style="">
-206.676,45 </td>
-<td style="">
-FERNANDO/ VâNIA </td>
-<td title="ANDRE GUILHERME GROKOSKI" style="">
-ANDRE GUILHERME GROKOSKI </td>
-<td title="CINTIA EMANUELLE VENEROSKI MONTEIRO" style="">
-CINTIA EMANUELLE VENEROSKI MONTEIRO </td>
-<td height="28" align="center" style="">
-17 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-5 </td>
-<td style="">
-BOTUCATU - SP - II </td>
- <td align="right" style="">
-187.696,32 </td>
-<td style="">
-ELAINE </td>
-<td title="ANA MARIA PRUSNAL" style="">
-ANA MARIA PRUSNAL </td>
-<td title="PAOLA INGRID PEREIRA" style="">
-PAOLA INGRID PEREIRA </td>
-<td height="28" align="center" style="">
-16 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-6 </td>
-<td style="">
-TELEMACO BORBA - PR (CS) </td>
-<td align="right" style="">
-171.517,09 </td>
-<td style="">
-FABIANO </td>
-<td title="EVELIN CAROLINE MULLER" style="">
-EVELIN CAROLINE MULLER </td>
-<td title="TATIANE WALUS NOGUEIRA" style="">
-TATIANE WALUS NOGUEIRA </td>
-<td height="28" align="center" style="">
-15 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-7 </td>
-<td style="">
-INDAIAL - SC </td>
-<td align="right" style="">
-160.174,47 </td>
-<td style="">
-MARISTELA / JUAREZ </td>
-<td title="CASSIA CAROLINA DE LARA" style="">
-CASSIA CAROLINA DE LARA </td>
- <td title="CHRISTOPHER HILDON DE GOES" style="">
-CHRISTOPHER HILDON DE GOES </td>
-<td height="28" align="center" style="">
-14 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-8 </td>
-<td style="">
-MARABA - PA - NOVO HORIZONTE </td>
-<td align="right" style="">
-143.484,26 </td>
-<td style="">
-ANDRESSA </td>
-<td title="ANA PAULA DA VEIGA MICHALSKI" style="">
-ANA PAULA DA VEIGA MICHALSKI </td>
-<td title="LARISSA STEFANI GUIMARAES" style="">
-LARISSA STEFANI GUIMARAES </td>
-<td height="28" align="center" style="">
-13 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-9 </td>
-<td style="">
-NOVA LIMA - MG </td>
-<td align="right" style="">
-134.690,22 </td>
-<td style="">
-HAROLDO </td>
-<td title="BRUNA TURCZYNIAK" style="">
-BRUNA TURCZYNIAK </td>
-<td title="IAGO GERALDI GONCALVES" style="">
-IAGO GERALDI GONCALVES </td>
-<td height="28" align="center" style="">
-12 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-10 </td>
-<td style="">
-PRESIDENTE GETULIO - SC </td>
-<td align="right" style="">
-117.326,48 </td>
-<td style="">
-NILSON </td>
-<td title="ANA MARIA PRUSNAL" style="">
-ANA MARIA PRUSNAL </td>
-<td title="KAROLINE DA SILVA" style="">
-KAROLINE DA SILVA </td>
-<td height="28" align="center" style="">
-11 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-11 </td>
-<td style="">
-GASPAR - SC </td>
-<td align="right" style="">
-112.433,80 </td>
-<td style="">
-CINTIA / SEDEUR </td>
-<td title="FERNANDA APARECIDA DE MORAIS" style="">
-FERNANDA APARECIDA DE MORAIS </td>
-<td title="EDILAINE MARQUES DE OLIVEIRA" style="">
-EDILAINE MARQUES DE OLIVEIRA </td>
-<td height="28" align="center" style="">
-10 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-12 </td>
-<td style="">
- CAMPINA GRANDE DO SUL II - PR </td>
-<td align="right" style="">
-107.380,40 </td>
-<td style="">
-EDSON </td>
-<td title="GUILHERME MARCELO BOZACKI" style="">
-GUILHERME MARCELO BOZACKI </td>
-<td title="RICARDO VIEIRA" style="">
-RICARDO VIEIRA </td>
-<td height="28" align="center" style="">
-9 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-13 </td>
-<td style="">
-JARAGUA DO SUL - SC - CHICO DE PAULO </td>
-<td align="right" style="">
-100.350,28 </td>
-<td style="">
-FRANCISCO / MILENA / MONICA / FABIO </td>
-<td title="EVELIN CAROLINE MULLER" style="">
-EVELIN CAROLINE MULLER </td>
-<td title="BRUNA SAYONARA DE OLIVEIRA" style="">
-BRUNA SAYONARA DE OLIVEIRA </td>
-<td height="28" align="center" style="">
-8 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-14 </td>
-<td style="">
-CONTAGEM - MG - BAIRRO RESSACA </td>
-<td align="right" style="">
-97.538,82 </td>
-<td style="">
-KARLA / HELOISA </td>
-<td title="ARIANE MARI BORBA" style="">
-ARIANE MARI BORBA </td>
-<td title="RAFAEL GOMES MENSEN" style="">
-RAFAEL GOMES MENSEN </td>
-<td height="28" align="center" style="">
-7 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-15 </td>
-<td style="">
-SERRANA - SP </td>
-<td align="right" style="">
-97.102,86 </td>
-<td style="">
-BRUNO IRENO / CAROLINA PASCON </td>
-<td title="CASSIA CAROLINA DE LARA" style="">
-CASSIA CAROLINA DE LARA </td>
-<td title="LETICIA NUNES DE CARMO SILVEIRA" style="">
-LETICIA NUNES DE CARMO SILVEIRA </td>
-<td height="28" align="center" style="">
-6 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-16 </td>
-<td style="">
-CANELA - RS </td>
-<td align="right" style="">
-97.002,91 </td>
-<td style="">
-MARCELO / VINICIUS / CAMILA </td>
-<td title="FERNANDA APARECIDA DE MORAIS" style="">
-FERNANDA APARECIDA DE MORAIS </td>
-<td title="BARBARA ALESSANDRA VAZ DE OLIVEIRA" style="">
-BARBARA ALESSANDRA VAZ DE OLIVEIRA </td>
-<td height="28" align="center" style="">
- 5 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-17 </td>
-<td style="">
-CONCORDIA - SC </td>
-<td align="right" style="">
-95.163,04 </td>
-<td style="">
-JULIANA / ALEX </td>
-<td title="PRYSCILA HASS FERREIRA" style="">
-PRYSCILA HASS FERREIRA </td>
-<td title="JOAO VICTOR TOZETTO DE MATTOS" style="">
-JOAO VICTOR TOZETTO DE MATTOS </td>
-<td height="28" align="center" style="">
-4 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-18 </td>
-<td style="">
-SAO JERONIMO - RS </td>
-<td align="right" style="">
-93.486,40 </td>
-<td style="">
-JOãO / THAIS </td>
-<td title="EVELIN CAROLINE MULLER" style="">
-EVELIN CAROLINE MULLER </td>
-<td title="TATIANE WALUS NOGUEIRA" style="">
-TATIANE WALUS NOGUEIRA </td>
-<td height="28" align="center" style="">
-3 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-19 </td>
-<td style="">
-SIQUEIRA CAMPOS - PR - ODONTO MEDIC </td>
-<td align="right" style="">
-89.393,05 </td>
-<td style="">
-ALEX MORIKAWA / DAYANE MORIKAWA </td>
-<td title="FERNANDA APARECIDA DE MORAIS" style="">
-FERNANDA APARECIDA DE MORAIS </td>
-<td title="EDILAINE MARQUES DE OLIVEIRA" style="">
-EDILAINE MARQUES DE OLIVEIRA </td>
-<td height="28" align="center" style="">
-2 </td>
-</tr>
-<tr>
-<td height="28" align="center" style="">
-20 </td>
-<td style="">
-ARACOIABA DA SERRA - SP </td>
-<td align="right" style="">
-85.337,28 </td>
-<td style="">
-FELIPE / FRADERICO / OSWALDO </td>
-<td title="PRYSCILA HASS FERREIRA" style="">
-PRYSCILA HASS FERREIRA </td>
-<td title="ALESSANDRO DE OLIVEIRA DA SILVA" style="">
-ALESSANDRO DE OLIVEIRA DA SILVA </td>
-<td height="28" align="center" style="">
-1 </td>
-</tr>
-</table>
-<table>
-<tr>
-<td>
-<img src="/sistemas/odonto/adm//images/top_10_modelo_02/implantodontia_rodape_top_20.jpg">
-</td>
-</tr>
-<tr>
-<td>
-</td>
-</tr>
-</table>
-</div>
-<div class="top-ranking-mostra-anteriores" align="center" width="700px">
-_________________________________________
-<br>
-<h4>
-Ver Top Ranking anteriores
-</h4>
-<input type="hidden" name="mes" id="mes" value="02">
-<input type="hidden" name="ano" id="ano" value="2023">
-<input type="hidden" name="pais" id="pais" value="1">
-<button type="button" class="btn btn-info btn-ver-top-ranking" categoria="2">Clinico Geral - Efetivação</button>
-<br>
-</div>
-<script>
-    $(document).ready(function() {
-        function pop_it_up_center(page_URL, title, w, h) {
-            let left = (screen.width / 2) - (w / 2);
-            let top = (screen.height / 2) - (h / 2);
-            let popup = window.open(page_URL, title, 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-            if (window.focus) {
-                popup.focus();
-            }
+                $.post('./acao/gravar_estrela_negociacao.php', {
+                    protocolox: protocolox,
+                    starx: starx
+                }, function(data) {
+                    if ($.trim(data.toString()) === '') {
+                        var $stars_place = $this.closest('.estrelas');
+                        $stars_place.html('<span class=\'text-success\'>Registrando...<span><p></p>');
+                        setTimeout(function() {
+                            refresh_page_wo_warning();
+                        }, 2000);
+                    } else {
+                        swal('Atenção', data);
+                    }
+                });
+            });
         }
+    }
 
-        $(".btn-ver-top-ranking").on("click", function() {
-            let categoria = $(this).attr('categoria');
-            let pais = $('#pais').val();
-            let mes = $('#mes').val();
-            let ano = $('#ano').val();
+    function event_close_protocol() {
+        $('.button-close-protocol').off('click');
+        $('.button-close-protocol').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
 
-            pop_it_up_center('./top_ranking_mostrar.php?pais=' + pais + '&mes=' + mes + '&ano=' + ano + '&categoria=' + categoria, 'Top Ranking', 1200, 800);
+            $('.fechar-formulario-end-protocol').trigger('click');
+
+            $('.form-close-protocol').html('');
+            $('.button-close-protocol').removeClass('comentario-atual');
+
+            $this.addClass('comentario-atual');
+
+            $this.attr('disabled', 'disabled').children().addClass('fa-spin').addClass('fa-spinner').removeClass('fa-comment');
+
+            $this.parent().
+            parent().
+            find('.form-close-protocol').
+            html('<div class=\'text-center\'><br><span class=\'fas fa-spinner fa-pulse fa-2x\'></span><h4>Carregando...</h4></div>');
+
+            $this.parent().parent().find('.form-close-protocol').load('./load/exp_end_protocol.php', {
+                protocolx: $protocolx
+            }, function() {
+                $('.btn-gravar-comissao').attr('disabled', 'disabled');
+
+                event_end_protocol_add_close();
+                set_price_format();
+                event_on_calc();
+                event_save_end_protocol($protocolx);
+
+                $this.removeAttr('disabled').children().removeClass('fa-spin').removeClass('fa-spinner').addClass('fa-checked');
+
+                $('#input-descricao').maxlength($maxLengthOptions);
+                $('#input-descricao').focus();
+
+            });
         });
-    });
-</script> <hr style="border: thin solid #C00; max-width: 700px;">
-<hr style="border: thin solid #C00; max-width: 700px;">
+    }
 
-<p align="center">
-<a class="twitter-timeline" href="https://twitter.com/OseiasGomesof" data-widget-id="1111" width="700" height="500">Tweets de @OseiasGomesof</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script>
-        ! function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                p = /^https:/.test(d.location) ? 'https' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
+    function event_end_protocol_add_close() {
+        $('.fechar-formulario-end-protocol').off('click');
+        $('.fechar-formulario-end-protocol').on('click', function() {
+            var $this = $(this);
+            $this.fadeOut('fast');
+
+            var $comment = $this.parents('.form-close-protocol');
+
+            $comment.slideUp('slow', function() {
+                $comment.html('');
+                $comment.show();
+            });
+        });
+    }
+
+    function event_save_end_protocol(protocolx) {
+        $('.btn-gravar-comissao').off('click');
+        $('.btn-gravar-comissao').on('click', function() {
+            var $this = $(this);
+
+            var $protocolx = protocolx;
+            var $to_status = 8;
+
+            var $supervisor = $('#comissao-supervisor').val();
+            var $gerente = $('#comissao-gerente').val();
+            var $empresa = $('#comissao-empresa').val();
+            var $representante = $('#comissao-representante').val();
+            var $usuario = $('#comissao-usuario').val();
+
+            if (false /* JUMP FOR NOW */ ) {
+
+                if ($supervisor.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Supervisor.');
+                    return false;
+                }
+                if ($gerente.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Gerente.');
+                    return false;
+                }
+                if ($empresa.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão da Empresa.');
+                    return false;
+                }
+                if ($representante.length <= 3) {
+                    swal('Atenção', 'Por favor, adicione o valor da Comissão do Representante.');
+                    return false;
+                }
             }
-        }(document, 'script', 'twitter-wjs');
-    </script>
-</p>
 
+            $.post('./acao/exp_change_protocol_status.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+                supervisorx: $supervisor,
+                gerentex: $gerente,
+                empresax: $empresa,
+                representantex: $representante,
+                usuariox_exp: $usuario,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    $('.btn-change-status, .button-add-comment').attr('disabled', 'disabled');
+                    refresh_page_w_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
 
+            console.log($protocolx);
+        });
+    }
 
-<br><br>
-<div class="recados">
-<p align="center" style="color: #C00">
-<img id="loader" src="/sistemas/odonto/adm/images/ajax-loader2.gif" alt="Carregando..." width="16" height="16">
-<br />
-Carregando...
-</p>
-</div>
-<script type="text/javascript">
-                        $(document).ready(function () {
-                            setTimeout(function () {
-                                $(".recados").load("ajax/mural_recados.php");
-                            }, 1750);
+    function event_on_calc() {
+        $('.button-calcular').off('click');
+        $('.button-calcular').on('click', function() {
+            var $this = $(this);
+            $this.attr('disabled', 'disabled');
+            $('.btn-gravar-comissao').attr('disabled', 'disabled');
+            show_real_spend($this);
+        });
+    }
+
+    function event_external_link() {
+        $('.button-external-link').off('click');
+        $('.button-external-link').on('click', function() {
+            var $this = $(this);
+            var $value = $this.val();
+
+            $this.preventDefault;
+            $this.attr('disabled', 'disabled');
+            $.post('./acao/set_temp_var.php', {
+                atributox: 'sistema_controle_exp_work_protocol',
+                valorx: $value
+            }, function(returnx) {
+                pop_it_up_center('./pop_exp_external_prot.php', 'extprot', 1280, 720);
+                $this.removeClass('btn-primary').addClass('btn-default');
+                setTimeout(function() {
+                    $this.removeAttr('disabled');
+                }, 2000);
+            });
+        });
+    }
+
+    function event_erase_protocol() {
+        $('.button-erase-protocol').off('click');
+        $('.button-erase-protocol').on('click', function() {
+            var $this = $(this);
+            var $value = $this.val();
+
+            $this.preventDefault;
+            $this.attr('disabled', 'disabled');
+
+            swal('Realmente excluir, o processo irreversível?', {
+                buttons: {
+                    cancel: 'Cancelar',
+                    deletar: {
+                        text: 'Deletar',
+                        value: true,
+                    },
+                },
+            }).then((value) => {
+                switch (value) {
+                    case 'Cancelar':
+                        break;
+
+                    case true:
+                        $this.closest('tr').remove();
+                        $.post('./acao/exp_delete_protocol.php', {
+                            valorx: $value
+                        }, function(returnx) {
+                            call_protocol();
+                            swal('Apagado!', 'Protocolo apagado.', 'success');
+                            setTimeout(function() {
+                                $this.removeAttr('disabled');
+                            }, 2000);
                         });
-                    </script>
-<br>
-<table width="700" border="0" align="center" cellpadding="0" cellspacing="4" class="FormTABLE">
-<tr>
-<th colspan="6">Pós - venda </th>
-</tr>
-<tr>
-<td width="316" height="20"><strong>Nome</strong></td>
-<td width="61" height="20"><strong>Retorno</strong></td>
-<td width="92" height="20"><strong>Telefones</strong></td>
-<td width="64" height="20"><strong>Tentativa(s)</strong></td>
-<td height="20" colspan="2"><div align="center"><strong>Ação</strong></div></td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2941611">
-MARIA ALEIDE PEIXOTO ECA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-05/02/2023 </div>
-</td>
-<td class="DataTD">
-01195923375 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2246216&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2246216');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
- <a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2833123">
-MARIA DAS DORES PEREIRA DOS SANTOS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-05/02/2023 </div>
-</td>
-<td class="DataTD">
-011998524448 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2209666&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2209666');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2728409">
-INGRID APARECIDA DA CUNHA </a>
-&nbsp;
-<a href="#" onClick="open_obs('2197315'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-06/02/2023 </div>
-</td>
-<td class="DataTD">
-011971514475 (mae )  </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2197315&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2197315');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3050364">
-PAULO SILVA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-06/02/2023 </div>
-</td>
-<td class="DataTD">
-011913291182 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2321273&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2321273');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
- </div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3110863">
-JENIFER GARCIA MOREIRA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-06/02/2023 </div>
-</td>
-<td class="DataTD">
-01146934672 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2383791&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2383791');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2587191">
-ANDREIA GONCALVES DA SILVA </a>
-&nbsp;
- <a href="#" onClick="open_obs('2392519'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-06/02/2023 </div>
-</td>
-<td class="DataTD">
-011943015922 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2392519&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2392519');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3119627">
-ERICA APARECIDA DE OLIVEIRA CORREIA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-07/02/2023 </div>
-</td>
-<td class="DataTD">
-011970776861 </td>
-<td class="DataTD">
-<div align="center">
- </div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2383326&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2383326');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3128467">
-RENATA APARECIDA VIEIRA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-08/02/2023 </div>
-</td>
-<td class="DataTD">
-011973870462 (esposo) </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2395270&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2395270');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
+                        break;
+                }
+            });
 
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2858275">
-WILLIAN APARECIDO ALVES </a>
-&nbsp;
-<a href="#" onClick="open_obs('2176139'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-09/02/2023 </div>
-</td>
-<td class="DataTD">
-011912739366 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2176139&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2176139');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2956414">
-SERGIO RODRIGO LUCAS DURAN </a>
-  </td>
-<td class="DataTD">
-<div align="center">
-10/02/2023 </div>
-</td>
-<td class="DataTD">
-011972854249 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2251611&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2251611');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2813631">
-LARISSA LIMA SILVA SANTOS </a>
-&nbsp;
-<a href="#" onClick="open_obs('2179460'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-11/02/2023 </div>
-</td>
-<td class="DataTD">
-011912834552 </td>
-<td class="DataTD">
-<div align="center">
+            $this.removeAttr('disabled');
+        });
+    }
 
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2179460&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2179460');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+    function event_external_payment() {
+        $('.button-pagar').off('click');
+        $('.button-pagar').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = 111; //AUTHORIZE PAYMENT
+            var $line = $this.parent().parent();
+
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+
+            $line.hide();
+            $.post('./acao/exp_change_protocol_status_master.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    reload_protocolos();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+
+        $('.button-estornar').off('click');
+        $('.button-estornar').on('click', function() {
+            var $this = $(this);
+            var $protocolx = $this.val();
+            var $to_status = 222; //REVOKE PAYMENT
+            var $line = $this.parent().parent();
+
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+            $this.attr('disabled', 'disabled');
+
+            $line.hide();
+            $.post('./acao/exp_change_protocol_status_master.php', {
+                protocolx: $protocolx,
+                change_status: $to_status,
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    reload_protocolos();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+        });
+    }
+
+    function event_add_email() {
+        $('#add-email-prot-vazio').off('keypress').on('keypress', function(key) {
+            if (key.which === 13) {
+                let _this = $(this);
+                let protx = $('#protocolx').attr('protocolx');
+                let emailx = $('#add-email-prot-vazio').val();
+
+                if (emailx.length >= 1) {
+                    if (!validate_email(emailx)) {
+                        swal('Email incorreto.');
+                        return false;
+                    }
+                } else {
+                    swal('É preciso adicionar um email.');
+                    return false;
+                }
+
+                if (protx <= 1) {
+                    return false;
+                }
+
+                $.post('./acao/exp_add_email_prot.php', {
+                    protx: protx,
+                    emailx: emailx
+                }, function() {
+                    refresh_page_w_warning();
+                });
+            }
+        });
+    }
+
+    function event_renew_views() {
+        $('.button-hist-reset-view').off('click');
+        $('.button-hist-reset-view').on('click', function() {
+            var $this = $(this);
+            var $userx = $this.attr('userx');
+
+            $this.attr('disabled', 'disabled');
+            $this.text('Renovando...');
+            $.post('acao/exp_renew_views.php', {
+                userx: $userx
+            }, function($return) {
+                if ($.trim($return).length == 0) {
+                    refresh_page_wo_warning();
+                } else {
+                    swal('Atenção', $return);
+                }
+            });
+
+            if (false) {
+
+                swal({
+                    title: 'Tem certeza?',
+                    text: 'Não é possível desfazer a operação!',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dd6b55',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonText: 'Resetar',
+                    closeOnConfirm: false,
+                }, function() {
+                    $this.attr('disabled', 'disabled');
+                    $this.text('Renovando...');
+                    $.post('acao/exp_renew_views.php', {
+                        userx: $userx
+                    }, function($return) {
+                        if ($.trim($return).length == 0) {
+                            refresh_page_wo_warning();
+                        } else {
+                            swal('Atenção', $return);
+                        }
+                    });
+                });
+            }
+        });
+    }
+
+    function send_whats() {
+        $('.whatsx').each(function(index, obj) {
+            whats_to_desktop(index, obj);
+        });
+    }
+
+    function whats_to_desktop(index, obj) {
+        let $this = $(obj);
+
+        let uri = 'https://wa.me/';
+        let phone = $this.attr('phone');
+        let msg = $this.attr('msg');
+
+        let url = uri + phone + '?text=' + msg;
+
+        $this.attr('href', url);
+    }
+
+    /* -EVENTOS ----------------------------------------------------------------------------------------------------- */
+
+    /* +GATILHO ----------------------------------------------------------------------------------------------------- */
+
+    function trigger_register_form_close() {
+        $('#form-cadastrar').trigger('click');
+    }
+
+    /* -GATILHO ----------------------------------------------------------------------------------------------------- */
+
+    /* +STARTS ------------------------------------------------------------------------------------------------------ */
+    /* SHOULD BE MANUAL */
+    /* -STARTS ------------------------------------------------------------------------------------------------------ */
+</script><tr>
+<td colspan="2">
+<div class="box001_p" style="width:970px; height:auto">
+<table width="100%" border="0" cellspacing="4" cellpadding="4">
+<tr>
+<td width="72%" align="center">
+<div class="box002" style="width: 950px;">20. Mapa de trabalho - colaborador <img id="open_mapa_admin" src="/sistemas/odonto/adm/./images/mais.png" width="16" height="16" style="cursor: pointer;" />
 </div>
 </td>
 </tr>
 <tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2841949">
-FERNANDA DE NAZARE TEODORO </a>
-&nbsp;
-<a href="#" onClick="open_obs('2177962'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-11/02/2023 </div>
-</td>
-<td class="DataTD">
-012996200920 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2177962&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2177962');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2949373">
-CAMILA DE OLIVEIRA CRUZ </a>
-</td>
-<td class="DataTD">
-<div align="center">
-11/02/2023 </div>
-</td>
-<td class="DataTD">
-011974466652 esposo </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2266310&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2266310');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2788523">
- MAURICIO DIAS PEREIRA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-esposa-011999770424 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2277954&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2277954');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2922135">
-MARIA GABRIELA EVANGELISTA </a>
-&nbsp;
-<a href="#" onClick="open_obs('2215769'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-011975289447 </td>
-<td class="DataTD">
- <div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2215769&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2215769');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2747709">
-THAIS DEL VECHIO </a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-011995357460 Gilberto ( somente whatzap) </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2182240&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2182240');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
- </td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2747709">
-THAIS DEL VECHIO </a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-011995357460 Gilberto ( somente whatzap) </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2179965&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2179965');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2970837">
-JOSIANE DE CAMARGO DE SOUZA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-011930441992 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2276036&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2276036');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2987570">
-EVELYN LEITE OLIVEIRA DOS SANTOS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-12/02/2023 </div>
-</td>
-<td class="DataTD">
-0119129727538 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2287093&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
- </td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2287093');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2877677">
-LUIZ CARLOS DE MORAIS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-13/02/2023 </div>
-</td>
-<td class="DataTD">
-01146933267 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2181132&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2181132');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3147875">
-NATIELE JESUS DE SOUSA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-13/02/2023 </div>
-</td>
-<td class="DataTD">
-011951247291 mae claudia </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2392965&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2392965');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2877348">
-PEDRO VICTOR DA SILVA QUINTAO </a>
-</td>
-<td class="DataTD">
-<div align="center">
-15/02/2023 </div>
-</td>
-<td class="DataTD">
-01297424912 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
- <td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2181905&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2181905');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2880560">
-MAIRA PRUDENCIO DOS SANTOS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-15/02/2023 </div>
-</td>
-<td class="DataTD">
-011910012215 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2182472&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2182472');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3015062">
-MIGUEL DE FREITAS SANTOS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-15/02/2023 </div>
-</td>
-<td class="DataTD">
-01142859939 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2395568&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2395568');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2705181">
-DAYANE FERREIRA DOS SANTOS PINTO </a>
-</td>
-<td class="DataTD">
-<div align="center">
-15/02/2023 </div>
-</td>
-<td class="DataTD">
-011944655775 </td>
- <td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2404072&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2404072');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3128467">
-RENATA APARECIDA VIEIRA </a>
-&nbsp;
-<a href="#" onClick="open_obs('2404342'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-15/02/2023 </div>
-</td>
-<td class="DataTD">
-011973870462 (esposo) </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2404342&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2404342');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2880244">
-DAVID DO PADRO DE SIQUEIRA </a>
-</td>
-<td class="DataTD">
-<div align="center">
-16/02/2023 </div>
-</td>
-<td class="DataTD">
-011955972777 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2202883&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2202883');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2565241">
-JANAINA APARECIDA SANTOS </a>
-&nbsp;
-<a href="#" onClick="open_obs('2184738'); return false">
-<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
-</a>
-</td>
-<td class="DataTD">
-<div align="center">
-16/02/2023 </div>
-</td>
-<td class="DataTD">
-11969045201 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2184738&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2184738');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2804805">
-ADRIANA APARECIDA DE CASTRO </a>
-</td>
-<td class="DataTD">
-<div align="center">
-16/02/2023 </div>
-</td>
-<td class="DataTD">
-filha-011961841743 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2203176&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2203176');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
-<tr>
-<td class="DataTD">
-<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2760945">
-PEDRO BARRIOS </a>
-</td>
-<td class="DataTD">
-<div align="center">
-16/02/2023 </div>
-</td>
-<td class="DataTD">
-011992090491 </td>
-<td class="DataTD">
-<div align="center">
-</div>
-</td>
-<td width="74">
-<div align="center">
-<a href="novo_retorno.php?id=2203695&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
-</div>
-</td>
-<td width="63">
-<div align="center">
-<a href="javascript:excluir('2203695');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
-</div>
-</td>
-</tr>
- </table>
-<p>
-</p>
-<p>&nbsp; </p>
-<table width="700" border="0" align="center" cellpadding="0" cellspacing="4" class="FormTABLE">
-<tr>
-<th colspan="6">Revisão implanto </th>
-</tr>
-<tr>
-<td width="316" height="20"><strong>Nome</strong></td>
-<td width="61" height="20"><strong>Retorno</strong></td>
-<td width="92" height="20"><strong>Telefones</strong></td>
-<td width="64" height="20"><strong>Tentativa(s)</strong></td>
-<td height="20" colspan="2">
-<div align="center">
-<strong>Ação</strong>
-</div>
+<td valign="middle">
+<div id="conteudo_item_20" class="box003_p" style="width:950px; height:auto"></div>
 </td>
 </tr>
 </table>
+</div>
+</td>
+</tr>
+<script>
+	$(document).ready(function () {
+		$("#open_mapa_admin").off("click").on("click", function () {
+			deny_ver_dados();
+			pop_it_up_center("../../admin/mapa_trabalho_colaborador_link.php", "janelamapa", 1280, 720);
+			allow_ver_dados();
+		});
+		
+		function deny_ver_dados() {
+			$("#button-ver-dados").attr("disabled", "disabled");
+		}
+
+		function allow_ver_dados() {
+			$("#button-ver-dados").removeAttr("disabled");
+		}
+	});
+</script>
+<tr>
+<td colspan="2" align="center" valign="top">
 </td>
 </tr>
 </table>
-<iframe name="mm_excluir" id="mm_excluir" src="about:blank" height="1" width="1" frameborder="0" scrolling="no"></iframe>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+</td>
+</tr>
+</table>
 <style>
 		.rodape {
 			border-top: 1px solid #BDBDBD;
@@ -1984,13 +3634,13 @@ PEDRO BARRIOS </a>
 </script>
 <div id='system' align="rigth">
 <p></p>
-<abbr title="Memória utilizada.">21.75 MB</abbr>
+<abbr title="Memória utilizada.">23.75 MB</abbr>
 |
-<abbr title="Pico de uso de memória.">22 MB</abbr>
+<abbr title="Pico de uso de memória.">23.75 MB</abbr>
 |
 <abbr title="Tempo que o servidor levou para gerar a página (em segundos).">
-2.683s </abbr>
-<iframe name="expire" id="expire" src="expirex.php" height="1" width="1" frameborder="0" scrolling="no"></iframe><p align="right">U53076F1693S187.108.198.168</p></div>
+2.549s </abbr>
+<iframe name="expire" id="expire" src="expirex.php" height="1" width="1" frameborder="0" scrolling="no"></iframe><p align="right">U53076F1468S187.108.198.168</p></div>
 <script type="text/javascript">
     $('#system').appendTo($('#info-memoria'));
 
@@ -2011,72 +3661,33 @@ PEDRO BARRIOS </a>
 </body>
 </html>
 <script>
-    $("#table-msg-franqueadora")
-            .css("cursor", "default")
-            .attr('unselectable', 'on')
-            .css({'-moz-user-select': '-moz-none', '-moz-user-select': 'none', '-o-user-select': 'none', '-khtml-user-select': 'none', '-webkit-user-select': 'none', '-ms-user-select': 'none', 'user-select': 'none'})
-            .bind('selectstart', function () {
-                return false;
-            });
-</script>
-<script>
-    $("#table-msg-franquia")
-            .css("cursor", "default")
-            .attr('unselectable', 'on')
-            .css({'-moz-user-select': '-moz-none', '-moz-user-select': 'none', '-o-user-select': 'none', '-khtml-user-select': 'none', '-webkit-user-select': 'none', '-ms-user-select': 'none', 'user-select': 'none'})
-            .bind('selectstart', function () {
-                return false;
-            });
-</script>
-<script>
-    $(document).ready(function () {
-        var pesquisa;
-        var alternativa;
-        var justificativa;
-        carregarPesquisa();
-        function carregarPesquisa() {
-            $("#painel_pesquisa_franqueado").load("painel_pesquisa_franqueado.php", {id_tipo_usuario: 10}, function () {});
-            
+    function pop_it_up_center(page_URL, title, w, h) {
+        let left  = (screen.width / 2) - (w / 2);
+        let top   = (screen.height / 2) - (h / 2);
+        let popup = window.open(page_URL, title, 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        if (window.focus) {
+            popup.focus();
         }
+    }
 
-        $("body").on("click", ".alternativa", function () {
-            pesquisa = $(this).parent(".pesquisa").attr("id");
-            alternativa = $(this).attr("id");
-            justificativa = $(this).attr("justificativa");
-            if (justificativa == "1") {
-                $("#justificativa_alternativa").show();
-            } else {
-                $("#justificativa_alternativa").hide();
-                $("#justificativa_text").val("");
+    function carregar_mapa_20(franquia) {
+        var verifyMbox18 = setInterval(() => {
+            if ($('#mbox18').length >= 1) {
+                clearInterval(verifyMbox18);
+                $('#conteudo_item_20').html('<img src="./images/carregando_pacotes.gif" width="32" height="32" align="absmiddle" />');
+                $('#conteudo_item_20').load('./ajax/mapa_trabalho_item_20.php', {franquia: franquia}, function() {
+                    $('#bprosseguir').show();
+                });
             }
-            $(".alternativa").removeClass("selected");
-            $(this).addClass("selected");
-        });
+        }, 1000);
+    }
 
-        $("body").on("click", "#responder_pesquisa", function () {
-            if (!alternativa) {
-                alert("Favor escolher uma alternativa");
-            } else {
-                var motivo_justificativa = $("#justificativa_text").val().trim();
-                if (justificativa == "0" || (justificativa == "1" && motivo_justificativa.length >= 10)) {
-                    $(this).attr("disabled", "true");
-                    $.ajax({
-                        type: 'POST',
-                        url: 'gravar_resposta_pesquisa_franqueado.php',
-                        data: {fk_pesquisa: pesquisa, fk_alternativa: alternativa, justificativa: motivo_justificativa},
-                        success: function (data) {
-                            $("#cssmenu").show();
-                            $(".button-menu").show();
-                        //    alert("Agradecemos a sua participação!");
-                            carregarPesquisa();
-                            alternativa = null;
-                        }
-                    });
-                } else {
-                    alert("Favor informar o motivo da escolha");
-                }
+    function mostrarMaisinhos() {
+        $('.maisinho').show();
+    }
 
-            }
-        });
+    $(document).ready(function() {
+        mostrarMaisinhos();
+        carregar_mapa_20(1468);
     });
 </script>
