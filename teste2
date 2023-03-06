@@ -1,0 +1,2082 @@
+!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128400116-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128400116-1');
+</script>
+<title>Sistema Odonto Excellence</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="cache-control" content="max-age=0">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+<meta name="twitter:widgets:csp" content="on">
+<meta name="robots" content="noindex"> <link href="/sistemas/odonto/adm/css/admin2.css?1677930146" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/Site.css?1677930146" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/site_new.css?1677930146" rel="stylesheet" type="text/css" />
+<link href="/sistemas/odonto/adm/css/_joint.css?1677930146" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" media="screen" href="/sistemas/odonto/adm/libs/font-awesome/4.6.3/css/all.css">
+<link rel="icon" type="image/x-icon" href="/sistemas/odonto/adm/favicon.ico?1677930146">
+<style>
+	body {
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+
+	@media print {
+		.hidden-print {
+			display: none;
+		}
+	}
+</style> 
+<link rel="stylesheet" href="/sistemas/odonto/adm/css/colorbox.css?1677930146">
+<script src="/sistemas/odonto/adm/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/js/jquery.colorbox-min.js?1677930146"></script> 
+<style>
+	.select2 {
+		font-size: 14px !important;
+		font-family: "Calibri";
+	}
+</style>
+<link href="/sistemas/odonto/adm/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
+<script src="/sistemas/odonto/adm/libs/select2/4.0.5/js/select2.min.js"></script>
+<script src="/sistemas/odonto/adm/libs/select2/4.0.5/js/i18n/pt-BR.js"></script>
+<script>
+	var $loader = "<div style=\"text-align: center; \"class=\"loader text-center\" title=\"Loading...\">\n\t<svg class=\"ajax-loader\" version=\"1.1\" id=\"loader-1\" x=\"0px\" y=\"0px\" width=\"40px\" height=\"40px\" viewBox=\"0 0 40 40\" enable-background=\"new 0 0 40 40\" xml:space=\"preserve\"><path opacity=\"0.2\" fill=\"#000\" d=\"M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z\"/><path fill=\"#000\" d=\"M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z\"><animateTransform attributeType=\"xml\" attributeName=\"transform\" type=\"rotate\" from=\"0 20 20\" to=\"360 20 20\" dur=\"0.5s\" repeatCount=\"indefinite\"/></path></svg>\n</div>";
+
+	$(document).ready(function () {
+		$(".select2").select2();
+	});
+</script>
+<link rel="stylesheet" href="/sistemas/odonto/adm/windowfiles/dhtmlwindow.css?1677930146" type="text/css" />
+<link rel="stylesheet" href="/sistemas/odonto/adm/modalfiles/modal.css?1677930146" type="text/css" />
+<script type="text/javascript" src="/sistemas/odonto/adm/js/avalidate.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/windowfiles/dhtmlwindow.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/modalfiles/modal.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/modalfiles/modais.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.config.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.lang-enUS.js?1677930146"></script>
+<script type="text/javascript" src="/sistemas/odonto/adm/js/fValidate.validators.js?1677930146"></script>
+<style type="text/css">
+            <!--
+            .style1 {font-weight: bold}
+            a.veja:link,a.veja:visited{color: black;text-decoration:none}
+            a.veja:hover{color: black;text-decoration:none}
+            -->
+        </style>
+<style>
+            #aviso {
+                font-weight:bold;
+                color: #C00;
+            }
+
+            #aviso a {
+                margin: 10px;
+            }
+
+            #aviso_atualizacao {
+                font-weight:bold;
+                color: #C00;
+            }
+
+            #aviso_atualizacao a {
+                margin: 10px;
+            }
+
+            .texto1 {
+                margin-top: 5px;
+                padding-top: 10px;
+            }
+        </style>
+
+<link rel="stylesheet" href="/sistemas/odonto/adm/css/colorbox.css?1677930146" />
+<script src="/sistemas/odonto/adm/js/jquery.colorbox-min.js?1677930146"></script>
+<script>
+            $(document).ready(function () {
+                $(".modal_verificar_cliente").colorbox({iframe: true, width: "710", height: "650", overlayClose: true});
+            });
+
+            function fecha_modal() {
+                $(".modal_verificar_cliente").colorbox.close();
+            }
+        </script>
+
+<script language="JavaScript">
+            function excluir(id) {
+                if (confirm("Tem certeza que deseja excluir?")) {
+                    document.getElementById("mm_excluir").src = "excluir_retornos.php?ret=&acao=excluir&table=tb_retornos&id_posfix=&id=" + id;
+                }
+            }
+        </script>
+</head>
+<body topmargin="0" marginheight="0">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../../admin/css/single-happy-star.css">
+<style>
+	body {
+		margin: 0px !important;
+	}
+
+	.defaultSize {
+		height: 70px;
+	}
+
+	.title-header {
+		background: #EEEEEE;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.header-content {
+		font-family: 'Open Sans';
+		/*margin-left: 5em;*/
+		margin-left: 8em;
+		padding-top: 1em;
+	}
+
+	.icon_new {
+		background-position-x: 1em;
+	}
+
+	#span_title, #spam-title {
+		font-size: 20px;
+		font-weight: bold;
+		position: absolute;
+		margin-top: 30px;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.span_combo, .spam-combo {
+		margin-top: 30px;
+	}
+
+	.logox {
+		background-repeat: no-repeat;
+		background-position-x: 4em;
+		/*background-position-x: 1em;*/
+		background-position-y: 80%;
+		background-size: 40px;
+		height: 100%;
+		width: 100%;
+		background-image: url("/sistemas/odonto/adm//images/logo_mini.png");
+	}
+
+	.icon_new {
+		background-position-x: 1em;
+		margin-top: 10px;
+	}
+
+	.time-zone {
+		padding-top: 0px;
+		padding-left: 10px;
+		text-align: left;
+		width: 400px;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.session-user {
+		margin-top: -12px;
+		text-align: right;
+		filter: drop-shadow(1px 1px 0px #282726);
+	}
+
+	.content-center {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 30px;
+	}
+</style>
+ <style>
+		.info-userx {
+			color: #EEEEEE;
+			background-color: #373737;
+			border-bottom: 1px solid #212121;
+			
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 15px;
+			padding-top: 3px;
+			padding-right: 15px;
+			z-index: 100000;
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+			/*text-transform: uppercase;*/
+		}
+    </style>
+<div class="title-header defaultSize">
+<div class="info-userx">
+<div class="time-zone">
+Time Zone: Etc/GMT+3 - 06/03/2023 09:46:27 </div>
+<div class="session-user">
+Usuário: G53076 /
+F: 1693 /
+T: 10 /
+PT-BRL </div>
+</div>
+<div class="logox">
+<div class="content-center">
+<label>
+<nav class="rating">
+<ul id="some-list">
+<li class="li current" title="Parabéns, o Projeto 360 foi concluído!">
+<svg>
+<use xlink:href="#star"></use>
+</svg>
+</li>
+</ul>
+<div>
+<span>
+<svg><use xlink:href="#star"></use></svg>
+</span>
+</div>
+</nav>
+<svg style="display: none;">
+<symbol viewBox="0 0 36 34" id="star">
+<path fill="currentColor" d="M19.6859343,0.861782958 L24.8136328,8.05088572 C25.0669318,8.40601432 25.4299179,8.6717536 25.8489524,8.80883508 L34.592052,11.6690221 C35.6704701,12.021812 36.2532905,13.1657829 35.8938178,14.2241526 C35.8056709,14.4836775 35.6647294,14.7229267 35.4795411,14.9273903 L29.901129,21.0864353 C29.5299163,21.4962859 29.3444371,22.0366367 29.3872912,22.5833831 L30.1116131,31.8245163 C30.1987981,32.9368499 29.3506698,33.9079379 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.51252508,34.2485817 6.34688429,33.6765963 5.98741159,32.6182265 C5.90066055,32.3628116 5.86681029,32.0929542 5.88785051,31.8245163 L6.61217242,22.5833831 C6.65502653,22.0366367 6.46954737,21.4962859 6.09833466,21.0864353 L0.519922484,14.9273903 C-0.235294755,14.0935658 -0.158766688,12.8167745 0.690852706,12.0755971 C0.899189467,11.8938516 1.14297067,11.7555303 1.40741159,11.6690221 L10.1505113,8.80883508 C10.5695458,8.6717536 10.9325319,8.40601432 11.1858308,8.05088572 L16.3135293,0.861782958 C16.9654141,-0.0521682813 18.2488096,-0.274439442 19.1800736,0.365326425 C19.3769294,0.500563797 19.5481352,0.668586713 19.6859343,0.861782958 Z"></path>
+</symbol>
+<path class="shadow" d="M18.7022469,29.7633426 L29.1611722,33.6861584 C28.8859085,33.8576358 28.5650147,33.9672494 28.2172657,33.993502 C27.9437428,34.0141511 27.6687736,33.9809301 27.4085205,33.8957918 L18.6506147,31.0307612 C18.2281197,30.8925477 17.7713439,30.8925477 17.3488489,31.0307612 L8.59094317,33.8957918 C7.98083887,34.0953792 7.34281791,33.9989813 6.83864817,33.6859784 L17.2977531,29.7633426 C17.7505234,29.5935537 18.2494766,29.5935537 18.7022469,29.7633426 Z"></path>
+</svg>
+</label>
+</div>
+<div class="header-content">
+<spam id='spam-title'>
+GUARAREMA - SP
+</spam>
+<spam id='spam-combo'>
+<select class="comboFranquia select2" style="width:400px!important" autocomplete="off">
+<option value="iRigmBRQA786WMne0YJ2JghI915D5TXnag%3D%3D">
+ERECHIM - RS - BAIRRO LINHO [1006] </option>
+<option value="eNLbStrO80NAZn9xs4FR0BgwcTOuAuo%3D">
+ERECHIM - RS - CENTRO [60] </option>
+<option selected="selected" value="pE%2Fxh05RiU1uDBBCQmWucdKhdqJBwvZrdA%3D%3D">
+GUARAREMA - SP [1693] </option>
+<option value="l4Z0cjjgqa5D90te0gqLK50MwdM7QqNiaw%3D%3D">
+JARDINOPOLIS - SP [1468] </option>
+<option value="2gjFGG%2F3VYjSePAFBWrJiruwQsDnN%2Fz2">
+MANDAGUACU - PR [522] </option>
+<option value="5nvwZ7jpCf9w33lpgkBrz9BXzw7QDvCx">
+MARIALVA - PR [534] </option>
+<option value="IS7r%2BaIazujbFiI0HuxR6pJ72DHwfH29jQ%3D%3D">
+PALMEIRA DAS MISSOES - RS [1069] </option>
+<option value="w0fxmG0aDgSZeUuphCrfrVfg3rnjpBZlpA%3D%3D">
+RONDA ALTA-RS [1382] </option>
+<option value="0%2FUT9XaI5iKPE4JTVzPrkspolsE1n7Q9gQ%3D%3D">
+SALTO DE PIRAPORA - SP [1204] </option>
+<option value="0Fy3paJxj5Fnr2LQO9uprl1hFF%2Fvzgmu">
+SARANDI - PR - CENTRO [813] </option>
+<option value="ne9p0vi6VdbsoRqeozFK%2FU28lVSP5azx">
+UBERLANDIA - MG - CENTRO [695] </option>
+</select>
+</spam>
+</div>
+</div>
+</div>
+<script>
+		$(document).ready(function () {
+			$(".comboFranquia").change(function() {
+				let franquia_referencia = $(this).val();
+				let retorno = '/sistemas/odonto/adm/home_full.php'; 
+				
+				let $dados = {
+					franquia_referencia, 
+					retorno 
+				};
+				
+				$.post('./acao/atualizar_sessao_franquia.php', $dados, function($ret) {				
+					window.location.reload();	
+				});
+			});			
+		});	
+	</script>
+
+
+<table border="0" width="100%" height="75%" cellpadding="0" cellspacing="0" bgcolor="white">
+<tr>
+<td width="13" valign="top" class="hidden-print">
+<p>
+<br>
+<iframe src="./include_menu3/_menu3.php" width="275px" height="2000px" scrolling="no" style="overflow: hidden; border: none;"></iframe>
+<script>
+    $(document).ready(function() {
+        $(".btn-escolha-menu").click(function() {
+            let escolha_menu = $(this).attr("escolha_menu");
+
+            let dados = {
+                escolha_menu: escolha_menu
+            };
+
+            if (escolha_menu != "") {
+                $.post("./acao/gravar_escolha_menu.php", dados, function(ret) {
+                    if (ret == "OK") {
+                        window.location = './home.php';
+                    } else {
+                        alert(ret);
+                    }
+                });
+            }
+        });
+    });
+</script>
+</p>
+</td>
+<td valign="top" class="conteudo">
+<p align="center">&nbsp;</p>
+
+<script>
+                        $(document).ready(function () {
+                            setTimeout(function () {
+                                $("#aviso").load("ajax/aviso_tarefa.php");
+                                $("#aviso_atualizacao").load("ajax/aviso_atualizacao.php");
+                            }, 1250);
+                        });
+                    </script>
+<p align="center">
+<span>
+Olá,
+<strong>
+JHONATAN WILLIAN DOS SANTOS <br>
+<small style="color: grey;">
+Franqueado <br>
+</small>
+</strong>
+</span>
+</p>
+<hr style="border: thin solid #757575; max-width: 700px;">
+<div id="painel_pesquisa_franqueado"></div>
+
+<script>
+        $(document).ready(function() {
+            $(".btn-inscrever-ferramenta-termo").off("click");
+            $(".btn-inscrever-ferramenta-termo").on("click", function() {
+                let preenchido = 0;
+                let franquias = new Array();
+                $("input[name='franquiasEscolhaFerramenta[]']:checked").each(function() {
+                    franquias.push($(this).val());
+                    if (franquias) {
+                        preenchido = 1;
+                    }
+                });
+
+                if (preenchido == 1) {
+                    if (franquias) {
+                        dados = {
+                            franquias: franquias
+                        };
+
+                        if (confirm('Deseja gravar?')) {
+                            $.post("./acao/gravar_escolha_franquia_termo_conclusao_procedimento.php", dados, function(ret) {
+                                var ret = $.trim(ret);
+                                if (ret == "OK") {
+                                    window.location.reload(true);
+                                } else {
+                                    alert(ret);
+                                }
+                            });
+                        }
+                    }
+                } else {
+                    alert("Escolha uma Franquia antes de gravar");
+                }
+            });
+        });
+    </script>
+<div align="center">
+<h3 class="text-justify font-weight-bold">
+Mensagem do Presidente<br>
+</h3>
+</div>
+<div align="center">
+<iframe allow="autoplay; fullscreen;" class="jmvplayer" frameborder="0" src="https://player.jmvstream.com/1wclpjZ0Uo51RK9oMgmR51sL7km92G/2a297n21z1yr16k" allow="accelerometer; autoplay; fullscreen; gyroscope; xr-spatial-tracking;" style="position: top; height: 700px; width: 700px;"></iframe>
+</div>
+<hr style="border: thin solid #c00; max-width: 700px;">
+<div align="center">
+<h3 class="text-justify font-weight-bold">
+Cupom de desconto para profissional Odonto Excellence: #descontodontoexcelenceproteseabo23 <br><br>
+Falar com Dr. Leonardo Pellissari (42) 98403-6545
+</h3>
+</div>
+<div align="center">
+<p align="center">
+<img src="images/curso_2023/aviso-curso-especializacao-protese-03-2023.jpg">
+</p>
+</div>
+<hr style="border: thin solid #c00; max-width: 700px;">
+<div align="center">
+<h3 class="text-justify font-weight-bold">
+Curso Rioquímica<br>
+</h3>
+</div>
+<div align="center">
+<iframe allow="autoplay; fullscreen;" class="jmvplayer" frameborder="0" src="https://player.jmvstream.com/1wclpjZ0Uo51RK9oMgmR51sL7km92G/nei31xq7p92h215" allow="accelerometer; autoplay; fullscreen; gyroscope; xr-spatial-tracking;" style="position: top; height: 700px; width: 700px;"></iframe>
+</div>
+<hr style="border: thin solid #c00; max-width: 700px;">
+<div align="center">
+<p align="center">
+<img src="images/curso_2023/aviso-curso-bioseguranca-03-2022-2.jpg">
+</p>
+</div>
+<hr style="border: thin solid #c00; max-width: 700px;">
+<hr style="border: thin solid #c00; max-width: 700px;">
+<div align='center'>
+<p align='center'>
+<img src="images/publicidade_2023/atualizado_outdoor_publicidade_2023.jpg">
+</p>
+</div>
+<hr style="border: thin solid #c00; max-width: 700px;">
+<style>
+    .treinamento {
+        font: 10px/12px Geneva, Verdana, Arial, Helvetica, sans-serif;
+        border-color: #eeeeee;
+        display: table;
+        margin: 0 auto;
+        background: #eeeeee;
+        border-bottom: 1px solid #bdbdbd;
+        border-top: 1px solid #bdbdbd;
+        border-right: 1px solid #bdbdbd;
+        border-left: 1px solid #bdbdbd;
+    }
+
+    #form_treinamento {
+        border-color: #eeeeee;
+    }
+
+    #form_treinamento th {
+        background-color: #e0e0e0;
+        border-bottom: 1px solid #9e9e9e;
+        border-top: 1px solid #9e9e9e;
+        height: 15px;
+        line-height: 10px;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $(".btn-inscrever-treinamento-1").off("click");
+        $(".btn-inscrever-treinamento-1").on("click", function() {
+            let fk_usuario = $('#usuario').val();
+            let fk_franquia = $('#franquia').val();
+            let id_treinamento = $('#treinamento_1').val();
+
+            dados = {
+                fk_usuario: fk_usuario,
+                fk_franquia: fk_franquia,
+                id_treinamento: id_treinamento
+            };
+
+            if (id_treinamento != "") {
+                $.post("./acao/gravar_inscricao_usuario_treinamento.php", dados, function(ret) {
+                    var ret = $.trim(ret);
+                    if (confirm('Deseja Participar?')) {
+                        if (ret == "OK") {
+                            window.location.reload(true)
+                        } else {
+                            alert(ret);
+                        }
+                    }
+                });
+            }
+        });
+
+        $(".btn-inscrever-treinamento-2").off("click");
+        $(".btn-inscrever-treinamento-2").on("click", function() {
+            let fk_usuario = $('#usuario').val();
+            let fk_franquia = $('#franquia').val();
+            let id_treinamento = $('#treinamento_2').val();
+
+            dados = {
+                fk_usuario: fk_usuario,
+                fk_franquia: fk_franquia,
+                id_treinamento: id_treinamento
+            };
+
+            if (id_treinamento != "") {
+                $.post("./acao/gravar_inscricao_usuario_treinamento.php", dados, function(ret) {
+                    var ret = $.trim(ret);
+                    if (confirm('Deseja Participar?')) {
+                        if (ret == "OK") {
+                            window.location.reload(true)
+                        } else {
+                            alert(ret);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script> <hr style="border: thin solid #C00; max-width: 700px;">
+<hr style="border: thin solid #C00; max-width: 700px;">
+<style>
+            .top_10 th {
+                font-size: 13px;
+                background-color: #bac9cc;
+            }
+
+            .top_10 td {
+                font-size: 11px;
+                border-left: 1px solid #bac9cc;
+                border-bottom: 1px solid #000000;
+            }
+
+            .title_top_10_clinico_geral {
+                background-color: #00a652;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_orto {
+                background-color: #f68121;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_implanto {
+                background-color: #7570b3;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_aplicativo {
+                background-color: #5980ab;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_ticket_medio {
+                background-color: #cc8c5e;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_conversao {
+                background-color: #806c53;
+                color: white;
+                font-size: 20px;
+            }
+
+            .title_top_10_menor_cancelamento {
+                background-color: #3a8476;
+                color: white;
+                font-size: 20px;
+            }
+
+            .top_10 th {
+                font-size: small;
+                text-transform: uppercase;
+            }
+        </style>
+<div align="center">
+<table width="700">
+<tr>
+<td align="center">
+<img src="/sistemas/odonto/adm//images/top_10_modelo_02/implantodontia_cabecalho_top_20.jpg">
+</td>
+</tr>
+</table>
+<table class="top_10" width="700">
+<tr>
+<th align="center">
+<h3>
+Valores de EFETIVAÇÃO em IMPLANTODONTIA - [ Fevereiro / 2023 ]
+</h3>
+</th>
+</tr>
+</table>
+<table class="top_10" width="700">
+<tr>
+<th align="center">
+<strong>
+#
+</strong>
+</th>
+<th align="center">
+<strong>
+Unidade </strong>
+</th>
+<th align="center" width="75">
+<strong>
+VALOR </strong>
+</th>
+<th align="center">
+<strong>
+Franqueado </strong>
+</th>
+<th align="center">
+<strong>
+Supervisor </strong>
+</th>
+<th align="center">
+<strong>
+Gerente </strong>
+</th>
+<th align="center">
+<strong>
+<abbr title="Pontuação">
+Pontuação </abbr>
+</strong>
+</th>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+1 </td>
+<td style="">
+JUNDIAI - SP - BAIRRO BONFIGLIOLI </td>
+<td align="right" style="">
+241.485,96 </td>
+<td style="">
+FRANCISCO / DANIEL </td>
+<td title="CASSIA CAROLINA DE LARA" style="">
+CASSIA CAROLINA DE LARA </td>
+<td title="CHRISTOPHER HILDON DE GOES" style="">
+CHRISTOPHER HILDON DE GOES </td>
+<td height="28" align="center" style="">
+20 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+2 </td>
+<td style="">
+PONTA GROSSA - PR - CENTRO (CS) </td>
+<td align="right" style="">
+228.757,76 </td>
+<td style="">
+SIDNEI / TATIANA </td>
+<td title="LIDIANE DZULINSKI" style="">
+LIDIANE DZULINSKI </td>
+<td title="BRUNA KEDRYN TAQUES" style="">
+BRUNA KEDRYN TAQUES </td>
+<td height="28" align="center" style="">
+19 </td>
+</tr>
+
+<tr>
+<td height="28" align="center" style="">
+3 </td>
+<td style="">
+FLORIANOPOLIS - SC - BAIRRO ESTREITO </td>
+<td align="right" style="">
+212.077,26 </td>
+<td style="">
+ANDREA / JOãO </td>
+<td title="PRYSCILA HASS FERREIRA" style="">
+PRYSCILA HASS FERREIRA </td>
+<td title="NATALIA GABRIELE DO NASCIMENTO ARAUJO" style="">
+NATALIA GABRIELE DO NASCIMENTO ARAUJO </td>
+<td height="28" align="center" style="">
+18 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+4 </td>
+<td style="">
+DIAMANTINO - MT </td>
+<td align="right" style="">
+206.676,45 </td>
+<td style="">
+FERNANDO/ VâNIA </td>
+<td title="ANDRE GUILHERME GROKOSKI" style="">
+ANDRE GUILHERME GROKOSKI </td>
+<td title="CINTIA EMANUELLE VENEROSKI MONTEIRO" style="">
+CINTIA EMANUELLE VENEROSKI MONTEIRO </td>
+<td height="28" align="center" style="">
+17 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+5 </td>
+<td style="">
+BOTUCATU - SP - II </td>
+ <td align="right" style="">
+187.696,32 </td>
+<td style="">
+ELAINE </td>
+<td title="ANA MARIA PRUSNAL" style="">
+ANA MARIA PRUSNAL </td>
+<td title="PAOLA INGRID PEREIRA" style="">
+PAOLA INGRID PEREIRA </td>
+<td height="28" align="center" style="">
+16 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+6 </td>
+<td style="">
+TELEMACO BORBA - PR (CS) </td>
+<td align="right" style="">
+171.517,09 </td>
+<td style="">
+FABIANO </td>
+<td title="EVELIN CAROLINE MULLER" style="">
+EVELIN CAROLINE MULLER </td>
+<td title="TATIANE WALUS NOGUEIRA" style="">
+TATIANE WALUS NOGUEIRA </td>
+<td height="28" align="center" style="">
+15 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+7 </td>
+<td style="">
+INDAIAL - SC </td>
+<td align="right" style="">
+160.174,47 </td>
+<td style="">
+MARISTELA / JUAREZ </td>
+<td title="CASSIA CAROLINA DE LARA" style="">
+CASSIA CAROLINA DE LARA </td>
+ <td title="CHRISTOPHER HILDON DE GOES" style="">
+CHRISTOPHER HILDON DE GOES </td>
+<td height="28" align="center" style="">
+14 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+8 </td>
+<td style="">
+MARABA - PA - NOVO HORIZONTE </td>
+<td align="right" style="">
+143.484,26 </td>
+<td style="">
+ANDRESSA </td>
+<td title="ANA PAULA DA VEIGA MICHALSKI" style="">
+ANA PAULA DA VEIGA MICHALSKI </td>
+<td title="LARISSA STEFANI GUIMARAES" style="">
+LARISSA STEFANI GUIMARAES </td>
+<td height="28" align="center" style="">
+13 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+9 </td>
+<td style="">
+NOVA LIMA - MG </td>
+<td align="right" style="">
+134.690,22 </td>
+<td style="">
+HAROLDO </td>
+<td title="BRUNA TURCZYNIAK" style="">
+BRUNA TURCZYNIAK </td>
+<td title="IAGO GERALDI GONCALVES" style="">
+IAGO GERALDI GONCALVES </td>
+<td height="28" align="center" style="">
+12 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+10 </td>
+<td style="">
+PRESIDENTE GETULIO - SC </td>
+<td align="right" style="">
+117.326,48 </td>
+<td style="">
+NILSON </td>
+<td title="ANA MARIA PRUSNAL" style="">
+ANA MARIA PRUSNAL </td>
+<td title="KAROLINE DA SILVA" style="">
+KAROLINE DA SILVA </td>
+<td height="28" align="center" style="">
+11 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+11 </td>
+<td style="">
+GASPAR - SC </td>
+<td align="right" style="">
+112.433,80 </td>
+<td style="">
+CINTIA / SEDEUR </td>
+<td title="FERNANDA APARECIDA DE MORAIS" style="">
+FERNANDA APARECIDA DE MORAIS </td>
+<td title="EDILAINE MARQUES DE OLIVEIRA" style="">
+EDILAINE MARQUES DE OLIVEIRA </td>
+<td height="28" align="center" style="">
+10 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+12 </td>
+<td style="">
+ CAMPINA GRANDE DO SUL II - PR </td>
+<td align="right" style="">
+107.380,40 </td>
+<td style="">
+EDSON </td>
+<td title="GUILHERME MARCELO BOZACKI" style="">
+GUILHERME MARCELO BOZACKI </td>
+<td title="RICARDO VIEIRA" style="">
+RICARDO VIEIRA </td>
+<td height="28" align="center" style="">
+9 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+13 </td>
+<td style="">
+JARAGUA DO SUL - SC - CHICO DE PAULO </td>
+<td align="right" style="">
+100.350,28 </td>
+<td style="">
+FRANCISCO / MILENA / MONICA / FABIO </td>
+<td title="EVELIN CAROLINE MULLER" style="">
+EVELIN CAROLINE MULLER </td>
+<td title="BRUNA SAYONARA DE OLIVEIRA" style="">
+BRUNA SAYONARA DE OLIVEIRA </td>
+<td height="28" align="center" style="">
+8 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+14 </td>
+<td style="">
+CONTAGEM - MG - BAIRRO RESSACA </td>
+<td align="right" style="">
+97.538,82 </td>
+<td style="">
+KARLA / HELOISA </td>
+<td title="ARIANE MARI BORBA" style="">
+ARIANE MARI BORBA </td>
+<td title="RAFAEL GOMES MENSEN" style="">
+RAFAEL GOMES MENSEN </td>
+<td height="28" align="center" style="">
+7 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+15 </td>
+<td style="">
+SERRANA - SP </td>
+<td align="right" style="">
+97.102,86 </td>
+<td style="">
+BRUNO IRENO / CAROLINA PASCON </td>
+<td title="CASSIA CAROLINA DE LARA" style="">
+CASSIA CAROLINA DE LARA </td>
+<td title="LETICIA NUNES DE CARMO SILVEIRA" style="">
+LETICIA NUNES DE CARMO SILVEIRA </td>
+<td height="28" align="center" style="">
+6 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+16 </td>
+<td style="">
+CANELA - RS </td>
+<td align="right" style="">
+97.002,91 </td>
+<td style="">
+MARCELO / VINICIUS / CAMILA </td>
+<td title="FERNANDA APARECIDA DE MORAIS" style="">
+FERNANDA APARECIDA DE MORAIS </td>
+<td title="BARBARA ALESSANDRA VAZ DE OLIVEIRA" style="">
+BARBARA ALESSANDRA VAZ DE OLIVEIRA </td>
+<td height="28" align="center" style="">
+ 5 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+17 </td>
+<td style="">
+CONCORDIA - SC </td>
+<td align="right" style="">
+95.163,04 </td>
+<td style="">
+JULIANA / ALEX </td>
+<td title="PRYSCILA HASS FERREIRA" style="">
+PRYSCILA HASS FERREIRA </td>
+<td title="JOAO VICTOR TOZETTO DE MATTOS" style="">
+JOAO VICTOR TOZETTO DE MATTOS </td>
+<td height="28" align="center" style="">
+4 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+18 </td>
+<td style="">
+SAO JERONIMO - RS </td>
+<td align="right" style="">
+93.486,40 </td>
+<td style="">
+JOãO / THAIS </td>
+<td title="EVELIN CAROLINE MULLER" style="">
+EVELIN CAROLINE MULLER </td>
+<td title="TATIANE WALUS NOGUEIRA" style="">
+TATIANE WALUS NOGUEIRA </td>
+<td height="28" align="center" style="">
+3 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+19 </td>
+<td style="">
+SIQUEIRA CAMPOS - PR - ODONTO MEDIC </td>
+<td align="right" style="">
+89.393,05 </td>
+<td style="">
+ALEX MORIKAWA / DAYANE MORIKAWA </td>
+<td title="FERNANDA APARECIDA DE MORAIS" style="">
+FERNANDA APARECIDA DE MORAIS </td>
+<td title="EDILAINE MARQUES DE OLIVEIRA" style="">
+EDILAINE MARQUES DE OLIVEIRA </td>
+<td height="28" align="center" style="">
+2 </td>
+</tr>
+<tr>
+<td height="28" align="center" style="">
+20 </td>
+<td style="">
+ARACOIABA DA SERRA - SP </td>
+<td align="right" style="">
+85.337,28 </td>
+<td style="">
+FELIPE / FRADERICO / OSWALDO </td>
+<td title="PRYSCILA HASS FERREIRA" style="">
+PRYSCILA HASS FERREIRA </td>
+<td title="ALESSANDRO DE OLIVEIRA DA SILVA" style="">
+ALESSANDRO DE OLIVEIRA DA SILVA </td>
+<td height="28" align="center" style="">
+1 </td>
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<img src="/sistemas/odonto/adm//images/top_10_modelo_02/implantodontia_rodape_top_20.jpg">
+</td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+</div>
+<div class="top-ranking-mostra-anteriores" align="center" width="700px">
+_________________________________________
+<br>
+<h4>
+Ver Top Ranking anteriores
+</h4>
+<input type="hidden" name="mes" id="mes" value="02">
+<input type="hidden" name="ano" id="ano" value="2023">
+<input type="hidden" name="pais" id="pais" value="1">
+<button type="button" class="btn btn-info btn-ver-top-ranking" categoria="2">Clinico Geral - Efetivação</button>
+<br>
+</div>
+<script>
+    $(document).ready(function() {
+        function pop_it_up_center(page_URL, title, w, h) {
+            let left = (screen.width / 2) - (w / 2);
+            let top = (screen.height / 2) - (h / 2);
+            let popup = window.open(page_URL, title, 'width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+            if (window.focus) {
+                popup.focus();
+            }
+        }
+
+        $(".btn-ver-top-ranking").on("click", function() {
+            let categoria = $(this).attr('categoria');
+            let pais = $('#pais').val();
+            let mes = $('#mes').val();
+            let ano = $('#ano').val();
+
+            pop_it_up_center('./top_ranking_mostrar.php?pais=' + pais + '&mes=' + mes + '&ano=' + ano + '&categoria=' + categoria, 'Top Ranking', 1200, 800);
+        });
+    });
+</script> <hr style="border: thin solid #C00; max-width: 700px;">
+<hr style="border: thin solid #C00; max-width: 700px;">
+
+<p align="center">
+<a class="twitter-timeline" href="https://twitter.com/OseiasGomesof" data-widget-id="1111" width="700" height="500">Tweets de @OseiasGomesof</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+        ! function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^https:/.test(d.location) ? 'https' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
+</p>
+
+
+
+<br><br>
+<div class="recados">
+<p align="center" style="color: #C00">
+<img id="loader" src="/sistemas/odonto/adm/images/ajax-loader2.gif" alt="Carregando..." width="16" height="16">
+<br />
+Carregando...
+</p>
+</div>
+<script type="text/javascript">
+                        $(document).ready(function () {
+                            setTimeout(function () {
+                                $(".recados").load("ajax/mural_recados.php");
+                            }, 1750);
+                        });
+                    </script>
+<br>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="4" class="FormTABLE">
+<tr>
+<th colspan="6">Pós - venda </th>
+</tr>
+<tr>
+<td width="316" height="20"><strong>Nome</strong></td>
+<td width="61" height="20"><strong>Retorno</strong></td>
+<td width="92" height="20"><strong>Telefones</strong></td>
+<td width="64" height="20"><strong>Tentativa(s)</strong></td>
+<td height="20" colspan="2"><div align="center"><strong>Ação</strong></div></td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2941611">
+MARIA ALEIDE PEIXOTO ECA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+05/02/2023 </div>
+</td>
+<td class="DataTD">
+01195923375 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2246216&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2246216');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+ <a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2833123">
+MARIA DAS DORES PEREIRA DOS SANTOS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+05/02/2023 </div>
+</td>
+<td class="DataTD">
+011998524448 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2209666&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2209666');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2728409">
+INGRID APARECIDA DA CUNHA </a>
+&nbsp;
+<a href="#" onClick="open_obs('2197315'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+06/02/2023 </div>
+</td>
+<td class="DataTD">
+011971514475 (mae )  </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2197315&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2197315');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3050364">
+PAULO SILVA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+06/02/2023 </div>
+</td>
+<td class="DataTD">
+011913291182 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2321273&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2321273');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+ </div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3110863">
+JENIFER GARCIA MOREIRA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+06/02/2023 </div>
+</td>
+<td class="DataTD">
+01146934672 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2383791&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2383791');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2587191">
+ANDREIA GONCALVES DA SILVA </a>
+&nbsp;
+ <a href="#" onClick="open_obs('2392519'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+06/02/2023 </div>
+</td>
+<td class="DataTD">
+011943015922 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2392519&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2392519');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3119627">
+ERICA APARECIDA DE OLIVEIRA CORREIA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+07/02/2023 </div>
+</td>
+<td class="DataTD">
+011970776861 </td>
+<td class="DataTD">
+<div align="center">
+ </div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2383326&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2383326');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3128467">
+RENATA APARECIDA VIEIRA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+08/02/2023 </div>
+</td>
+<td class="DataTD">
+011973870462 (esposo) </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2395270&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2395270');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2858275">
+WILLIAN APARECIDO ALVES </a>
+&nbsp;
+<a href="#" onClick="open_obs('2176139'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+09/02/2023 </div>
+</td>
+<td class="DataTD">
+011912739366 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2176139&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2176139');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2956414">
+SERGIO RODRIGO LUCAS DURAN </a>
+  </td>
+<td class="DataTD">
+<div align="center">
+10/02/2023 </div>
+</td>
+<td class="DataTD">
+011972854249 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2251611&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2251611');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2813631">
+LARISSA LIMA SILVA SANTOS </a>
+&nbsp;
+<a href="#" onClick="open_obs('2179460'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+11/02/2023 </div>
+</td>
+<td class="DataTD">
+011912834552 </td>
+<td class="DataTD">
+<div align="center">
+
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2179460&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2179460');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2841949">
+FERNANDA DE NAZARE TEODORO </a>
+&nbsp;
+<a href="#" onClick="open_obs('2177962'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+11/02/2023 </div>
+</td>
+<td class="DataTD">
+012996200920 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2177962&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2177962');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2949373">
+CAMILA DE OLIVEIRA CRUZ </a>
+</td>
+<td class="DataTD">
+<div align="center">
+11/02/2023 </div>
+</td>
+<td class="DataTD">
+011974466652 esposo </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2266310&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2266310');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2788523">
+ MAURICIO DIAS PEREIRA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+esposa-011999770424 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2277954&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2277954');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2922135">
+MARIA GABRIELA EVANGELISTA </a>
+&nbsp;
+<a href="#" onClick="open_obs('2215769'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+011975289447 </td>
+<td class="DataTD">
+ <div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2215769&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2215769');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2747709">
+THAIS DEL VECHIO </a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+011995357460 Gilberto ( somente whatzap) </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2182240&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2182240');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+ </td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2747709">
+THAIS DEL VECHIO </a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+011995357460 Gilberto ( somente whatzap) </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2179965&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2179965');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2970837">
+JOSIANE DE CAMARGO DE SOUZA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+011930441992 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2276036&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2276036');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2987570">
+EVELYN LEITE OLIVEIRA DOS SANTOS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+12/02/2023 </div>
+</td>
+<td class="DataTD">
+0119129727538 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2287093&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+ </td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2287093');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2877677">
+LUIZ CARLOS DE MORAIS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+13/02/2023 </div>
+</td>
+<td class="DataTD">
+01146933267 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2181132&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2181132');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3147875">
+NATIELE JESUS DE SOUSA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+13/02/2023 </div>
+</td>
+<td class="DataTD">
+011951247291 mae claudia </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2392965&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2392965');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2877348">
+PEDRO VICTOR DA SILVA QUINTAO </a>
+</td>
+<td class="DataTD">
+<div align="center">
+15/02/2023 </div>
+</td>
+<td class="DataTD">
+01297424912 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+ <td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2181905&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2181905');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2880560">
+MAIRA PRUDENCIO DOS SANTOS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+15/02/2023 </div>
+</td>
+<td class="DataTD">
+011910012215 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2182472&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2182472');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3015062">
+MIGUEL DE FREITAS SANTOS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+15/02/2023 </div>
+</td>
+<td class="DataTD">
+01142859939 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2395568&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2395568');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2705181">
+DAYANE FERREIRA DOS SANTOS PINTO </a>
+</td>
+<td class="DataTD">
+<div align="center">
+15/02/2023 </div>
+</td>
+<td class="DataTD">
+011944655775 </td>
+ <td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2404072&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2404072');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=3128467">
+RENATA APARECIDA VIEIRA </a>
+&nbsp;
+<a href="#" onClick="open_obs('2404342'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+15/02/2023 </div>
+</td>
+<td class="DataTD">
+011973870462 (esposo) </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2404342&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2404342');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2880244">
+DAVID DO PADRO DE SIQUEIRA </a>
+</td>
+<td class="DataTD">
+<div align="center">
+16/02/2023 </div>
+</td>
+<td class="DataTD">
+011955972777 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2202883&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2202883');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2565241">
+JANAINA APARECIDA SANTOS </a>
+&nbsp;
+<a href="#" onClick="open_obs('2184738'); return false">
+<img src="/sistemas/odonto/adm/images/note_novo.gif" width="23" height="22" border="0" align="absmiddle" title="Ver Observações">
+</a>
+</td>
+<td class="DataTD">
+<div align="center">
+16/02/2023 </div>
+</td>
+<td class="DataTD">
+11969045201 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2184738&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2184738');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2804805">
+ADRIANA APARECIDA DE CASTRO </a>
+</td>
+<td class="DataTD">
+<div align="center">
+16/02/2023 </div>
+</td>
+<td class="DataTD">
+filha-011961841743 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2203176&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2203176');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="DataTD">
+<a class='modal_verificar_cliente veja' href="editar_cliente_m.php?id=2760945">
+PEDRO BARRIOS </a>
+</td>
+<td class="DataTD">
+<div align="center">
+16/02/2023 </div>
+</td>
+<td class="DataTD">
+011992090491 </td>
+<td class="DataTD">
+<div align="center">
+</div>
+</td>
+<td width="74">
+<div align="center">
+<a href="novo_retorno.php?id=2203695&num=1" class="e-botao turquesa" style="min-width: 72px;">Novo</a>
+</div>
+</td>
+<td width="63">
+<div align="center">
+<a href="javascript:excluir('2203695');void('0');" class="e-botao" style="min-width: 72px;">Excluir</a>
+</div>
+</td>
+</tr>
+ </table>
+<p>
+</p>
+<p>&nbsp; </p>
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="4" class="FormTABLE">
+<tr>
+<th colspan="6">Revisão implanto </th>
+</tr>
+<tr>
+<td width="316" height="20"><strong>Nome</strong></td>
+<td width="61" height="20"><strong>Retorno</strong></td>
+<td width="92" height="20"><strong>Telefones</strong></td>
+<td width="64" height="20"><strong>Tentativa(s)</strong></td>
+<td height="20" colspan="2">
+<div align="center">
+<strong>Ação</strong>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<iframe name="mm_excluir" id="mm_excluir" src="about:blank" height="1" width="1" frameborder="0" scrolling="no"></iframe>
+<style>
+		.rodape {
+			border-top: 1px solid #BDBDBD;
+			background: #EEEEEE;
+			margin: 0px !important;
+			padding: 1em;
+			margin-top: 1em !important;
+		}
+
+		#rodape {
+			filter: drop-shadow(1px 1px 0px #282726);
+		}
+		#tabela_rodape {
+			filter: drop-shadow(1px 1px 0px #282726);
+		}
+	</style>
+<div class="rodape">
+<div style="text-align: right;">
+<button class="scroll-top btn e-botao concreto">
+<i class="fa fa-chevron-up" style="margin-bottom: 3px;"></i>
+</button>
+<div id="info-memoria"></div>
+</div>
+</div>
+<iframe name="mm_excluir" id="mm_excluir" src="about:blank" height="1" width="1" frameborder="0" scrolling="no"></iframe>
+<script>
+    $(document).ready(function() {
+        $.post('./ajax/refresh_session.php', {refresh: 1});
+        setInterval(function() {
+            $.post('./ajax/refresh_session.php', {refresh: 1});
+        }, 300000);
+
+        setInterval(function() {
+            //Notificações
+            if ($('.notif').find('li').hasClass('notif_green')) {
+                setTimeout(function() {
+                    $('.icone_notificacao_ativo').toggleClass('notif_green');
+                    $('#cabecalho').css('border-bottom', '8px solid #8bc34a');
+                    $('#rodape').css('border-top', '8px solid #8bc34a');
+                }, 250);
+                setTimeout(function() {
+                    $('.icone_notificacao_ativo').toggleClass('notif_green');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('.icone_notificacao_ativo').removeClass('notif_green');
+            }
+
+            //Voz do Franqueado
+            if ($('.notif').find('li').hasClass('notif_blue')) {
+                setTimeout(function() {
+                    $('.icone_voz_do_franqueado').toggleClass('notif_blue');
+                    $('#cabecalho').css('border-bottom', '8px solid #42a5f5');
+                    $('#rodape').css('border-top', '8px solid #42a5f5');
+                }, 250);
+                setTimeout(function() {
+                    $('.icone_voz_do_franqueado').toggleClass('notif_blue');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('.icone_voz_do_franqueado').removeClass('notif_blue');
+            }
+
+            //Mensagem
+            if ($('.notif').find('li').hasClass('notif_orange_mi')) {
+                setTimeout(function() {
+                    $('title').html('ATENÇÃO!');
+                    $('.icone_mensageiro_ativo').toggleClass('notif_orange_mi');
+                    $('#cabecalho').css('border-bottom', '8px solid #ff9800');
+                    $('#rodape').css('border-top', '8px solid #ff9800');
+                }, 250);
+                setTimeout(function() {
+                    $('title').html('NOVA MENSAGEM!');
+                    $('.icone_mensageiro_ativo').toggleClass('notif_orange_mi');
+                    $('#cabecalho').css('border-bottom', '8px solid #b71c1c');
+                    $('#rodape').css('border-top', '8px solid #b71c1c');
+                }, 750);
+            } else {
+                $('title').html('Sistema Odonto Excellence');
+                $('.icone_mensageiro_ativo').removeClass('notif_orange');
+            }
+
+            //Vídeo
+            if ($('#menu-v').find('li').hasClass('notificacao')) {
+                setTimeout(function() {
+                    $('.notificacao').toggleClass('video_ativo');
+                    $('.span-icon').toggleClass('icon_ativo');
+                }, 250);
+                setTimeout(function() {
+                    $('.notificacao').removeClass('video_ativo');
+                    $('.span-icon').removeClass('icon_ativo');
+                }, 750);
+            } else {
+                $('.notificacao').removeClass('video_ativo');
+                $('.span-icon').removeClass('icon_ativo');
+            }
+        }, 1250);
+
+        $('.scroll-top').click(function() {
+            $('.scroll-top').attr('disabled', 'disabled');
+            $('html, body').animate({scrollTop: 0}, 'slow', function() {
+                $('.scroll-top').removeAttr('disabled');
+            });
+        });
+    });
+</script>
+<div id='system' align="rigth">
+<p></p>
+<abbr title="Memória utilizada.">21.75 MB</abbr>
+|
+<abbr title="Pico de uso de memória.">22 MB</abbr>
+|
+<abbr title="Tempo que o servidor levou para gerar a página (em segundos).">
+2.683s </abbr>
+<iframe name="expire" id="expire" src="expirex.php" height="1" width="1" frameborder="0" scrolling="no"></iframe><p align="right">U53076F1693S187.108.198.168</p></div>
+<script type="text/javascript">
+    $('#system').appendTo($('#info-memoria'));
+
+    function msg_notify_by_system_lite($title, $msg, $tag = 'normal') {
+        var options = {
+            body: $msg, lang: 'pt-BR', tag: $tag,
+        };
+
+        var n = new Notification($title, options);
+    }
+
+    function blinkMenuIndicacao() {
+        setInterval(function() {
+            $('#indicacao_cliente').toggleClass('orange');
+        }, 750);
+    }
+</script>
+</body>
+</html>
+<script>
+    $("#table-msg-franqueadora")
+            .css("cursor", "default")
+            .attr('unselectable', 'on')
+            .css({'-moz-user-select': '-moz-none', '-moz-user-select': 'none', '-o-user-select': 'none', '-khtml-user-select': 'none', '-webkit-user-select': 'none', '-ms-user-select': 'none', 'user-select': 'none'})
+            .bind('selectstart', function () {
+                return false;
+            });
+</script>
+<script>
+    $("#table-msg-franquia")
+            .css("cursor", "default")
+            .attr('unselectable', 'on')
+            .css({'-moz-user-select': '-moz-none', '-moz-user-select': 'none', '-o-user-select': 'none', '-khtml-user-select': 'none', '-webkit-user-select': 'none', '-ms-user-select': 'none', 'user-select': 'none'})
+            .bind('selectstart', function () {
+                return false;
+            });
+</script>
+<script>
+    $(document).ready(function () {
+        var pesquisa;
+        var alternativa;
+        var justificativa;
+        carregarPesquisa();
+        function carregarPesquisa() {
+            $("#painel_pesquisa_franqueado").load("painel_pesquisa_franqueado.php", {id_tipo_usuario: 10}, function () {});
+            
+        }
+
+        $("body").on("click", ".alternativa", function () {
+            pesquisa = $(this).parent(".pesquisa").attr("id");
+            alternativa = $(this).attr("id");
+            justificativa = $(this).attr("justificativa");
+            if (justificativa == "1") {
+                $("#justificativa_alternativa").show();
+            } else {
+                $("#justificativa_alternativa").hide();
+                $("#justificativa_text").val("");
+            }
+            $(".alternativa").removeClass("selected");
+            $(this).addClass("selected");
+        });
+
+        $("body").on("click", "#responder_pesquisa", function () {
+            if (!alternativa) {
+                alert("Favor escolher uma alternativa");
+            } else {
+                var motivo_justificativa = $("#justificativa_text").val().trim();
+                if (justificativa == "0" || (justificativa == "1" && motivo_justificativa.length >= 10)) {
+                    $(this).attr("disabled", "true");
+                    $.ajax({
+                        type: 'POST',
+                        url: 'gravar_resposta_pesquisa_franqueado.php',
+                        data: {fk_pesquisa: pesquisa, fk_alternativa: alternativa, justificativa: motivo_justificativa},
+                        success: function (data) {
+                            $("#cssmenu").show();
+                            $(".button-menu").show();
+                        //    alert("Agradecemos a sua participação!");
+                            carregarPesquisa();
+                            alternativa = null;
+                        }
+                    });
+                } else {
+                    alert("Favor informar o motivo da escolha");
+                }
+
+            }
+        });
+    });
+</script>
